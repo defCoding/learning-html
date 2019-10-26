@@ -5,16 +5,53 @@
 	</head>
 	<body>
 		<h1>Learning HTML</h1>
+		<p id="tableofcontents"><u>Table of Contents</u></p>
+		<ol>
+			<li><a href="#tags">Types of Tags</a>
+				<ol type="a">
+					<li><a href="#textemph">Text Emphasis</a></li>
+					<li><a href="#quotations">Quotations</a></li>
+					<li><a href="#abbrev">Abbreviations</a></li>
+					<li><a href="#cites">Citations and Definitions</a></li>
+					<li><a href="#author">Author Details</a></li>
+					<li><a href="#contentchanges">Changes to Content</a></li>
+					<li><a href="#monospace">Monospace Text and Code</a></li>
+				</ol>
+			</li>
+			<li><a href="#lists">Lists</a>
+				<ol type="a">
+					<li><a href="#olists">Ordered Lists</a></li>
+					<li><a href="#ulists">Unordered Lists</a></li>
+					<li><a href="#dfnlists">Definition Lists</a></li>
+					<li><a href="#nestlists">Nested Lists</a></li>
+				</ol>
+			</li>
+			<li><a href="#links">Links</a>
+				<ol type="a">
+					<li><a href="#linktypes">Types of Links</a></li>
+					<li><a href="#writelinks">Writing Links</a>
+						<ol>
+							<li><a href="#linkothersites">Links to Other Sites</a></li>
+							<li><a href="#linkotherpages">Linking to Other Pages on the Same Site</a></li>
+							<li><a href="#emaillinks">Email Links</a></li>
+							<li><a href="#newwindowlinks">Opening Links in a New Window</a></li>
+							<li><a href="#linkpartsamepage">Linking to a Specific Part of the Same Page</a></li>
+							<li><a href="#linkpartotherpage">Linking to a Specific Part of Another Page</a></li>
+						</ol>
+					</li>
+				</ol>
+			</li>
+		</ol>
 		<p>
-			Paragraph under. Line break is doing using <code>&lt;br /&gt;</code>.
+			Line break is done using <code>&lt;br /&gt;</code>.
 			<br />
 			A horizontal line is achieved using <code>&lt;hr /&gt;</code>.
 			<br /> These two tags are known as <b>empty elements</b> because they do not have any words in between the opening and closing tag. Most empty elements only have an opening tag.
 			The space before the / is not needed, but it's added to show that is an empty tag and is a good habit to get into.
 		</p>
 		<hr />
-		<h2>Types of Tags</h2>
-		<h3>Text Emphasis</h3>
+		<h2 id="tags">Types of Tags</h2>
+		<h3 id="textemph">Text Emphasis</h3>
 		<p>
 			<b>Bold</b> is done using <code>&lt;b&gt;</code><code>&lt;/b&gt;</code>.</b>
 			<br />
@@ -33,22 +70,22 @@
 			<em>Emphasis</em> is done using <code>&lt;em&gt;</code><code>&lt;/em&gt;</code>. As with the connection between <code>strong</code> and <code>bold</code>, <code>em</code> is visually identical to italics.
 			However, it carries the meaning that the emphasis will subtly change the meaning of a sentence.
 		</p>
-		<h3>Quotations</h3>
-		<p>
+		<h3 id="quotations">Quotations</h3>
 			<blockquote>
-				Blockquotes can be done using <code>&lt;blockquote&gt;</code><code>&lt;/blockquote&gt;</code>. It's used for longer quotes that take up an entire paragraph.
-				Typically, you use <code>&lt;p&gt;</code><code>&lt;/p&gt;</code> inside of it. Browsers tend to indent these blockquotes, but won't always do so. Rely on CSS for indentation.
+				<p>Blockquotes can be done using <code>&lt;blockquote&gt;</code><code>&lt;/blockquote&gt;</code>. It's used for longer quotes that take up an entire paragraph.
+				Typically, you use <code>&lt;p&gt;</code><code>&lt;/p&gt;</code> inside of it. Browsers tend to indent these blockquotes, but won't always do so. Rely on CSS for indentation.</p>
 			</blockquote>
+		<p>
 			For <q cite="https://www.youtube.com">shorter quotes</q> that sit inside a paragraph, use <code>&lt;q&gt;</code><code>&lt;/q&gt;</code>.
 			<br />
 			Both blockquotes and shorter quotes have a <code>cite</code> attribute with a URL value that will have more information.
 			The <code>cite</code> attribute doesn't have much presentational value, but is there to add semantic information to the quote.
 		</p>
-		<h3>Abbreviations</h3>
+		<h3 id="abbrev">Abbreviations</h3>
 		<p>
 			For an <abbr title="abbreviation">abbr</abbr>, you can add the full term by using <code>&lt;abbr title=""&gt;</code><code>&lt;/abbr&gt;</code>.
 		</p>
-		<h3>Citations and Definitions</h3>
+		<h3 id="cites">Citations and Definitions</h3>
 		<p>
 			According to <cite>HTML&CS;S Design and Build Websites</cite>, when citing, you can use <code>&lt;cite&gt;</code><code>&lt;/cite&gt;</code> to cite work. In HTML5, cite shouldn't be used to cite a person's name, but people usually do anyway.
 			Browsers will render the content of a cite in italics.
@@ -56,7 +93,7 @@
 			The first time you explain some new terminology, you can use the <dfn>dfn</dfn> tag to indicate a defining instance is occuring by using <code>&lt;dfn&gt;</code><code>&lt;/dfn&gt;</code>.
 			Some browsers show the content in italics, but Safari and Chrome do not. The dfn tag is used to let browsers and web crawlers know that nearby text contains a definition.
 		</p>
-		<h3>Author Details</h3>
+		<h3 id="author">Author Details</h3>
 		<p>
 			The address element is fairly niche: it contains the contact details for the author of the page. It can be done using <code>&lt;address&gt;</code><code>&lt;/address&gt;</code>.
 			<address>
@@ -64,7 +101,7 @@
 				<p>12345 NotARealStreet, Fake Town, NonExistent State, 11111.</p>
 			</address>
 		</p>
-		<h3>Changes to Content</h3>
+		<h3 id="contentchanges">Changes to Content</h3>
 		<p>
 			The <del>iensrt</del> <ins>ins</ins> element shows where something has been inserted, and the del element shows where something has been deleted.
 			Insertion uses <code>&lt;ins&gt;</code><code>&lt;/ins&gt;</code> and deletion using <code>&lt;del&gt;</code><code>&lt;/del&gt;</code>. Typically insertion is underlined, and deletion has a line through it.
@@ -76,7 +113,7 @@
 			<br />
 			I know some HTML.
 		</p>
-		<h3>Monospace Text</h3>
+		<h3 id="monospace">Monospace Text and Code</h3>
 		<p>The <tt><code>&lt;tt&gt;</code></tt> element can be used to specify teletype text. However, this tag is now obselete, so should not be used as it could be removed at any time.</p>
 		<p>Alternatively, the <code><code>&lt;code&gt;</code></code> tag can be used to specify computer code, and anything in between the tags (will still have to use special characters for some characters like &am;p) will be treated as code.
 			It is often paired with the <code><code>&lt;pre&gt;</code></code> element (preformatted) to preserve line spaces. As with <code><code>&lt;ol&gt;</code></code>, <code><code>&lt;pre&gt;</code></code> should not be used in <code><code>&lt;p&gt;</code></code>.</p>
@@ -92,12 +129,12 @@ int main(void) {
 }
 </code></pre>
 		<hr />
-		<h2>Lists</h2>
+		<h2 id="lists">Lists</h2>
 		<p>There are three types of lists in HTML: ordered, unordered, and definition. <dfn>Ordered lists</dfn> are lists where each item in the list is numbered. 
 		<dfn>Unordered lists</dfn> are lists that begin with a bullet point. <dfn>Definition lists</dfn> are made up of a set of terms along with their definitions. 
 		One thing to also keep in mind is that list elements should not be stored between <code>&lt;p&gt;</code> tags, because <code>&lt;p&gt;</code> elements contain "phrasing" content, which are inline 
 		elements like <code>&lt;strong&gt;</code>. List elements contain "flow" content, which are block elements like <code>&lt;p&gt;</code> and <code>&lt;div&gt;</code></p>
-		<h3>Ordered Lists</h3>
+		<h3 id="olists">Ordered Lists</h3>
 		<p>Ordered lists are created using <code>&lt;ol&gt;</code><code>&lt;/ol&gt;</code>. Each item in the list is placed between <code>&lt;li&gt;</code> and <code>&lt;/li&gt;</code>. Sometimes you may see a <code>type</code> attribute used with ol to specify the type of numbering. But it is better to use CSS for this.</p>
 		<ol>
 			<li>Bring pot of water to a boil.</li>
@@ -105,14 +142,14 @@ int main(void) {
 			<li>???</li>
 			<li>Profit.</li>
 		</ol>
-		<h3>Unordered Lists</h3>
+		<h3 id="ulists">Unordered Lists</h3>
 		<p>Unordered lists are created using <code>&lt;ul&gt;</code><code>&lt;/ul&gt;</code>. As with ordered lists, each item should be placed in li tags. And as with ordered lists, you may see a <code>type</code> attribute to customize the bullet points, but it's better to use CSS for this.</p>
 		<ul>
 			<li>Three feet of hempen rope.</li>
 			<li>Twenty two gallons of goat's milk.</li>
 			<li>Nine square feet of sheet metal.</li>
 		</ul>
-		<h3>Definition Lists</h3>
+		<h3 id="dfnlists">Definition Lists</h3>
 		<p>Definition lists are created using <code>&lt;dl&gt;</code><code>&lt;/dl&gt;</code>. The definition term is stored between <code>&lt;dt&gt;</code> and <code>&lt;/dt&gt;</code> tags. The definition for the term is stored in <code>&lt;dd&gt;</code> and <code>&lt;/dd&gt;</code> tags. 
 			Inside of the dl element, you will usually see pairs of dt and dd elements.
 		</p>
@@ -125,7 +162,7 @@ int main(void) {
 			<dt lang="es">Sinónimo</dt>
 			<dd>a word or phrase that means exactly or nearly the same as another word or phrase.</dd>
 		</dl>
-		<h3>Nested Lists</h3>
+		<h3 id="nestlists">Nested Lists</h3>
 		<p>You can also create nested lists inside of the items of another list. Browsers display nested lists even further indented, and in unordered lists, they will usually change the style of the bullet point as well.</p>
 		<ul>
 			<li>Markup Languages
@@ -159,21 +196,21 @@ int main(void) {
 			</li>
 		</ol>
 		<hr />
-		<h2>Links</h2>
+		<h2 id="links">Links</h2>
 		<p>Links allow you to move from one webpage to another.
 		</p>
-		<h3>Types of Links</h3>
+		<h3 id="linktypes">Types of Links</h3>
 		<ul>
 			<li>Links from one website to another.</li>
 			<li>Links from one page to another on the same website.</li>
 			<li>Links that open in a new browser window.</li>
 			<li>Links that start up your email program and address a new email to someone.</li>
 		</ul>
-		<h3>Writing Links</h3>
+		<h3 id="writelinks">Writing Links</h3>
 		<p>Links are created using the <code>&lt;a&gt;</code><code>&lt;/a&gt;</code> tags. Users can click anywhere in between the tags. To specify the page you want to link to, use the <code>href</code> attribute.
 		<br />
 		<code>&lt;a href="link goes here"&gt;Link text&lt;/a&gt;</code></p>
-		<h4>Linking to Other Sites</h4>
+		<h4 id="linkothersites">Linking to Other Sites</h4>
 		<p>When you link to a different website, the value of the <code>href</code> attribute will be the full web address for the site, which is known as an <dfn>absolute URL</dfn>.
 		<br /><br />
 		Example:
@@ -181,7 +218,7 @@ int main(void) {
 		<code>&lt;a href="https://www.reddit.com/r/learnprogramming"&gt;LearnProgramming Subreddit&lt;/a&gt;</code>
 		<br />
 		<a href="https://www.reddit.com/r/learnprogramming">LearnProgramming Subreddit</a></p>
-		<h4>Linking to Other Pages on the Same Site</h4>
+		<h4 id="linkotherpages">Linking to Other Pages on the Same Site</h4>
 		<p>When you are linking to other pages within the same site, you do not need to use the domain name as the URL. You can instead use the shorthand known as <dfn>relative URL</dfn>.
 		<br /><br />
 		If all the pages of the site are in the same folder, then you can just use the file name for the <code>href</code> attribute.
@@ -194,17 +231,37 @@ int main(void) {
 		<code>&lt;a href="linkedPage.html"&gt;Link to page in the same website.&lt;/a&gt;</code>
 		<br />
 		<a href="linkedPage.html">Link to page in same website.</a></p>
-		<h4>Email Links</h4>
+		<h4 id="emaillinks">Email Links</h4>
 		<p>Creating email links is just like creating any other link, except prepend <code>mailto:</code> to the string containing the link, or in this case, email address.
 		<br /><br />
 		<code>&lt;a href="mailto:thisisnotarealemail@notarealemailhoster.com"&gt;Contact Us via Email!&lt;/a&gt;</code>
 		<br />
 		<a href="mailto:thisisnotarealemail@notarealemailhoster.com">Contact Us via Email!</a></p>
-		<h4>Opening Links in a New Window</h4>
+		<h4 id="newwindowlinks">Opening Links in a New Window</h4>
 		<p>To have a link open in a new window, you can use the <code>target</code> attribute in the <code>&lt;a&gt;</code> element. The value of the attribute should be <code>_blank</code>.
 		<br /><br />
 		<code>&lt;a href="linkedPage.html" target="_blank"&gt;Open new window to page in the same website.&lt;/a&gt;</code>
 		<br />
 		<a href="linkedPage.html" target="_blank">Open new window to page in same website.</a></p>
+		<h4 id="linkpartsamepage">Linking to a Specific Part of the Same Page</h4>
+		<p>Before you can link to a specific part of a page, you need to identify the points in the page that the link will go to. You do this by setting the <code>id</code> 
+		attribute, which can be used on every HTML element. The value of the <code>id</code> attribute should start with a letter or an underscore (not a number or any other character). 
+		To target an <code>id</code>, prepend the <code>href</code> attribute value with a "#".
+		<br /><br />
+		<code>&lt;a href="#tableofcontents"&gt;Return to Top&lt;/a&gt;</code>
+		<br />
+		<a href="#tableofcontents">Return to Top</a></p>
+		<h4 id="linkpartotherpage">Linking to a Specific Part of Another Page</h4>
+		<p>If you want to link to part in another page, that can be done as well, for both your own site and other sites. There just needs to be an <code>id</code> attribute in that page.
+		Just add the same syntax to the end of the link for that page. The <code>href</code> attribute will contain either the absolute or relative URL, followed by the # symbol, and then the <code>id</code>.
+		<br /><br />
+		<code>&lt;a href="https://www.reddit.com#header"&gt;Header of Reddit&lt;/a&gt;</code>
+		<br />
+		<a href="https://ww.reddit.com#header">Header of Reddit</a>
+		<br /><br />
+		<code>&lt;a href="linkedPage.html#part&gt;Specific Part of Other Page on Same Website&lt;/a&gt;</code>
+		<br />
+		<a href="linkedPage.html#part">Specific Part of Other Page on Same Website</a>
+		</p>
 	</body>
 </html>
