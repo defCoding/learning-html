@@ -41,6 +41,15 @@
 					</li>
 				</ol>
 			</li>
+			<li>
+				<a href="#images">Images</a>
+				<ol type="a">
+					<li><a href="#addimages">Adding Images</a></li>
+					<li><a href="#heightwidthimages">Height and Width of Images</a></li>
+					<li><a href="#wheretoplaceimages">Where to Place Images</a></li>
+					<li><a href="#imgrules">Three Rules for Creating Images</a></li>
+				</ol>
+			</li>
 		</ol>
 		<p>
 			Line break is done using <code>&lt;br /&gt;</code>.
@@ -263,5 +272,67 @@ int main(void) {
 		<br />
 		<a href="linkedPage.html#part">Specific Part of Other Page on Same Website</a>
 		</p>
+		<hr />
+		<h2 id="images">Images</h2>
+		<p>For larger websites, images should be stored separetely, in an <i>images</i> folder perhaps, which may contain subfolders in itself for even larger websites.</p>
+		<h3 id="addimages">Adding Images</h3>
+		<p>To add an image to the page, using the <code>&lt;img&gt;</code> element. It's also an empty element, meaning there is no closing tag. The <code>src</code> attribute tells the browser where it can find 
+		the image file. The <code>alt</code> attribute provides a text description of the image which describes the image if you cannot see it. Both the <code>src</code> and <code>alt</code> attribute are necessary. 
+		Additionally, the <code>title</code> attribute can provide additional information about the image. Typically, most browsers will display the contents in a tooltip when the mouse hovers over the image. 
+		The text in the <code>alt</code> attribute is referred to as the <dfn>alt text</dfn>, and is used by screen reader software. If the image is just there for graphical purchases, it's best to just leave the 
+		<code>alt</code> attribute blank.
+		</p>
+		<code>&lt;img src="assets/images/MemeableShane.png" alt="A gloriously smug picture of Shane O'Neill smirking." title="How u doin'?" /&gt;</code>
+		<br />
+		<img src="assets/images/MemeableShane.png" alt="A gloriously smug picture of Shane O'Neill smirking." title="How u doin'?" />
+		<h3 id="heightwidthimages">Height and Width of Images</h3>
+		<p>
+			There are two other attributes that can be used to specify the size: <code>height</code> and <code>width</code>. Images take longer to load than the rest of the code, so it's a good idea to specify the size so taht the browser
+			can render the rest of the text while leaving the right amount of space for the image that is still loading. The size of images, however, is increasingly being specified using CSS rather than HTML.
+		</p>
+		<code>&lt;img src="assets/images/MemeableShane.png" alt="Small gloriously smug picture of Shane O'Neill smirking." title="How u doin'?" height="180" width="120" /&gt;</code>	
+		<br />
+		<img src="assets/images/MemeableShane.png" alt="Small gloriously smug picture of Shane O'Neill smirking." title="How u doin'?" height="180" width="120" />
+		<h3 id="wheretoplaceimages">Where to Place Images in Your Code</h3>
+		<p>
+			Where an image is placed in the code will affect how it is displayed. 
+			<ul>
+				<li><b>Before a Paragraph</b>
+					<br />
+					<img src="assets/images/MemeableShane.png" alt="Small gloriously smug picture of Shane O'Neill smirking." title="How u doin'?" height="60" width="40" />
+					<p>The paragraph starts on a new line after the image.</p>
+				</li>
+				<li><b>Inside the Start of a Paragraph</b>
+					<br />
+					<p><img src="assets/images/MemeableShane.png" alt="Small gloriously smug picture of Shane O'Neill smirking." title="How u doin'?" height="60" width="40" />The first row of text aligns with the bottom of the image.</p>
+				</li>
+				<li><b>In the Middle of a Paragraph</b>
+					<br />
+					<p>The image is placed between <img src="assets/images/MemeableShane.png" alt="Small gloriously smug picture of Shane O'Neill smirking." title="How u doin'?" height="60" width="40" />the words of the paragraph it appears in.</p>
+				</li>
+			</ul>
+		</p>
+		<p>
+			Where you place the image in the ode is important because show HTML elements in one of two ways, <dfn>block</dfn> or <dfn>inline</dfn> elements.
+			<br />
+			Block elements always appear on a new line. Examples of block elements include the <code>&lt;h&gt;</code> and <code>&lt;p&gt;</code> elements.
+			<br />
+			Inline elements sit within a block level element and do not start on a new line. Examples of inline elemnets include the <code>&lt;em&gt;</code> and <code>&lt;img&gt;</code> elements.
+		</p>
+		<h3 id="imgrules">Three Rules for Creating Images</h3>
+		<p>There are three rules to remember when you are creating images for your website:</p>
+		<ol>
+			<li><b>Save images in the right format.</b>
+				<p>Choosing the wrong format for your image may cause it to not look as sharp as it should and can make the web page slower to load.</p>
+			</li>
+			<li><b>Save images at the right size.</b>
+				<p>Save the image at the same width and height it will appear in the website. If the image is too small, it might get distorted. If it's too large, 
+					then it will take longer to display on the page than it should.
+				</p>
+			</li>
+			<li><b>Measure images in pixels.</b>
+				<p>Measure the image in terms of pixels, and not in centimeters or inches.</p>
+			</li>
+		</ol>
 	</body>
 </html>
