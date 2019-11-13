@@ -48,6 +48,66 @@
 					<li><a href="#heightwidthimages">Height and Width of Images</a></li>
 					<li><a href="#wheretoplaceimages">Where to Place Images</a></li>
 					<li><a href="#imgrules">Three Rules for Creating Images</a></li>
+					<li><a href="#figures">HTML5: Figure and Figure Caption</a></li>
+				</ol>
+			</li>
+			<li>
+				<a href="#tables">Tables</a>
+				<ol type="a">
+					<li><a href="#basictables">Basic Table Structure</a></li>
+					<li><a href="#tableheadings">Table Headings</a></li>
+					<li><a href="#spanningcols">Spanning Columns</a></li>
+					<li><a href="#spanningrows">Spanning Rows</a></li>
+					<li><a href="#longtables">Long Tables</a></li>
+				</ol>
+			</li>
+			<li>
+				<a href="#forms">Forms</a>
+				<ol type="a">
+					<li>
+						<a href="#input">Input</a>
+						<ol>
+							<li><a href="#textinput">Text Input</a></li>
+							<li><a href="#passwordinput">Password Input</a></li>
+							<li><a href="#textarea">Text Area</a></li>
+							<li><a href="#radiobutton">Radio Button</a></li>
+							<li><a href="#checkbox">Checkbox</a></li>
+							<li><a href="#file">File Input</a></li>
+							<li><a href="#hidden">Hidden Controls</a></li>
+						</ol>
+					</li>
+					<li>
+						<a href="#dropdown">Drop Down List Box</a>
+						<ol>
+							<li><a href="#multipleselect">Multiple Select Box</a></li>
+						</ol>
+					</li>
+					<li>
+						<a href="#buttons">Buttons</a>
+						<ol>
+							<li><a href="#submitbutton">Submit Button</a></li>
+							<li><a href="#imagebutton">Image Button</a></li>
+							<li><a href="#button">Button</a></li>
+						</ol>
+					</li>
+					<li>
+						<a href="#labellingforms">Labelling Forms Controls</a>
+					</li>
+					<li>
+						<a href="#groupingforms">Grouping Form Elements</a>
+					</li>
+					<li>
+						<a href="#formvalid">HTML5: Form Validation</a>
+					</li>
+					<li>
+						<a href="#dateinput">HTML5: Date Input</a>
+					</li>
+					<li>
+						<a href="#emailurlinput">HTML5: Email & Url Input</a>
+					</li>
+					<li>
+						<a href="#searchinput">HTML5: Search Input</a>
+					</li>
 				</ol>
 			</li>
 		</ol>
@@ -313,11 +373,11 @@ int main(void) {
 			</ul>
 		</p>
 		<p>
-			Where you place the image in the ode is important because show HTML elements in one of two ways, <dfn>block</dfn> or <dfn>inline</dfn> elements.
+			Where you place the image in the code is important because we show HTML elements in one of two ways, <dfn>block</dfn> or <dfn>inline</dfn> elements.
 			<br />
 			Block elements always appear on a new line. Examples of block elements include the <code>&lt;h&gt;</code> and <code>&lt;p&gt;</code> elements.
 			<br />
-			Inline elements sit within a block level element and do not start on a new line. Examples of inline elemnets include the <code>&lt;em&gt;</code> and <code>&lt;img&gt;</code> elements.
+			Inline elements sit within a block level element and do not start on a new line. Examples of inline elements include the <code>&lt;em&gt;</code> and <code>&lt;img&gt;</code> elements.
 		</p>
 		<h3 id="imgrules">Three Rules for Creating Images</h3>
 		<p>There are three rules to remember when you are creating images for your website:</p>
@@ -334,5 +394,661 @@ int main(void) {
 				<p>Measure the image in terms of pixels, and not in centimeters or inches.</p>
 			</li>
 		</ol>
+		<h3 id="figures">HTML5: Figure and Figure Caption</h3>
+		<p>
+			Images often come with captions. In HTML5, you can wrap images and their captions in the <code>&lt;figure&gt;</code> element. You can have more than one image in the <code>&lt;figure&gt;</code> element 
+			as long as they share the same caption. Browsers sometimes indent the contents of the element. The <code>&lt;figcaption&gt;</code> element is used to create the caption for the image.
+		</p>
+<pre>
+<code>
+&lt;figure&gt;
+	&lt;img src="assets/images/MemeableShane.png" alt="Gloriously smug Shane O'Neill" title="HOW U DOIN'?" /&gt;
+	&lt;br /&gt;
+	&lt;figcaption&gt;One does not out-smug the Shane.&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code>
+</pre>
+		<figure>
+			<img src="assets/images/MemeableShane.png" alt="Gloriously smug Shane O'Neill" title="HOW U DOIN'?" />
+			<br />
+			<figcaption>One does not out-smug the Shane.</figcaption>
+		</figure>
+		<hr />
+		<h2 id="tables">Tables</h2>
+		<h3 id="basictables">Basic Table Structure</h3>
+		<p>
+			Use the <code>&lt;table&gt;</code> element to create a table. The contents of the table are written out row by row. You can indicate the start of the row using <code>&lt;tr&gt;</code>. Inside the <code>&lt;tr&gt;</code> 
+			tags are one or more <code>&lt;td&gt;</code> elements, which represent the columns of the table. Some browsers automatically draw lines around the cells, but this can be controlled using CSS.
+		</p>
+<pre>
+<code>
+&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;3&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;4&lt;/td&gt;
+		&lt;td&gt;5&lt;/td&gt;
+		&lt;td&gt;6&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;7&lt;/td&gt;
+		&lt;td&gt;8&lt;/td&gt;
+		&lt;td&gt;9&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</code>
+</pre>
+		<br />
+		<table>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+			</tr>
+		</table>
+		<h3 id="tableheadings">Table Headings</h3>
+		<p>
+			The <code>&lt;th&gt;</code> element is used just like the <code>&lt;td&gt;</code> element but it will be used to represent the heading for either a column or a row. Even if a cell has no content, you should still use 
+			the <code>&lt;th&gt;</code> element to represent the presence of an empty cell (otherwise the table will not render properly). You can use the <code>scope</code> attribute to indicate if it is the heading for a column 
+			or a row. It can take the value of <code>"row"</code> or <code>"col"</code>.
+		</p>
+<pre>
+<code>
+&lt;table&gt;
+	&lt;tr&gt;
+		&lt;th&gt;&lt;/th&gt;
+		&lt;th scope="col"&gt;Midterm&lt;/th&gt;
+		&lt;th scope="col"&gt;Final Exam&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th scope="row"&gt;Mayla&lt;/th&gt;
+		&lt;td&gt;B+&lt;/td&gt;
+		&lt;td&gt;A&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th scope="row"&gt;Lisa&lt;/th&gt;
+		&lt;td&gt;C+&lt;/td&gt;
+		&lt;td&gt;A&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</code>
+</pre>
+		<table>
+			<tr>
+				<th></th>
+				<th scope="col">Midterm</th>
+				<th scope="col">Final Exam</th>
+			</tr>
+			<tr>
+				<th scope="row">Mayla</th>
+				<td>B+</td>
+				<td>A</td>
+			</tr>
+			<tr>
+				<th scope="row">Lisa</th>
+				<td>C+</td>
+				<td>A</td>
+			</tr>
+		</table>
+		<h3 id="spanningcols">Spanning Columns</h3>
+		<p>
+			To have a <code>&lt;td&gt;</code> or <code>&lt;th&gt;</code> element span multiple columns, you can use the <code>colspan</code> attribute and indicate how many columns the cell should span across.
+		</p>
+<pre>
+<code>
+&lt;table&gt;
+	&lt;tr&gt;
+		&lt;th scope="col"&gt;&lt;/th&gt;
+		&lt;th scope="col"&gt;12 PM&lt;/th&gt;
+		&lt;th scope="col"&gt;1 PM&lt;/th&gt;
+		&lt;th scope="col"&gt;2 PM&lt;/th&gt;
+		&lt;th scope="col"&gt;3 PM&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th scope="row"&gt;Monday&lt;/th&gt;
+		&lt;td colspan="2"&gt;| Database Concepts |&lt;/td&gt;
+		&lt;td&gt;| Intro to Algorithms |&lt;/td&gt;
+		&lt;td&gt;| Game Technology |&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th scope="row"&gt;Tuesday&lt;/th&gt;
+		&lt;td colspan="3"&gt;&lt;/td&gt;
+		&lt;td&gt;| SICE Tutors |&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</code>
+</pre>
+		<table>
+			<tr>
+				<th scope="col"></th>
+				<th scope="col">12 PM</th>
+				<th scope="col">1 PM</th>
+				<th scope="col">2 PM</th>
+				<th scope="col">3 PM</th>
+			</tr>
+			<tr>
+				<th scope="row">Monday</th>
+				<td colspan="2">| Database Concepts |</td>
+				<td>| Intro to Algorithms |</td>
+				<td>| Game Technology |</td>
+			</tr>
+			<tr>
+				<th scope="row">Tuesday</th>
+				<td colspan="3"></td>
+				<td>| SICE Tutors |</td>
+			</tr>
+		</table>
+		<h3 id="spanningrows">Spanning Rows</h3>
+		<p>
+			You can also create rows that span over multiple rows using the <code>rowspan</code> attribute.
+		</p>
+<pre>
+<code> 
+&lt;table&gt;
+	&lt;tr&gt;
+		&lt;th scope="col"&gt;&lt;/th&gt;
+		&lt;th scope="col"&gt;ABC&lt;/th&gt;
+		&lt;th scope="col"&gt;BBC&lt;/th&gt;
+		&lt;th scope="col"&gt;CNN&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th scope="row"&gt;6pm - 7pm&lt;/th&gt;
+		&lt;td rowspan="2"&gt;Movie&lt;/td&gt;
+		&lt;td&gt;Comedy&lt;/td&gt;
+		&lt;td&gt;News&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th scope="row"&gt;7pm - 8pm&lt;/th&gt;
+		&lt;td&gt;Sport&lt;/td&gt;
+		&lt;td&gt;Current Affairs&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</code>
+</pre>
+		<table>
+			<tr>
+				<th scope="col"></th>
+				<th scope="col">ABC</th>
+				<th scope="col">BBC</th>
+				<th scope="col">CNN</th>
+			</tr>
+			<tr>
+				<th scope="row">6pm - 7pm</th>
+				<td rowspan="2">Movie</td>
+				<td>Comedy</td>
+				<td>News</td>
+			</tr>
+			<tr>
+				<th scope="row">7pm - 8pm</th>
+				<td>Sport</td>
+				<td>Current Affairs</td>
+			</tr>
+		</table>
+		<h3 id="longtables">Long Tables</h3>
+		<p>There are three elements that help distinguish between the main content of the table and the first and last row. These help people who use screen readers and allow you to style 
+			these sections in a different manner than the rest of the table through CSS. The browser of will very rarely treat these elements any differently, so it's primarily used to change the appearance.
+		</p>
+		<p>
+			<code>&lt;thead&gt;</code> stores the headings of the table.
+			<br />
+			<code>&lt;tbody&gt;</code> stores the main body of the table.
+			<br />
+			<code>&lt;tfoot&gt;</code> stores the footer of the table.
+		</p>
+<pre>
+<code>
+&lt;table&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th scope="col"&gt;Date&lt;/th&gt;
+			&lt;th scope="col"&gt;Hours Worked&lt;/th&gt;
+			&lt;th scope="col"&gt;Money Made&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;th scope="row"&gt;Nov 1st&lt;/th&gt;
+			&lt;td&gt;4&lt;/td&gt;
+			&lt;td&gt;50&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th scope="row"&gt;Nov 2nd&lt;/th&gt;
+			&lt;td&gt;3&lt;/td&gt;
+			&lt;td&gt;36&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th scope="row"&gt;Nov 3rd&lt;/th&gt;
+			&lt;td&gt;4.5&lt;/td&gt;
+			&lt;td&gt;82&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th scope="row"&gt;Nov 4th&lt;/th&gt;
+			&lt;td&gt;2.5&lt;/td&gt;
+			&lt;td&gt;32&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+	&lt;tfoot&gt;
+		&lt;tr&gt;
+			&lt;th scope="row"&gt;&lt;/th&gt;
+			&lt;td&gt;14&lt;/td&gt;
+			&lt;td&gt;200&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
+&lt;/table&gt;
+</code>
+</pre>
+		<table>
+			<thead>
+				<tr>
+					<th scope="col">Date</th>
+					<th scope="col">Hours Worked</th>
+					<th scope="col">Money Made</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">Nov 1st</th>
+					<td>4</td>
+					<td>50</td>
+				</tr>
+				<tr>
+					<th scope="row">Nov 2nd</th>
+					<td>3</td>
+					<td>36</td>
+				</tr>
+				<tr>
+					<th scope="row">Nov 3rd</th>
+					<td>4.5</td>
+					<td>82</td>
+				</tr>
+				<tr>
+					<th scope="row">Nov 4th</th>
+					<td>2.5</td>
+					<td>32</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<th scope="row"></th>
+					<td>14</td>
+					<td>200</td>
+				</tr>
+			</tfoot>
+		</table>
+		<hr />
+		<h2 id="forms">Forms</h2>
+		<h3 id="formstructure">Form Structure</h3>
+		<p>
+			Form controls live inside a <code>&lt;form&gt;</code> element. This element should carry the <code>action</code> attribute and will usually have a <code>method</code> and <code>id</code> attribute too. 
+			<br />
+			The value of the <code>action</code> attribute is the URL for the page on the server that will receive the infromation in the form when it is submitted.
+			<br />
+			Forms can be sent using one of two methods: <code>get</code> or <code>post</code>. By default, <code>&lt;form&gt;</code> will use the <code>get</code> method.
+		</p>
+		<ul>
+			<li>With the <code>get</code> method, the values from the form are added to the end of the URL specified in <code>action</code>. It is best used for short forms, or when you are just retrieving data from 
+			the web server.</li>
+			<li>With the <code>post</code> method, the values are sent in what are known as HTTP headers. You should use it if your form allows users to upload a file, is very long, contains sensitive data, or adds/deletes 
+			information from a database.</li>
+		</ul>
+		<p>The <code>id</code> attribute is used to identify the form distinctly from other elements on the page, and often is used by scripts that require you to check that information has been entered in certain fields.</p>
+
+		<h3 id="input">Input</h3>
+		<p>The <code>&lt;input&gt;</code> element is used to create several form controls. Use the <code>type</code> attribute to determine the kind of input they will be creating. Set the mandatory <code>name</code> attribute 
+			to let the server know which form control the piece of data was entered into. This identifies the form control. You can set the optional <code>maxlength</code> attribute to limit the number of characters a user may enter into the field.</p>
+		<h4 id="textinput">Text Input</h4>
+		<p><code>type="text"</code></p>
+		<p>Creates a single line text input. Note that this is an empty element. It is also an inline element, so should be placed inside of <code>&lt;p&gt;</code> tags.</p>
+<pre>
+<code>
+&lt;form action="https://www.reddit.com"&gt;
+	&lt;p&gt;Favorite Animal: 
+		&lt;input type="text" name="animal" maxlength="25" /&gt;
+	&lt;/p&gt;
+&lt;/form&gt;
+</code>
+</pre>
+		<form action="https://www.reddit.com">
+			<p>Favorite Animal: 
+				<input type="text" name="animal" maxlength="25" />
+			</p>
+		</form>
+
+		<p>When the above form is submitted, you will see that <i>/?animal=text</i> is appended to the end of the URL.</p>
+		<h4 id="passwordinput">Password Input</h4>
+		<p><code>text="password"</code></p>
+		<p>Creates a text box that acts just like a single-line text input. but the characters are blocked out. Otherwise, it acts just like the <code>text</code> type, and has the same attributes. However, one thing to keep in mind is 
+		that while the password is hidden on screen, it is not sent securely to the server. For full secuity, you should use Secure Sockets Layer (SSL) to communicate to the browser from the server. That is not taught here, however.</p>
+<pre>
+<code>
+&lt;form action="https://www.reddit.com"&gt;
+	&lt;p&gt;Username:
+		&lt;input type="text" name="username" maxlength="25" /&gt;
+	&lt;/p&gt;
+	&lt;p&gt;Password: 
+		&lt;input type="password" name="password" maxlength="30" /&gt;
+	&lt;/p&gt;
+&lt;/form&gt;
+</code>
+</pre>
+		<form action="https://www.reddit.com">
+			<p>Username:
+				<input type="text" name="username" maxlength="25" />
+			</p>
+			<p>Password: 
+				<input type="password" name="password" maxlength="30" />
+			</p>
+		</form>
+
+		<h4 id="textarea">Text Area</h4>
+		<p>
+			Creates a multi-line text input. Unlike the previous two, this is NOT an empty element. Any text that appears in between the tag will appear in the text area when the page loads. If nothing is entered and the form is 
+			submitted, then whatever was there by default will be sent to the server. Some sites use Javascript to clear this area when it is clicked on. Use CSS to manipulate the size. This is a block element so should not be put 
+			inside of <code>&lt;p&gt;</code> tags.
+		</p>
+<pre>
+<code>
+&lt;form action="https://www.reddit.com"&gt;
+	&lt;p&gt;Please leave your feedback here!&lt;/p&gt;
+	&lt;textarea name="feedback" maxlength="120"&gt;Enter your comments...&lt;/textarea&gt;
+&lt;/form&gt;
+</code>
+</pre>
+		<form action="https://www.reddit.com">
+			<p>Please leave your feedback here!</p>
+			<textarea name="feedback" maxlength="120">Enter your comments...</textarea>
+		</form>
+
+		<h4 id="radiobutton">Radio Button</h4>
+		<p><code>type="radio"</code></p>
+		<p>
+			They allow users to pick just one of a number of options. The <code>name</code> attribute is sent to the server with the value of the option that the user selects. It also groups the radio buttons together. The <code>name</code> attribute should be the same for 
+			all of the radio buttons used to answer the question. The <code>value</code> attribute indicates the value that is sent to the server for the selected option. The value for each button should be different. The <code>checked</code> 
+			attribute is used to indicate which value should be selected when the page loads. The value of this attribute is just <code>"checked"</code>. This is an inline empty element.
+		</p>
+<pre>
+<code>
+&lt;form action="https://www.reddit.com"&gt;
+	&lt;p&gt;
+		Select your lane:
+		&lt;br /&gt;
+		&lt;input type="radio" name="lane" value="top" /&gt;Top
+		&lt;input type="radio" name="lane" value="jungle" /&gt;Jungle
+		&lt;input type="radio" name="lane" value="middle" checked="checked" /&gt;Middle
+		&lt;input type="radio" name="lane" value="adc" /&gt;ADC
+		&lt;input type="radio" name="lane" value="support" /&gt;Support
+	&lt;/p&gt;
+&lt;/form&gt;
+</code>
+</pre>
+		<form action="https://www.reddit.com">
+			<p>
+				Select your lane:
+				<br />
+				<input type="radio" name="lane" value="top" />Top
+				<input type="radio" name="lane" value="jungle" />Jungle
+				<input type="radio" name="lane" value="middle" checked="checked" />Middle
+				<input type="radio" name="lane" value="adc" />ADC
+				<input type="radio" name="lane" value="support" />Support
+			</p>
+		</form>
+		<h4 id="checkbox">Checkbox</h4>
+		<p><code>type="checkbox"</code></p>
+		<p>Has the same attributes as <code>type="radio"</code>. This is an inline element.</p>
+<pre>
+<code>
+&lt;form action="https://www.reddit.com"&gt;
+	&lt;p&gt;
+		What would you like on your burrito?
+		&lt;br /&gt;
+		&lt;input type="checkbox" name="burrito" value="meat" /&gt;Meat
+		&lt;input type="checkbox" name="burrito" value="moremeat" /&gt;More Meat
+		&lt;input type="checkbox" name="burrito" value="mostmeat" /&gt;Most Meat
+		&lt;input type="checkbox" name="burrito" value="allmeat" /&gt;All Meat
+	&lt;/p&gt;
+&lt;/form&gt;
+</code>
+</pre>
+		<form action="https://www.reddit.com">
+			<p>
+				What would you like on your burrito?
+				<br />
+				<input type="checkbox" name="burrito" value="meat" />Meat
+				<input type="checkbox" name="burrito" value="moremeat" />More Meat
+				<input type="checkbox" name="burrito" value="mostmeat" />Most Meat
+				<input type="checkbox" name="burrito" value="allmeat" />All Meat
+			</p>
+		</form>
+		<h4 id="file">File Input</h4>
+		<p><code>type="file"</code></p>
+		<p>This creates a box that looks like a text input followed by a Browse button. If you are allowing users to upload files, the <code>&lt;form&gt;</code> element must have a value of <code>"post"</code> for its <code>method</code> attribute. This is an empty element.</p>
+<pre>
+<code>
+&lt;form action="https://www.reddit.com" type="file"&gt;
+	&lt;p&gt;Upload your file!&lt;/p&gt;
+	&lt;input type="file" name="userfile" /&gt;
+&lt;/form&gt;
+</code>
+</pre>
+		<form action="https://www.reddit.com" type="file">
+			<p>Upload your file!</p>
+			<input type="file" name="userfile" />
+		</form>
+		<h4 id="hidden">Hidden Controls</h4>
+		<p><code>type="hidden"</code></p>
+		<p>If you use the <code>"hidden"</code> value, you can prevent forms from showing on a webpage. For example, an author might use a hidden field to indicate which page the user was on when they submitted the form.</p>
+		<h3 id="dropdown">Drop Down List Box</h3>
+		<p>A drop down list box can be created using the <code>&lt;select&gt;</code> element. It contains two or more <code>&lt;option&gt;</code> elements. It also contains a <code>name</code> attribute to be sent to the server.</p>
+		<p>The <code>&lt;option&gt;</code> element is used to specify the options the user can select from. The <code>value</code> attribute indicates the value that is sent to the server if that option is selected. For a default selected 
+		option, use the <code>selected</code> attribute, which has the only value <code>"selected"</code>. If the <code>selected</code> attribute is not specified, it defaults to the first <code>option</code>. This is a block element.</p>
+
+<pre>
+<code>
+&lt;form action="https://www.reddit.com"&gt;
+	&lt;p&gt;What was your first programming language?&lt;/p&gt;
+	&lt;select name="language"&gt;
+		&lt;option value="java"&gt;Java&lt;/option&gt;
+		&lt;option value="C"&gt;C&lt;/option&gt;
+		&lt;option value="C++"&gt;C++&lt;/option&gt;
+		&lt;option value="python" selected="selected"&gt;Python&lt;/option&gt;
+		&lt;option value="javascript"&gt;Javascript&lt;/option&gt;
+	&lt;/select&gt;
+&lt;/form&gt;
+</code>
+</pre>
+		<form action="https://www.reddit.com">
+			<p>What was your first programming language?</p>
+			<select name="language">
+				<option value="java">Java</option>
+				<option value="C">C</option>
+				<option value="C++">C++</option>
+				<option value="python" selected="selected">Python</option>
+				<option value="javascript">Javascript</option>
+			</select>
+		</form>
+		
+		<h4 id="multipleselect">Multiple Select Box</h4>
+		<p>
+			You can convert the aforementioned drop down list box into a multiple select box by adding the <code>multiple</code> attribute with a value of <code>"multiple"</code>. You can also turn it from a drop down box into a 
+			box that shows more than one option by using the <code>size</code> attribute to change how many options are shown at once.
+		</p>
+
+		<form action="https://www.reddit.com">
+			<p>What languages do you know? (Press and hold control (PC)/command (Mac) to select multiple options).</p>
+			<select name="knownlanguage" multiple="multiple" size="5">
+				<option value="java">Java</option>
+				<option value="C">C</option>
+				<option value="C++">C++</option>
+				<option value="python" selected="selected">Python</option>
+				<option value="javascript">Javascript</option>
+			</select>
+		</form>
+		<h3 id="buttons">Buttons</h3>
+		<h4 id="submitbutton">Submit Button</h4>
+		<p>type="submit"</p>
+		<p>We also use the <code>&lt;input&gt;</code> element to create the buttons. An <code>&lt;input&gt;</code> of <code>type="submit"</code> will send the form to the server. To manipulate the text on the button, use the <code>value</code> attribute.</p>
+<pre>
+<code>
+&lt;form action="https://www.reddit.com"&gt;
+	&lt;p&gt;Username: &lt;input type="text" name="username" maxlength="25" /&gt;&lt;/p&gt;
+	&lt;p&gt;Password: &lt;input type="password" name="password" maxlength="30" /&gt;&lt;/p&gt;
+	&lt;input type="submit" value="Submit" /&gt;
+&lt;/form&gt;
+</code>
+</pre>
+		<form action="https://www.reddit.com">
+			<p>Username: <input type="text" name="username" maxlength="25" /></p>
+			<p>Password: <input type="password" name="password" maxlength="30" /></p>
+			<input type="submit" value="Submit" />
+		</form>
+		<p>If you look at the URL after submitting the form, you will see that <i>/?username=text&password=text</i> is appended to the end of the URL.</p>
+		<h4 id="imagebutton">Image Button</h4>
+		<p>type="image"</p>
+		<p>If you want to use an image for the submit button, you set the <code>type</code> attribute to <code>"image"</code> and then you may use the <code>src</code>, <code>width</code>, <code>height</code>, and <code>alt</code> attributes just as you do with the <code>&lt;img&gt;</code> element.</p>
+<pre>
+<code>
+&lt;form action="https://www.reddit.com"&gt;
+	&lt;p&gt;Please leave your feedback here!&lt;/p&gt;
+	&lt;textarea name="feedback" maxlength="120"&gt;Enter your comments...&lt;/textarea&gt;
+	&lt;input type="image" src="assets/images/submit.png" width="100" height="34" alt="submit" /&gt;
+&lt;/form&gt;
+</code>
+</pre>
+		<form action="https://www.reddit.com">
+			<p>Please leave your feedback here!</p>
+			<textarea name="feedback" maxlength="120">Enter your comments...</textarea>
+			<input type="image" src="assets/images/submit.png" width="100" height="34" alt="submit" />
+		</form>
+		<h4 id="button">Button</h4>
+		<p>The <code>&lt;button&gt;</code> element was introduced to allow more control over how their buttons appear and allow other elements to appear inside the button. So you can combine text and images in between the tags.</p>
+<pre>
+<code>
+&lt;form action="https://www.reddit.com"&gt;
+	&lt;button&gt;&lt;p&gt;&lt;img src="assets/images/MemeableShane.png" alt="press shane" title="press me I dare you" width="40" height="60" /&gt;Press Shane!&lt;/p&gt;&lt;/button&gt;
+&lt;/form&gt;
+</code>
+</pre>
+		<form action="https://www.reddit.com">
+			<button><p><img src="assets/images/MemeableShane.png" alt="press shane" title="press me I dare you" width="40" height="60" />Press Shane!</p></button>
+		</form>
+		<h3 id="labellingforms">Labelling Form Controls</h3>
+		<p>When introducing form controls, the code was kept simple indicating the purpose of each one in text next to it. However, each form control should have its own <code>&lt;label&gt;</code> element as this makes this form accessible 
+		to vision-impaired users. You can use this in two ways:</p>
+		<ul>
+			<li>Wrap around both the text description and the form input.</li>
+			<li>Be kept separate from the form control and use the <code>for</code> attribute to indicate which form control it is a label for by referencing the <code>id</code> attribute.</li>
+		</ul>
+<pre>
+<code>
+&lt;label&gt;Account Number: &lt;input type="text" name="account" maxlength="25" /&gt;&lt;/label&gt;
+&lt;br /&gt;
+&lt;input id="checking" type="radio" name="accounttype" value="checking" /&gt;
+&lt;label for="checking"&gt;Checking&lt;/label&gt;
+&lt;input id="savings" type="radio" name="accounttype" value="savings" /&gt;
+&lt;label for="savings"&gt;Savings&lt;/label&gt;
+</code>
+</pre>
+		<label>Account Number: <input type="text" name="account" maxlength="25" /></label>
+		<br />
+		<input id="checking" type="radio" name="accounttype" value="checking" />
+		<label for="checking">Checking</label>
+		<input id="savings" type="radio" name="accounttype" value="savings" />
+		<label for="savings">Savings</label>
+		<p>You may notice that when you use a <code>&lt;label&gt;</code> element with a checkbox/radio button, users can click on either the form control or the label to select. The expanded clickable area makes the form easier to use.</p>
+		<h3 id="groupingforms">Grouping Form Elements</h3>
+		<p>You can group related form controls together inside the <code>&lt;fieldset&gt;</code> element. Most browsers will show the fieldset with a line around the edge to show how they are related. The <code>&lt;legend&gt;</code> element can come directly 
+		after the opening <code>&lt;fieldset&gt;</code> tag and contains a caption which helps identify the purpose of that group of form controls.</p>
+<pre>
+<code>
+&lt;fieldset&gt;
+	&lt;legend&gt;Login&lt;/legend&gt;
+	&lt;label&gt;Username:&lt;br /&gt;
+	&lt;input type="text" name="username" maxlength="25" /&gt;&lt;/label&gt;&lt;br /&gt;
+	&lt;label&gt;Password:&lt;br /&gt;
+	&lt;input type="password" name="password" maxlength="30" /&gt;&lt;/label&gt;
+&lt;/fieldset&gt;
+</code>
+</pre>
+		<fieldset>
+			<legend>Login</legend>
+			<label>Username:<br />
+			<input type="text" name="username" maxlength="25" /></label><br />
+			<label>Password:<br />
+			<input type="password" name="password" maxlength="30" /></label>
+		</fieldset>
+		<h3 id="formvalid">HTML5: Form Validation</h3>
+		<p>Some websites give users a message when a form control has not been filled in correctly, which is known as <dfn>form validation</dfn>. Traditionally, form validation is done via Javascript. But HTML5 introduces form validation. 
+		An example of form validation is including the <code>required</code> attribute, which is set to the value of <code>"required"</code>.</p>
+<pre>
+<code>
+&lt;fieldset&gt;
+	&lt;legend&gt;Login&lt;/legend&gt;
+	&lt;form action="https://www.reddit.com"&gt;
+		&lt;label&gt;Username:&lt;br /&gt;
+		&lt;input type="text" name="username" maxlength="25" required="required"/&gt;&lt;/label&gt;&lt;br /&gt;
+		&lt;label&gt;Password:&lt;br /&gt;
+		&lt;input type="password" name="password" maxlength="30" required="required"/&gt;&lt;/label&gt;&lt;br /&gt;&lt;br /&gt;
+		&lt;input type="submit" name="login" value="login" /&gt;
+	&lt;/form&gt;
+&lt;/fieldset&gt;
+</code>
+</pre>
+		<fieldset>
+			<legend>Login</legend>
+			<form action="https://www.reddit.com">
+				<label>Username:<br />
+				<input type="text" name="username" maxlength="25" required="required"/></label><br />
+				<label>Password:<br />
+				<input type="password" name="password" maxlength="30" required="required"/></label><br /><br />
+				<input type="submit" name="login" value="Login" />
+			</form>
+		</fieldset>
+		<h3 id="dateinput">HTML5: Date Input</h3>
+		<p>Use an <code>&lt;input&gt;</code> element and set the <code>type</code> to <code>"date"</code>. On older browsers that do not support HTML5, it will just treat the input as a single line text box.</p>
+<pre>
+<code>
+&lt;form action="https://www.reddit.com"&gt;
+	&lt;label&gt;Birth Date: &lt;input type="date" name="birth" /&gt;&lt;/label&gt;
+	&lt;input type="submit" name="datesubmit" value="Submit" /&gt;
+&lt;/form&gt;
+</code>
+</pre>
+		<form action="https://www.reddit.com">
+			<label>Birth Date: <input type="date" name="birth" /></label>
+			<input type="submit" name="datesubmit" value="Submit" />
+		</form>
+		<p>Looking at the link this brings you to, you'll see a <i>/?birth=YYYY-MM-DD</i> appended to the end of the link.</p>
+		<h3 id="emailurlinput">HTML5: Email & URL Input</h3>
+		<p>For email input, use the <code>&lt;input&gt;</code> element and set the <code>type</code> attribute to <code>"email"</code>. For URL input, set the attribute to <code>"url"</code>. Browsers that support HTML5 validation 
+		will check that the provided input is valid.</p>
+		<form action="https://www.reddit.com">
+			<label>Email Address: <br />
+				<input type="email" name="email" maxlength="40" required="required" /></label><br />
+			<label>Website: <br />
+				<input type="url" name="website" maxlength="40" required="required" /></label><br /><br />
+			<input type="submit" name="submit" value="Submit" />
+		</form>
+		<h3 id="searchinput">HTML5: Search Input</h3>
+		<p>To create a single line text box for search queries, use the <code>&lt;input&gt;</code> element and set the <code>type</code> attribute to <code>"search"</code>. On any text box, you can also use an attribute called 
+		<code>placeholder</code> whose value is text that will be shown in the textbox until the user clicks in that area.</p>
+		<form action="https://www.reddit.com">
+			<label>Search: <br />
+				<input type="search" name="searchbox" placeholder="Enter keyword" />
+			</label>
+			<input type="submit" name="searchsubmit" value="Submit" />
+		</form>
 	</body>
 </html>
