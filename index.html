@@ -2,6 +2,10 @@
 	<head>
 		<!--Contains meta-data about the page.-->
 		<title>Learning HTML</title>
+		<meta name="description" content="A webpage I created to store my notes on HTML and to practice using HTML elements." />
+		<meta name="keywords" content="HTML, notes, CSS, websites, Jon Duckett" />
+		<meta name="robots" content="nofollow" />
+		<meta name="author" content="DefineCoding" />
 	</head>
 	<body>
 		<h1>Learning HTML</h1>
@@ -110,6 +114,19 @@
 					</li>
 				</ol>
 			</li>
+			<li>
+				<a href="#extramarkup">Extra Markup</a>
+				<ol type="a">
+					<li><a href="#doctypes">DOCTYPE</a></li>
+					<li><a href="#comments">Comments</a></li>
+					<li><a href="#id">ID Attribute</a></li>
+					<li><a href="#class">Class Attribute</a></li>
+					<li><a href="#div">Grouping Text & Elements in a Block</a></li>
+					<li><a href="#span">Grouping Text & Elements Inline</a></li>
+					<li><a href="#iframes">IFrames</a></li>
+					<li><a href="#meta">Information About Your Pages</a></li>
+				</ol>
+			</li>
 		</ol>
 		<p>
 			Line break is done using <code>&lt;br /&gt;</code>.
@@ -156,7 +173,7 @@
 		</p>
 		<h3 id="cites">Citations and Definitions</h3>
 		<p>
-			According to <cite>HTML&CS;S Design and Build Websites</cite>, when citing, you can use <code>&lt;cite&gt;</code><code>&lt;/cite&gt;</code> to cite work. In HTML5, cite shouldn't be used to cite a person's name, but people usually do anyway.
+			According to <cite>HTML&CSS Design and Build Websites</cite>, when citing, you can use <code>&lt;cite&gt;</code><code>&lt;/cite&gt;</code> to cite work. In HTML5, cite shouldn't be used to cite a person's name, but people usually do anyway.
 			Browsers will render the content of a cite in italics.
 			<br /><br />
 			The first time you explain some new terminology, you can use the <dfn>dfn</dfn> tag to indicate a defining instance is occuring by using <code>&lt;dfn&gt;</code><code>&lt;/dfn&gt;</code>.
@@ -347,7 +364,7 @@ int main(void) {
 		<img src="assets/images/MemeableShane.png" alt="A gloriously smug picture of Shane O'Neill smirking." title="How u doin'?" />
 		<h3 id="heightwidthimages">Height and Width of Images</h3>
 		<p>
-			There are two other attributes that can be used to specify the size: <code>height</code> and <code>width</code>. Images take longer to load than the rest of the code, so it's a good idea to specify the size so taht the browser
+			There are two other attributes that can be used to specify the size: <code>height</code> and <code>width</code>. Images take longer to load than the rest of the code, so it's a good idea to specify the size so that the browser
 			can render the rest of the text while leaving the right amount of space for the image that is still loading. The size of images, however, is increasingly being specified using CSS rather than HTML.
 		</p>
 		<code>&lt;img src="assets/images/MemeableShane.png" alt="Small gloriously smug picture of Shane O'Neill smirking." title="How u doin'?" height="180" width="120" /&gt;</code>	
@@ -885,7 +902,20 @@ int main(void) {
 			You can convert the aforementioned drop down list box into a multiple select box by adding the <code>multiple</code> attribute with a value of <code>"multiple"</code>. You can also turn it from a drop down box into a 
 			box that shows more than one option by using the <code>size</code> attribute to change how many options are shown at once.
 		</p>
-
+<pre>
+<code>
+&lt;form action="https://www.reddit.com"&gt;
+	&lt;p&gt;What languages do you know? (Press and hold control (PC)/command (Mac) to select multiple options).&lt;/p&gt;
+	&lt;select name="knownlanguage" multiple="multiple" size="5"&gt;
+		&lt;option value="java"&gt;Java&lt;/option&gt;
+		&lt;option value="C"&gt;C&lt;/option&gt;
+		&lt;option value="C++"&gt;C++&lt;/option&gt;
+		&lt;option value="python" selected="selected"&gt;Python&lt;/option&gt;
+		&lt;option value="javascript"&gt;Javascript&lt;/option&gt;
+	&lt;/select&gt;
+&lt;/form&gt;
+</code>
+</pre>
 		<form action="https://www.reddit.com">
 			<p>What languages do you know? (Press and hold control (PC)/command (Mac) to select multiple options).</p>
 			<select name="knownlanguage" multiple="multiple" size="5">
@@ -1034,6 +1064,17 @@ int main(void) {
 		<h3 id="emailurlinput">HTML5: Email & URL Input</h3>
 		<p>For email input, use the <code>&lt;input&gt;</code> element and set the <code>type</code> attribute to <code>"email"</code>. For URL input, set the attribute to <code>"url"</code>. Browsers that support HTML5 validation 
 		will check that the provided input is valid.</p>
+<pre>
+<code>
+&lt;form action="https://www.reddit.com"&gt;
+	&lt;label&gt;Email Address: &lt;br /&gt;
+		&lt;input type="email" name="email" maxlength="40" required="required" /&gt;&lt;/label&gt;&lt;br /&gt;
+	&lt;label&gt;Website: &lt;br /&gt;
+		&lt;input type="url" name="website" maxlength="40" required="required" /&gt;&lt;/label&gt;&lt;br /&gt;&lt;br /&gt;
+	&lt;input type="submit" name="submit" value="Submit" /&gt;
+&lt;/form&gt;
+</code>
+</pre>
 		<form action="https://www.reddit.com">
 			<label>Email Address: <br />
 				<input type="email" name="email" maxlength="40" required="required" /></label><br />
@@ -1044,11 +1085,165 @@ int main(void) {
 		<h3 id="searchinput">HTML5: Search Input</h3>
 		<p>To create a single line text box for search queries, use the <code>&lt;input&gt;</code> element and set the <code>type</code> attribute to <code>"search"</code>. On any text box, you can also use an attribute called 
 		<code>placeholder</code> whose value is text that will be shown in the textbox until the user clicks in that area.</p>
+<pre>
+<code>
+&lt;form action="https://www.reddit.com"&gt;
+	&lt;label&gt;Search: &lt;br /&gt;
+		&lt;input type="search" name="searchbox" placeholder="Enter keyword" /&gt;
+	&lt;/label&gt;
+	&lt;input type="submit" name="searchsubmit" value="Submit" /&gt;
+&lt;/form&gt;
+</code>
+</pre>
 		<form action="https://www.reddit.com">
 			<label>Search: <br />
 				<input type="search" name="searchbox" placeholder="Enter keyword" />
 			</label>
 			<input type="submit" name="searchsubmit" value="Submit" />
 		</form>
+		<hr />
+		<h2 id="extramarkup">Extra Markup</h2>
+		<h3 id="doctypes">Doctypes</h3>
+		<p>
+			There have been several version of HTML, so webpages should begin with a DOCTYPE declaration to tell the browser which version of HTML is being used. Here are the following common version used:
+		</p>
+		<ul>
+			<li>
+				<b>HTML5</b>
+				<br />
+				<code>&lt;!DOCTYPE html&gt;</code>
+			</li>
+			<li>
+				<b>HTML4</b>
+				<br />
+				<code>&lt;!DOCTYPE html PUBLIC
+					<br />
+					"-//W3C//DTD HTML 4.01 Transitional //EN"
+					<br />
+					"http://www.w3.org/TR/html4/loose.dtd"&gt;
+				</code>
+			</li>
+			<li>
+				<b>Transitional XHTML 1.0</b>
+				<br />
+				<code>&lt;!DOCTYPE html PUBLIC
+					<br />
+					"`//W3C//DTD XHTML 1.0 Transitional//EN"
+					<br />
+					"http://www.w3.org/TR/xhtml1/DTD/
+					<br />
+					xhtml1-transitional.dtd"&gt;
+				</code>
+			</li>
+			<li>
+				<b>Strict XHTML 1.0</b>
+				<br />
+				<code>&lt;!DOCTYPE html PUBLIC
+					<br />
+					"`//W3C//DTD XHTML 1.0 Strict//EN"
+					<br />
+					"http://www.w3.org/TR/xhtml1/DTD/
+					<br />
+					xhtml1-strict.dtd"&gt;
+				</code>
+			</li>
+			<li>
+				<b>XML Declaration</b>
+				<br />
+				<code>&lt;?xml version="1.0" ?&gt;</code>
+			</li>
+		</ul>
+		<h3 id="comments">Comments in HTML</h3>
+		<!-- For example, you can't see this so ha! -->
+		<p>To add a comment in html, insert the comment between <code>&lt;!-- --&gt;</code> like so: <code>&lt;!-- This is my comment! --&gt;</code>.</p>
+		<h3 id="id">ID Attribute</h3>
+		<p>
+			Every HTML element can carry the <code>id</code> attribute. It uniquely identifies the element from other elements on the page. The value should start with a letter of an underscore, and it's crucial that no two elements on the same page share the same 
+			<code>id</code> attribute. Giving an element it's own unique <code>id</code> allows CSS style it differently from any other instance of the same element on the page. In Javascript, <code>id</code> attributes allow the script to work with that specific element. 
+			An <code>id</code> attribute is known as a <dfn>global attribute</dfn> because it can be used with any element.
+		</p>
+		<h3 id="class">Class Attribute</h3>
+		<p>
+			Another global attribute is the <code>class</code> attribute. It allows you to identify several elements of a page as different from the other elements of the page, instead of only allowing you to identify one at a time. The <code>class</code> attribute on any element 
+			can share the same value as another element, and they will belong to the same class. Using these attributes do not affect the presentation of the element unless there is CSS code that indicates it should be displayed differently.
+		</p>
+		<h3 id="block">Block Elements</h3>
+		<p>
+			<dfn>Block elements</dfn> will always appear to start on a new line in the browser. Examples of block elements include <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;ul&gt;</code>, and <code>&lt;li&gt;</code>.
+		</p>
+		<h3 id="inline">Inline Elements</h3>
+		<p>
+			Unlike block elements, <dfn>inline elements</dfn> will appear to to continue on the same line as their neighboring elements. These include <code>&lt;a&gt;</code>, <code>&lt;b&gt;</code>, <code>&lt;em&gt;</code>, and <code>&lt;img&gt;</code>.
+		</p>
+		<h3 id="div">Grouping Text & Elements in a Block</h3>
+		<p>The <code>&lt;div&gt;</code> element allows you to group a set of elements together in a one-level block. In a browser, the contents of a <code>&lt;div&gt; elements will start on a new line. Typically, these are paired with the <code>id</code> and <code>class</code> attributes so that CSS can style the block.</coe></code></p>
+		<h3 id="span">Grouping Text & Elements Inline</h3>
+		<p>The <code>&lt;span&gt;</code> element acts like the <code>&lt;div&gt;</code> element, except it groups them together inline. It is typically used when a section of text needs to be differentiated, but there is no other suitable element to differentiate it. Alternatively, it is used to store a certain number of inline elements.</p>
+		<h3 id="iframes">IFrames</h3>
+		<p>
+			An <dfn>iframe</dfn> is like a little window that has been cut into your page, and in that window you can see another page. It's an abbreviation of "inline frame". A common use of iframes is to embed a Google Map onto the page. It is created using the <code>&lt;iframe&gt;</code> element. There are three attributes that need to be 
+			defined, <code>src</code>, <code>height</code>, and <code>width</code>. <code>src</code> indicates the URL of the page that should be shown. The <code>height</code> and <code>width</code> attributes indicate the size of the "window" in pixels.
+		</p>
+<pre>
+<code>
+&lt;iframe width="640" height="480" src="A REALLY LONG GOOGLE EMBED LINK THAT IS TOO LONG TO SHOW HERE"&gt;&lt;/iframe&gt;
+</code>
+</pre>
+		<iframe width="640" height="480" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12089.918986334653!2d-73.98549824468824!3d40.751471909070666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1573782237602!5m2!1sen!2sus"></iframe>
+		<p>
+			There's also the <code>scrolling</code> attribute, but that is not supported in HTML5, only in prior versions. You can set the value to <code>"yes"</code> or <code>"no"</code> and it will show/hide scrollbars. Another deprecated attribute is <code>frameborder</code>, 
+			which takes a value <code>"1"</code> or <code>"0"</code> and indicates if a border should be shown/should not be shown. However, there is a new attribute only in HTML5, <code>seamless</code>, which can be added to an iframe if scrollbars should not be shown. It, like the other attributes, 
+			does not require a value, but good practice states that you should give it a value of <code>"seamless"</code>.
+		</p>
+		<h3 id="meta">Information About Your Pages</h3>
+		<p>
+			The <code>&lt;meta&gt;</code> element lives inside the <code>&lt;head&gt;</code> element described earlier. It contains information about the webpage itself. It's not visible to the user, but it's incredibly important as it tells search engines about your page. The <code>&lt;meta&gt;</code> element is an empty element, so does not have a closing tag. 
+			The information it stores is found in the attributes. The most common attributes are the <code>name</code> and <code>content</code> attributes, which tend to be used together. The <code>name</code> attribute indicates the property you are editing, and the <code>content</code> attribute indicates the value you are setting the property to. Here are the following 
+			possible name values: 
+		</p>
+		<ul>
+			<li>
+				<code>description</code>
+				<br />
+				<p>It contains a description of the page. The description is typically used by search engines to understand what the page is about, and often times, the description is displayed in the search engine results.</p>
+			</li>
+			<li>
+				<code>keywords</code>
+				<br />
+				<p>This contains a list of comma-separated words that a user might search on to find the page. However, this is no longer really used due to changes in how search engines index sites.</p>
+			</li>
+			<li>
+				<code>robots</code>
+				<br />
+				<p>This indicates whether the search engines should add this page to the search results or not. A value of <code>noindex</code> can be used if it should not be added. A value of <code>nofollow</code> should be used if they should add the page in their results, but not any pages that it links to.</p>
+			</li>
+			<li>
+				<code>author</code>
+				<br />
+				<p>Defines the author of the page.</p>
+			</li>
+			<li>
+				<code>pragma</code>
+				<br />
+				<p>This prevents the browser from caching the page (storing it locally to save time downloading it on subsequent visits).</p>
+			</li>
+			<li>
+				<code>expires</code>
+				<br />
+				<p>Since browsers often cache the content of the page, the <code>expires</code> option can be used to indicate when the page should expire and no longer be cached. It is specified in a specific format.</p>
+			</li>
+		</ul>
+<pre>
+<code>
+&lt;head&gt;
+	&lt;!--Contains meta-data about the page.--&gt;
+	&lt;title&gt;Learning HTML&lt;/title&gt;
+	&lt;meta name="description" content="A webpage I created to store my notes on HTML and to practice using HTML elements." /&gt;
+	&lt;meta name="keywords" content="HTML, notes, CSS, websites, Jon Duckett" /&gt;
+	&lt;meta name="robots" content="nofollow" /&gt;
+	&lt;meta name="author" content="DefineCoding" /&gt;
+&lt;/head&gt;
+</code>
+</pre>
 	</body>
 </html>
