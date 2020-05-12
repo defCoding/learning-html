@@ -1,987 +1,1263 @@
 <html>
-	<head>
-		<!--Contains meta-data about the page.-->
-		<title>Learning HTML</title>
-		<meta name="description" content="A webpage I created to store my notes on HTML and to practice using HTML elements." />
-		<meta name="keywords" content="HTML, notes, CSS, websites, Jon Duckett" />
-		<meta name="robots" content="nofollow" />
-		<meta name="author" content="DefineCoding" />
-	</head>
-	<body>
-		<h1>Learning HTML</h1>
-		<p id="tableofcontents"><u>Table of Contents</u></p>
-		<ol>
-			<li><a href="#tags">Types of Tags</a>
-				<ol type="a">
-					<li><a href="#textemph">Text Emphasis</a></li>
-					<li><a href="#quotations">Quotations</a></li>
-					<li><a href="#abbrev">Abbreviations</a></li>
-					<li><a href="#cites">Citations and Definitions</a></li>
-					<li><a href="#author">Author Details</a></li>
-					<li><a href="#contentchanges">Changes to Content</a></li>
-					<li><a href="#monospace">Monospace Text and Code</a></li>
-				</ol>
-			</li>
-			<li><a href="#lists">Lists</a>
-				<ol type="a">
-					<li><a href="#olists">Ordered Lists</a></li>
-					<li><a href="#ulists">Unordered Lists</a></li>
-					<li><a href="#dfnlists">Definition Lists</a></li>
-					<li><a href="#nestlists">Nested Lists</a></li>
-				</ol>
-			</li>
-			<li><a href="#links">Links</a>
-				<ol type="a">
-					<li><a href="#linktypes">Types of Links</a></li>
-					<li><a href="#writelinks">Writing Links</a>
-						<ol>
-							<li><a href="#linkothersites">Links to Other Sites</a></li>
-							<li><a href="#linkotherpages">Linking to Other Pages on the Same Site</a></li>
-							<li><a href="#emaillinks">Email Links</a></li>
-							<li><a href="#newwindowlinks">Opening Links in a New Window</a></li>
-							<li><a href="#linkpartsamepage">Linking to a Specific Part of the Same Page</a></li>
-							<li><a href="#linkpartotherpage">Linking to a Specific Part of Another Page</a></li>
-						</ol>
-					</li>
-				</ol>
-			</li>
-			<li>
-				<a href="#images">Images</a>
-				<ol type="a">
-					<li><a href="#addimages">Adding Images</a></li>
-					<li><a href="#heightwidthimages">Height and Width of Images</a></li>
-					<li><a href="#wheretoplaceimages">Where to Place Images</a></li>
-					<li><a href="#imgrules">Three Rules for Creating Images</a></li>
-					<li><a href="#figures">HTML5: Figure and Figure Caption</a></li>
-				</ol>
-			</li>
-			<li>
-				<a href="#tables">Tables</a>
-				<ol type="a">
-					<li><a href="#basictables">Basic Table Structure</a></li>
-					<li><a href="#tableheadings">Table Headings</a></li>
-					<li><a href="#spanningcols">Spanning Columns</a></li>
-					<li><a href="#spanningrows">Spanning Rows</a></li>
-					<li><a href="#longtables">Long Tables</a></li>
-				</ol>
-			</li>
-			<li>
-				<a href="#forms">Forms</a>
-				<ol type="a">
-					<li>
-						<a href="#input">Input</a>
-						<ol>
-							<li><a href="#textinput">Text Input</a></li>
-							<li><a href="#passwordinput">Password Input</a></li>
-							<li><a href="#textarea">Text Area</a></li>
-							<li><a href="#radiobutton">Radio Button</a></li>
-							<li><a href="#checkbox">Checkbox</a></li>
-							<li><a href="#file">File Input</a></li>
-							<li><a href="#hidden">Hidden Controls</a></li>
-						</ol>
-					</li>
-					<li>
-						<a href="#dropdown">Drop Down List Box</a>
-						<ol>
-							<li><a href="#multipleselect">Multiple Select Box</a></li>
-						</ol>
-					</li>
-					<li>
-						<a href="#buttons">Buttons</a>
-						<ol>
-							<li><a href="#submitbutton">Submit Button</a></li>
-							<li><a href="#imagebutton">Image Button</a></li>
-							<li><a href="#button">Button</a></li>
-						</ol>
-					</li>
-					<li>
-						<a href="#labellingforms">Labelling Forms Controls</a>
-					</li>
-					<li>
-						<a href="#groupingforms">Grouping Form Elements</a>
-					</li>
-					<li>
-						<a href="#formvalid">HTML5: Form Validation</a>
-					</li>
-					<li>
-						<a href="#dateinput">HTML5: Date Input</a>
-					</li>
-					<li>
-						<a href="#emailurlinput">HTML5: Email & Url Input</a>
-					</li>
-					<li>
-						<a href="#searchinput">HTML5: Search Input</a>
-					</li>
-				</ol>
-			</li>
-			<li>
-				<a href="#extramarkup">Extra Markup</a>
-				<ol type="a">
-					<li><a href="#doctypes">DOCTYPE</a></li>
-					<li><a href="#comments">Comments</a></li>
-					<li><a href="#id">ID Attribute</a></li>
-					<li><a href="#class">Class Attribute</a></li>
-					<li><a href="#div">Grouping Text & Elements in a Block</a></li>
-					<li><a href="#span">Grouping Text & Elements Inline</a></li>
-					<li><a href="#iframes">IFrames</a></li>
-					<li><a href="#meta">Information About Your Pages</a></li>
-				</ol>
-			</li>
-		</ol>
-		<p>
-			Line break is done using <code>&lt;br /&gt;</code>.
-			<br />
-			A horizontal line is achieved using <code>&lt;hr /&gt;</code>.
-			<br /> These two tags are known as <b>empty elements</b> because they do not have any words in between the opening and closing tag. Most empty elements only have an opening tag.
-			The space before the / is not needed, but it's added to show that is an empty tag and is a good habit to get into.
-		</p>
-		<hr />
-		<h2 id="tags">Types of Tags</h2>
-		<h3 id="textemph">Text Emphasis</h3>
-		<p>
-			<b>Bold</b> is done using <code>&lt;b&gt;</code><code>&lt;/b&gt;</code>.</b>
-			<br />
-			<i>Italics</i> is done using <code>&lt;i&gt;</code><code>&lt;/i&gt;</code>.
-			<br />
-			<u>Underline</u> is done using <code>&lt;u&gt;</code><code>&lt;/u&gt;</code>.
-			<br />
-			Super<sup>script</sup> is done using <code>&lt;sup&gt;</code><code>&lt;/sup&gt;</code>.
-			<br />
-			Sub<sub>script</sub> is done using <code>&lt;sub&gt;</code><code>&lt;/sub&gt;</code>.</sub>
-			<br /><br />
-			<strong>Strong</strong> is done using <code>&lt;strong&gt;</code><code>&lt;/strong&gt;</code>. 
-			It visually looks the same as <code>bold</code>, but it's used to indicate the content is important.
-			Some readers for the visually impaired will differentiate between <code>strong</code> and <code>bold</code>, so keep that in mind.
-			<br />
-			<em>Emphasis</em> is done using <code>&lt;em&gt;</code><code>&lt;/em&gt;</code>. As with the connection between <code>strong</code> and <code>bold</code>, <code>em</code> is visually identical to italics.
-			However, it carries the meaning that the emphasis will subtly change the meaning of a sentence.
-		</p>
-		<h3 id="quotations">Quotations</h3>
-			<blockquote>
-				<p>Blockquotes can be done using <code>&lt;blockquote&gt;</code><code>&lt;/blockquote&gt;</code>. It's used for longer quotes that take up an entire paragraph.
-				Typically, you use <code>&lt;p&gt;</code><code>&lt;/p&gt;</code> inside of it. Browsers tend to indent these blockquotes, but won't always do so. Rely on CSS for indentation.</p>
-			</blockquote>
-		<p>
-			For <q cite="https://www.youtube.com">shorter quotes</q> that sit inside a paragraph, use <code>&lt;q&gt;</code><code>&lt;/q&gt;</code>.
-			<br />
-			Both blockquotes and shorter quotes have a <code>cite</code> attribute with a URL value that will have more information.
-			The <code>cite</code> attribute doesn't have much presentational value, but is there to add semantic information to the quote.
-		</p>
-		<h3 id="abbrev">Abbreviations</h3>
-		<p>
-			For an <abbr title="abbreviation">abbr</abbr>, you can add the full term by using <code>&lt;abbr title=""&gt;</code><code>&lt;/abbr&gt;</code>.
-		</p>
-		<h3 id="cites">Citations and Definitions</h3>
-		<p>
-			According to <cite>HTML&CSS Design and Build Websites</cite>, when citing, you can use <code>&lt;cite&gt;</code><code>&lt;/cite&gt;</code> to cite work. In HTML5, cite shouldn't be used to cite a person's name, but people usually do anyway.
-			Browsers will render the content of a cite in italics.
-			<br /><br />
-			The first time you explain some new terminology, you can use the <dfn>dfn</dfn> tag to indicate a defining instance is occuring by using <code>&lt;dfn&gt;</code><code>&lt;/dfn&gt;</code>.
-			Some browsers show the content in italics, but Safari and Chrome do not. The dfn tag is used to let browsers and web crawlers know that nearby text contains a definition.
-		</p>
-		<h3 id="author">Author Details</h3>
-		<p>
-			The address element is fairly niche: it contains the contact details for the author of the page. It can be done using <code>&lt;address&gt;</code><code>&lt;/address&gt;</code>.
-			<address>
-				<p><a href="thisisnotarealemail@notarealemailhoster.com">thisisnotarealemail@notarealemailhoster.com</a></p>
-				<p>12345 NotARealStreet, Fake Town, NonExistent State, 11111.</p>
-			</address>
-		</p>
-		<h3 id="contentchanges">Changes to Content</h3>
-		<p>
-			The <del>iensrt</del> <ins>ins</ins> element shows where something has been inserted, and the del element shows where something has been deleted.
-			Insertion uses <code>&lt;ins&gt;</code><code>&lt;/ins&gt;</code> and deletion using <code>&lt;del&gt;</code><code>&lt;/del&gt;</code>. Typically insertion is underlined, and deletion has a line through it.
-		</p>
-		<p>The s, or strikethrough, tag can be used to indicate something that is no longer accurate or relevant. It shows as a line through the center, like deletion. Used by doing <code>&lt;s&gt;</code><code>&lt;/s&gt;</code>.
-			The difference between s and del is semantical.
-			<br />
-			<s>I don't know HTML.</s>
-			<br />
-			I know some HTML.
-		</p>
-		<h3 id="monospace">Monospace Text and Code</h3>
-		<p>The <tt><code>&lt;tt&gt;</code></tt> element can be used to specify teletype text. However, this tag is now obselete, so should not be used as it could be removed at any time.</p>
-		<p>Alternatively, the <code><code>&lt;code&gt;</code></code> tag can be used to specify computer code, and anything in between the tags (will still have to use special characters for some characters like &am;p) will be treated as code.
-			It is often paired with the <code><code>&lt;pre&gt;</code></code> element (preformatted) to preserve line spaces. As with <code><code>&lt;ol&gt;</code></code>, <code><code>&lt;pre&gt;</code></code> should not be used in <code><code>&lt;p&gt;</code></code>.</p>
-		<p>And while not monospaced, the <code>&lt;var&gt;</code> element is used to indicate variables, and is often presented in italics. <var>y</var> = <var>mx</var> + <var>b</var>.</p>
-
-<pre><code>
+  <head>
+    <!--Contains meta-data about the page.-->
+    <title>Learning HTML</title>
+    <meta name="description" content="A webpage I created to store my notes on HTML and to practice using HTML elements." />
+    <meta name="keywords" content="HTML, notes, CSS, websites, Jon Duckett" />
+    <meta name="robots" content="nofollow" />
+    <meta name="author" content="DefineCoding" />
+  </head>
+  <body>
+    <h1>Learning HTML</h1>
+    <p id="tableofcontents">
+    <u>Table of Contents</u>
+    </p>
+    <ol>
+      <li>
+        <a href="#tags">Types of Tags</a>
+        <ol type="a">
+          <li>
+            <a href="#textemph">Text Emphasis</a>
+          </li>
+          <li>
+            <a href="#quotations">Quotations</a>
+          </li>
+          <li>
+            <a href="#abbrev">Abbreviations</a>
+          </li>
+          <li>
+            <a href="#cites">Citations and Definitions</a>
+          </li>
+          <li>
+            <a href="#author">Author Details</a>
+          </li>
+          <li>
+            <a href="#contentchanges">Changes to Content</a>
+          </li>
+          <li>
+            <a href="#monospace">Monospace Text and Code</a>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <a href="#lists">Lists</a>
+        <ol type="a">
+          <li>
+            <a href="#olists">Ordered Lists</a>
+          </li>
+          <li>
+            <a href="#ulists">Unordered Lists</a>
+          </li>
+          <li>
+            <a href="#dfnlists">Definition Lists</a>
+          </li>
+          <li>
+            <a href="#nestlists">Nested Lists</a>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <a href="#links">Links</a>
+        <ol type="a">
+          <li>
+            <a href="#linktypes">Types of Links</a>
+          </li>
+          <li>
+            <a href="#writelinks">Writing Links</a>
+            <ol>
+              <li>
+                <a href="#linkothersites">Links to Other Sites</a>
+              </li>
+              <li>
+                <a href="#linkotherpages">Linking to Other Pages on the Same Site</a>
+              </li>
+              <li>
+                <a href="#emaillinks">Email Links</a>
+              </li>
+              <li>
+                <a href="#newwindowlinks">Opening Links in a New Window</a>
+              </li>
+              <li>
+                <a href="#linkpartsamepage">Linking to a Specific Part of the Same Page</a>
+              </li>
+              <li>
+                <a href="#linkpartotherpage">Linking to a Specific Part of Another Page</a>
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <a href="#images">Images</a>
+        <ol type="a">
+          <li>
+            <a href="#addimages">Adding Images</a>
+          </li>
+          <li>
+            <a href="#heightwidthimages">Height and Width of Images</a>
+          </li>
+          <li>
+            <a href="#wheretoplaceimages">Where to Place Images</a>
+          </li>
+          <li>
+            <a href="#imgrules">Three Rules for Creating Images</a>
+          </li>
+          <li>
+            <a href="#figures">HTML5: Figure and Figure Caption</a>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <a href="#tables">Tables</a>
+        <ol type="a">
+          <li>
+            <a href="#basictables">Basic Table Structure</a>
+          </li>
+          <li>
+            <a href="#tableheadings">Table Headings</a>
+          </li>
+          <li>
+            <a href="#spanningcols">Spanning Columns</a>
+          </li>
+          <li>
+            <a href="#spanningrows">Spanning Rows</a>
+          </li>
+          <li>
+            <a href="#longtables">Long Tables</a>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <a href="#forms">Forms</a>
+        <ol type="a">
+          <li>
+            <a href="#input">Input</a>
+            <ol>
+              <li>
+                <a href="#textinput">Text Input</a>
+              </li>
+              <li>
+                <a href="#passwordinput">Password Input</a>
+              </li>
+              <li>
+                <a href="#textarea">Text Area</a>
+              </li>
+              <li>
+                <a href="#radiobutton">Radio Button</a>
+              </li>
+              <li>
+                <a href="#checkbox">Checkbox</a>
+              </li>
+              <li>
+                <a href="#file">File Input</a>
+              </li>
+              <li>
+                <a href="#hidden">Hidden Controls</a>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <a href="#dropdown">Drop Down List Box</a>
+            <ol>
+              <li>
+                <a href="#multipleselect">Multiple Select Box</a>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <a href="#buttons">Buttons</a>
+            <ol>
+              <li>
+                <a href="#submitbutton">Submit Button</a>
+              </li>
+              <li>
+                <a href="#imagebutton">Image Button</a>
+              </li>
+              <li>
+                <a href="#button">Button</a>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <a href="#labellingforms">Labelling Forms Controls</a>
+          </li>
+          <li>
+            <a href="#groupingforms">Grouping Form Elements</a>
+          </li>
+          <li>
+            <a href="#formvalid">HTML5: Form Validation</a>
+          </li>
+          <li>
+            <a href="#dateinput">HTML5: Date Input</a>
+          </li>
+          <li>
+            <a href="#emailurlinput">HTML5: Email &amp; Url Input</a>
+          </li>
+          <li>
+            <a href="#searchinput">HTML5: Search Input</a>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <a href="#extramarkup">Extra Markup</a>
+        <ol type="a">
+          <li>
+            <a href="#doctypes">DOCTYPE</a>
+          </li>
+          <li>
+            <a href="#comments">Comments</a>
+          </li>
+          <li>
+            <a href="#id">ID Attribute</a>
+          </li>
+          <li>
+            <a href="#class">Class Attribute</a>
+          </li>
+          <li>
+            <a href="#div">Grouping Text &amp; Elements in a Block</a>
+          </li>
+          <li>
+            <a href="#span">Grouping Text &amp; Elements Inline</a>
+          </li>
+          <li>
+            <a href="#iframes">IFrames</a>
+          </li>
+          <li>
+            <a href="#meta">Information About Your Pages</a>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <a href="#flashvideo">Flash, Video, &amp; Audio</a>
+        <ol type="a">
+          <li>
+            <a href="#howflashworks">How Flash Works</a>
+          </li>
+          <li>
+            <a href="#addingflash">Adding a Flash Movie to your Web Page</a>
+          </li>
+          <li>
+            <a href="#videoformats">Understanding Video Formats and Players</a>
+          </li>
+          <li>
+            <a href="#hostedvideo">Using Hosted Video Services</a>
+          </li>
+          <li>
+            <a href="#addingflashvideo">Adding a Flash Video to your Page</a>
+          </li>
+          <li>
+            <a href="#addinghtml5video">Adding a HTML5 Video to your Page</a>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <p>Line break is done using 
+    <code>&lt;br /&gt;</code>. 
+    <br />A horizontal line is achieved using 
+    <code>&lt;hr /&gt;</code>. 
+    <br />These two tags are known as 
+    <b>empty elements</b>because they do not have any words in between the opening and closing tag. Most empty elements only have an opening tag. The space before the / is not needed, but it's added to show that is an empty tag and is a good habit to get into.</p>
+    <hr />
+    <h2 id="tags">Types of Tags</h2>
+    <h3 id="textemph">Text Emphasis</h3>
+    <p>
+    <b>Bold</b>is done using 
+    <code>&lt;b&gt;</code>
+    <code>&lt;/b&gt;</code>. 
+    <br />
+    <i>Italics</i>is done using 
+    <code>&lt;i&gt;</code>
+    <code>&lt;/i&gt;</code>. 
+    <br />
+    <u>Underline</u>is done using 
+    <code>&lt;u&gt;</code>
+    <code>&lt;/u&gt;</code>. 
+    <br />Super
+    <sup>script</sup>is done using 
+    <code>&lt;sup&gt;</code>
+    <code>&lt;/sup&gt;</code>. 
+    <br />Sub
+    <sub>script</sub>is done using 
+    <code>&lt;sub&gt;</code>
+    <code>&lt;/sub&gt;</code>. 
+    <br />
+    <br />
+    <strong>Strong</strong>is done using 
+    <code>&lt;strong&gt;</code>
+    <code>&lt;/strong&gt;</code>. It visually looks the same as 
+    <code>bold</code>, but it's used to indicate the content is important. Some readers for the visually impaired will differentiate between 
+    <code>strong</code>and 
+    <code>bold</code>, so keep that in mind. 
+    <br />
+    <em>Emphasis</em>is done using 
+    <code>&lt;em&gt;</code>
+    <code>&lt;/em&gt;</code>. As with the connection between 
+    <code>strong</code>and 
+    <code>bold</code>, 
+    <code>em</code>is visually identical to italics. However, it carries the meaning that the emphasis will subtly change the meaning of a sentence.</p>
+    <h3 id="quotations">Quotations</h3>
+    <blockquote>
+      <p>Blockquotes can be done using 
+      <code>&lt;blockquote&gt;</code>
+      <code>&lt;/blockquote&gt;</code>. It's used for longer quotes that take up an entire paragraph. Typically, you use 
+      <code>&lt;p&gt;</code>
+      <code>&lt;/p&gt;</code>inside of it. Browsers tend to indent these blockquotes, but won't always do so. Rely on CSS for indentation.</p>
+    </blockquote>
+    <p>For 
+    <q cite="https://www.youtube.com">shorter quotes</q>that sit inside a paragraph, use 
+    <code>&lt;q&gt;</code>
+    <code>&lt;/q&gt;</code>. 
+    <br />Both blockquotes and shorter quotes have a 
+    <code>cite</code>attribute with a URL value that will have more information. The 
+    <code>cite</code>attribute doesn't have much presentational value, but is there to add semantic information to the quote.</p>
+    <h3 id="abbrev">Abbreviations</h3>
+    <p>For an 
+    <abbr title="abbreviation">abbr</abbr>, you can add the full term by using 
+    <code>&lt;abbr title=""&gt;</code>
+    <code>&lt;/abbr&gt;</code>.</p>
+    <h3 id="cites">Citations and Definitions</h3>
+    <p>According to 
+    <cite>HTML&amp;CSS Design and Build Websites</cite>, when citing, you can use 
+    <code>&lt;cite&gt;</code>
+    <code>&lt;/cite&gt;</code>to cite work. In HTML5, cite shouldn't be used to cite a person's name, but people usually do anyway. Browsers will render the content of a cite in italics. 
+    <br />
+    <br />The first time you explain some new terminology, you can use the 
+    <dfn>dfn</dfn>tag to indicate a defining instance is occuring by using 
+    <code>&lt;dfn&gt;</code>
+    <code>&lt;/dfn&gt;</code>. Some browsers show the content in italics, but Safari and Chrome do not. The dfn tag is used to let browsers and web crawlers know that nearby text contains a definition.</p>
+    <h3 id="author">Author Details</h3>
+    <p>The address element is fairly niche: it contains the contact details for the author of the page. It can be done using 
+    <code>&lt;address&gt;</code>
+    <code>&lt;/address&gt;</code>. 
+    <address>
+      <p>
+      <a href="thisisnotarealemail@notarealemailhoster.com">thisisnotarealemail@notarealemailhoster.com</a>
+      </p>
+      <p>12345 NotARealStreet, Fake Town, NonExistent State, 11111.</p>
+    </address></p>
+    <h3 id="contentchanges">Changes to Content</h3>
+    <p>The 
+    <del>iensrt</del>
+    <ins>ins</ins>element shows where something has been inserted, and the del element shows where something has been deleted. Insertion uses 
+    <code>&lt;ins&gt;</code>
+    <code>&lt;/ins&gt;</code>and deletion using 
+    <code>&lt;del&gt;</code>
+    <code>&lt;/del&gt;</code>. Typically insertion is underlined, and deletion has a line through it.</p>
+    <p>The s, or strikethrough, tag can be used to indicate something that is no longer accurate or relevant. It shows as a line through the center, like deletion. Used by doing 
+    <code>&lt;s&gt;</code>
+    <code>&lt;/s&gt;</code>. The difference between s and del is semantical. 
+    <br />
+    <s>I don't know HTML.</s>
+    <br />I know some HTML.</p>
+    <h3 id="monospace">Monospace Text and Code</h3>
+    <p>The 
+    <tt>
+      <code>&lt;tt&gt;</code>
+    </tt>element can be used to specify teletype text. However, this tag is now obselete, so should not be used as it could be removed at any time.</p>
+    <p>Alternatively, the 
+    <code>
+      <code>&lt;code&gt;</code>
+    </code>tag can be used to specify computer code, and anything in between the tags (will still have to use special characters for some characters like &amp;) will be treated as code. It is often paired with the 
+    <code>
+      <code>&lt;pre&gt;</code>
+    </code>element (preformatted) to preserve line spaces. As with 
+    <code>
+      <code>&lt;ol&gt;</code>
+    </code>, 
+    <code>
+      <code>&lt;pre&gt;</code>
+    </code>should not be used in 
+    <code>
+      <code>&lt;p&gt;</code>
+    </code>.</p>
+    <p>And while not monospaced, the 
+    <code>&lt;var&gt;</code>element is used to indicate variables, and is often presented in italics. 
+    <var>y</var>= 
+    <var>mx</var>+ 
+    <var>b</var>.</p>
+    <pre>
+<code>
 #include&lt;stdio.h&gt;
 
 int main(void) {
-	while (!mastered_html) {
-		learn_html();
-	}
+  while (!mastered_html) {
+    learn_html();
+  }
 }
-</code></pre>
-		<hr />
-		<h2 id="lists">Lists</h2>
-		<p>There are three types of lists in HTML: ordered, unordered, and definition. <dfn>Ordered lists</dfn> are lists where each item in the list is numbered. 
-		<dfn>Unordered lists</dfn> are lists that begin with a bullet point. <dfn>Definition lists</dfn> are made up of a set of terms along with their definitions. 
-		One thing to also keep in mind is that list elements should not be stored between <code>&lt;p&gt;</code> tags, because <code>&lt;p&gt;</code> elements contain "phrasing" content, which are inline 
-		elements like <code>&lt;strong&gt;</code>. List elements contain "flow" content, which are block elements like <code>&lt;p&gt;</code> and <code>&lt;div&gt;</code></p>
-		<h3 id="olists">Ordered Lists</h3>
-		<p>Ordered lists are created using <code>&lt;ol&gt;</code><code>&lt;/ol&gt;</code>. Each item in the list is placed between <code>&lt;li&gt;</code> and <code>&lt;/li&gt;</code>. Sometimes you may see a <code>type</code> attribute used with ol to specify the type of numbering. But it is better to use CSS for this.</p>
-		<ol>
-			<li>Bring pot of water to a boil.</li>
-			<li>Sell as lakefront property.</li>
-			<li>???</li>
-			<li>Profit.</li>
-		</ol>
-		<h3 id="ulists">Unordered Lists</h3>
-		<p>Unordered lists are created using <code>&lt;ul&gt;</code><code>&lt;/ul&gt;</code>. As with ordered lists, each item should be placed in li tags. And as with ordered lists, you may see a <code>type</code> attribute to customize the bullet points, but it's better to use CSS for this.</p>
-		<ul>
-			<li>Three feet of hempen rope.</li>
-			<li>Twenty two gallons of goat's milk.</li>
-			<li>Nine square feet of sheet metal.</li>
-		</ul>
-		<h3 id="dfnlists">Definition Lists</h3>
-		<p>Definition lists are created using <code>&lt;dl&gt;</code><code>&lt;/dl&gt;</code>. The definition term is stored between <code>&lt;dt&gt;</code> and <code>&lt;/dt&gt;</code> tags. The definition for the term is stored in <code>&lt;dd&gt;</code> and <code>&lt;/dd&gt;</code> tags. 
-			Inside of the dl element, you will usually see pairs of dt and dd elements.
-		</p>
-		<dl>
-			<dt>Recursion</dt>
-			<dd>See <i>recursion</i>.</dd>
-			<dt>Definition</dt>
-			<dd>a statement of the exact meaning of a word, especially in a dictionary.</dd>
-			<dt>Synonym</dt>
-			<dt lang="es">Sinónimo</dt>
-			<dd>a word or phrase that means exactly or nearly the same as another word or phrase.</dd>
-		</dl>
-		<h3 id="nestlists">Nested Lists</h3>
-		<p>You can also create nested lists inside of the items of another list. Browsers display nested lists even further indented, and in unordered lists, they will usually change the style of the bullet point as well.</p>
-		<ul>
-			<li>Markup Languages
-				<ul>
-					<li>HTML</li>
-					<li>LaTeX</li>
-					<li>Markdown</li>
-				</ul>
-			</li>
-			<li>Programming Languages
-				<ul>
-					<li>C</li>
-					<li>Java</li>
-					<li>Python</li>
-					<li>Swift</li>
-					<li>C#</li>
-					<li>Javascript</li>
-					<li>Racket</li>
-					<li>Arduino</li>
-				</ul>
-			</li>
-		</ul>
-
-		<ol>
-			<li>Fee</li>
-			<li>Fie
-				<ol>
-					<li>Foe</li>
-					<li>Fum</li>
-				</ol>
-			</li>
-		</ol>
-		<hr />
-		<h2 id="links">Links</h2>
-		<p>Links allow you to move from one webpage to another.
-		</p>
-		<h3 id="linktypes">Types of Links</h3>
-		<ul>
-			<li>Links from one website to another.</li>
-			<li>Links from one page to another on the same website.</li>
-			<li>Links that open in a new browser window.</li>
-			<li>Links that start up your email program and address a new email to someone.</li>
-		</ul>
-		<h3 id="writelinks">Writing Links</h3>
-		<p>Links are created using the <code>&lt;a&gt;</code><code>&lt;/a&gt;</code> tags. Users can click anywhere in between the tags. To specify the page you want to link to, use the <code>href</code> attribute.
-		<br />
-		<code>&lt;a href="link goes here"&gt;Link text&lt;/a&gt;</code></p>
-		<h4 id="linkothersites">Linking to Other Sites</h4>
-		<p>When you link to a different website, the value of the <code>href</code> attribute will be the full web address for the site, which is known as an <dfn>absolute URL</dfn>.
-		<br /><br />
-		Example:
-		<br />
-		<code>&lt;a href="https://www.reddit.com/r/learnprogramming"&gt;LearnProgramming Subreddit&lt;/a&gt;</code>
-		<br />
-		<a href="https://www.reddit.com/r/learnprogramming">LearnProgramming Subreddit</a></p>
-		<h4 id="linkotherpages">Linking to Other Pages on the Same Site</h4>
-		<p>When you are linking to other pages within the same site, you do not need to use the domain name as the URL. You can instead use the shorthand known as <dfn>relative URL</dfn>.
-		<br /><br />
-		If all the pages of the site are in the same folder, then you can just use the file name for the <code>href</code> attribute.
-		<br /><br />
-		If they are in different folders, then you will have to follow the directory structure.
-		<br />
-		The top-level folder is known as the <dfn>root folder</dfn>. It contains a file called <dfn>index.html</dfn> which is the homepage for the entire site and individual folders such as <i>assets</i>. 
-		Web servers are usually set up so that links return to <i>index.html</i> if no file name is specified.
-		<br /><br />
-		<code>&lt;a href="linkedPage.html"&gt;Link to page in the same website.&lt;/a&gt;</code>
-		<br />
-		<a href="linkedPage.html">Link to page in same website.</a></p>
-		<h4 id="emaillinks">Email Links</h4>
-		<p>Creating email links is just like creating any other link, except prepend <code>mailto:</code> to the string containing the link, or in this case, email address.
-		<br /><br />
-		<code>&lt;a href="mailto:thisisnotarealemail@notarealemailhoster.com"&gt;Contact Us via Email!&lt;/a&gt;</code>
-		<br />
-		<a href="mailto:thisisnotarealemail@notarealemailhoster.com">Contact Us via Email!</a></p>
-		<h4 id="newwindowlinks">Opening Links in a New Window</h4>
-		<p>To have a link open in a new window, you can use the <code>target</code> attribute in the <code>&lt;a&gt;</code> element. The value of the attribute should be <code>_blank</code>.
-		<br /><br />
-		<code>&lt;a href="linkedPage.html" target="_blank"&gt;Open new window to page in the same website.&lt;/a&gt;</code>
-		<br />
-		<a href="linkedPage.html" target="_blank">Open new window to page in same website.</a></p>
-		<h4 id="linkpartsamepage">Linking to a Specific Part of the Same Page</h4>
-		<p>Before you can link to a specific part of a page, you need to identify the points in the page that the link will go to. You do this by setting the <code>id</code> 
-		attribute, which can be used on every HTML element. The value of the <code>id</code> attribute should start with a letter or an underscore (not a number or any other character). 
-		To target an <code>id</code>, prepend the <code>href</code> attribute value with a "#".
-		<br /><br />
-		<code>&lt;a href="#tableofcontents"&gt;Return to Top&lt;/a&gt;</code>
-		<br />
-		<a href="#tableofcontents">Return to Top</a></p>
-		<h4 id="linkpartotherpage">Linking to a Specific Part of Another Page</h4>
-		<p>If you want to link to part in another page, that can be done as well, for both your own site and other sites. There just needs to be an <code>id</code> attribute in that page.
-		Just add the same syntax to the end of the link for that page. The <code>href</code> attribute will contain either the absolute or relative URL, followed by the # symbol, and then the <code>id</code>.
-		<br /><br />
-		<code>&lt;a href="https://www.reddit.com#header"&gt;Header of Reddit&lt;/a&gt;</code>
-		<br />
-		<a href="https://ww.reddit.com#header">Header of Reddit</a>
-		<br /><br />
-		<code>&lt;a href="linkedPage.html#part&gt;Specific Part of Other Page on Same Website&lt;/a&gt;</code>
-		<br />
-		<a href="linkedPage.html#part">Specific Part of Other Page on Same Website</a>
-		</p>
-		<hr />
-		<h2 id="images">Images</h2>
-		<p>For larger websites, images should be stored separetely, in an <i>images</i> folder perhaps, which may contain subfolders in itself for even larger websites.</p>
-		<h3 id="addimages">Adding Images</h3>
-		<p>To add an image to the page, using the <code>&lt;img&gt;</code> element. It's also an empty element, meaning there is no closing tag. The <code>src</code> attribute tells the browser where it can find 
-		the image file. The <code>alt</code> attribute provides a text description of the image which describes the image if you cannot see it. Both the <code>src</code> and <code>alt</code> attribute are necessary. 
-		Additionally, the <code>title</code> attribute can provide additional information about the image. Typically, most browsers will display the contents in a tooltip when the mouse hovers over the image. 
-		The text in the <code>alt</code> attribute is referred to as the <dfn>alt text</dfn>, and is used by screen reader software. If the image is just there for graphical purchases, it's best to just leave the 
-		<code>alt</code> attribute blank.
-		</p>
-		<code>&lt;img src="assets/images/MemeableShane.png" alt="A gloriously smug picture of Shane O'Neill smirking." title="How u doin'?" /&gt;</code>
-		<br />
-		<img src="assets/images/MemeableShane.png" alt="A gloriously smug picture of Shane O'Neill smirking." title="How u doin'?" />
-		<h3 id="heightwidthimages">Height and Width of Images</h3>
-		<p>
-			There are two other attributes that can be used to specify the size: <code>height</code> and <code>width</code>. Images take longer to load than the rest of the code, so it's a good idea to specify the size so that the browser
-			can render the rest of the text while leaving the right amount of space for the image that is still loading. The size of images, however, is increasingly being specified using CSS rather than HTML.
-		</p>
-		<code>&lt;img src="assets/images/MemeableShane.png" alt="Small gloriously smug picture of Shane O'Neill smirking." title="How u doin'?" height="180" width="120" /&gt;</code>	
-		<br />
-		<img src="assets/images/MemeableShane.png" alt="Small gloriously smug picture of Shane O'Neill smirking." title="How u doin'?" height="180" width="120" />
-		<h3 id="wheretoplaceimages">Where to Place Images in Your Code</h3>
-		<p>
-			Where an image is placed in the code will affect how it is displayed. 
-			<ul>
-				<li><b>Before a Paragraph</b>
-					<br />
-					<img src="assets/images/MemeableShane.png" alt="Small gloriously smug picture of Shane O'Neill smirking." title="How u doin'?" height="60" width="40" />
-					<p>The paragraph starts on a new line after the image.</p>
-				</li>
-				<li><b>Inside the Start of a Paragraph</b>
-					<br />
-					<p><img src="assets/images/MemeableShane.png" alt="Small gloriously smug picture of Shane O'Neill smirking." title="How u doin'?" height="60" width="40" />The first row of text aligns with the bottom of the image.</p>
-				</li>
-				<li><b>In the Middle of a Paragraph</b>
-					<br />
-					<p>The image is placed between <img src="assets/images/MemeableShane.png" alt="Small gloriously smug picture of Shane O'Neill smirking." title="How u doin'?" height="60" width="40" />the words of the paragraph it appears in.</p>
-				</li>
-			</ul>
-		</p>
-		<p>
-			Where you place the image in the code is important because we show HTML elements in one of two ways, <dfn>block</dfn> or <dfn>inline</dfn> elements.
-			<br />
-			Block elements always appear on a new line. Examples of block elements include the <code>&lt;h&gt;</code> and <code>&lt;p&gt;</code> elements.
-			<br />
-			Inline elements sit within a block level element and do not start on a new line. Examples of inline elements include the <code>&lt;em&gt;</code> and <code>&lt;img&gt;</code> elements.
-		</p>
-		<h3 id="imgrules">Three Rules for Creating Images</h3>
-		<p>There are three rules to remember when you are creating images for your website:</p>
-		<ol>
-			<li><b>Save images in the right format.</b>
-				<p>Choosing the wrong format for your image may cause it to not look as sharp as it should and can make the web page slower to load.</p>
-			</li>
-			<li><b>Save images at the right size.</b>
-				<p>Save the image at the same width and height it will appear in the website. If the image is too small, it might get distorted. If it's too large, 
-					then it will take longer to display on the page than it should.
-				</p>
-			</li>
-			<li><b>Measure images in pixels.</b>
-				<p>Measure the image in terms of pixels, and not in centimeters or inches.</p>
-			</li>
-		</ol>
-		<h3 id="figures">HTML5: Figure and Figure Caption</h3>
-		<p>
-			Images often come with captions. In HTML5, you can wrap images and their captions in the <code>&lt;figure&gt;</code> element. You can have more than one image in the <code>&lt;figure&gt;</code> element 
-			as long as they share the same caption. Browsers sometimes indent the contents of the element. The <code>&lt;figcaption&gt;</code> element is used to create the caption for the image.
-		</p>
-<pre>
+    </code>
+    </pre>
+    <hr />
+    <h2 id="lists">Lists</h2>
+    <p>There are three types of lists in HTML: ordered, unordered, and definition. 
+    <dfn>Ordered lists</dfn>are lists where each item in the list is numbered. 
+    <dfn>Unordered lists</dfn>are lists that begin with a bullet point. 
+    <dfn>Definition lists</dfn>are made up of a set of terms along with their definitions. One thing to also keep in mind is that list elements should not be stored between 
+    <code>&lt;p&gt;</code>tags, because 
+    <code>&lt;p&gt;</code>elements contain "phrasing" content, which are inline elements like 
+    <code>&lt;strong&gt;</code>. List elements contain "flow" content, which are block elements like 
+    <code>&lt;p&gt;</code>and 
+    <code>&lt;div&gt;</code></p>
+    <h3 id="olists">Ordered Lists</h3>
+    <p>Ordered lists are created using 
+    <code>&lt;ol&gt;</code>
+    <code>&lt;/ol&gt;</code>. Each item in the list is placed between 
+    <code>&lt;li&gt;</code>and 
+    <code>&lt;/li&gt;</code>. Sometimes you may see a 
+    <code>type</code>attribute used with ol to specify the type of numbering. But it is better to use CSS for this.</p>
+    <ol>
+      <li>Bring pot of water to a boil.</li>
+      <li>Sell as lakefront property.</li>
+      <li>???</li>
+      <li>Profit.</li>
+    </ol>
+    <h3 id="ulists">Unordered Lists</h3>
+    <p>Unordered lists are created using 
+    <code>&lt;ul&gt;</code>
+    <code>&lt;/ul&gt;</code>. As with ordered lists, each item should be placed in li tags. And as with ordered lists, you may see a 
+    <code>type</code>attribute to customize the bullet points, but it's better to use CSS for this.</p>
+    <ul>
+      <li>Three feet of hempen rope.</li>
+      <li>Twenty two gallons of goat's milk.</li>
+      <li>Nine square feet of sheet metal.</li>
+    </ul>
+    <h3 id="dfnlists">Definition Lists</h3>
+    <p>Definition lists are created using 
+    <code>&lt;dl&gt;</code>
+    <code>&lt;/dl&gt;</code>. The definition term is stored between 
+    <code>&lt;dt&gt;</code>and 
+    <code>&lt;/dt&gt;</code>tags. The definition for the term is stored in 
+    <code>&lt;dd&gt;</code>and 
+    <code>&lt;/dd&gt;</code>tags. Inside of the dl element, you will usually see pairs of dt and dd elements.</p>
+    <dl>
+      <dt>Recursion</dt>
+      <dd>See 
+      <i>recursion</i>.</dd>
+      <dt>Definition</dt>
+      <dd>a statement of the exact meaning of a word, especially in a dictionary.</dd>
+      <dt>Synonym</dt>
+      <dt lang="es">Sinónimo</dt>
+      <dd>a word or phrase that means exactly or nearly the same as another word or phrase.</dd>
+    </dl>
+    <h3 id="nestlists">Nested Lists</h3>
+    <p>You can also create nested lists inside of the items of another list. Browsers display nested lists even further indented, and in unordered lists, they will usually change the style of the bullet point as well.</p>
+    <ul>
+      <li>Markup Languages 
+        <ul>
+          <li>HTML</li>
+          <li>LaTeX</li>
+          <li>Markdown</li>
+        </ul></li>
+        <li>Programming Languages 
+          <ul>
+            <li>C</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>Swift</li>
+            <li>C#</li>
+            <li>Javascript</li>
+            <li>Racket</li>
+            <li>Arduino</li>
+          </ul></li>
+    </ul>
+    <ol>
+      <li>Fee</li>
+      <li>Fie 
+        <ol>
+          <li>Foe</li>
+          <li>Fum</li>
+        </ol></li>
+    </ol>
+    <hr />
+    <h2 id="links">Links</h2>
+    <p>Links allow you to move from one webpage to another.</p>
+    <h3 id="linktypes">Types of Links</h3>
+    <ul>
+      <li>Links from one website to another.</li>
+      <li>Links from one page to another on the same website.</li>
+      <li>Links that open in a new browser window.</li>
+      <li>Links that start up your email program and address a new email to someone.</li>
+    </ul>
+    <h3 id="writelinks">Writing Links</h3>
+    <p>Links are created using the 
+    <code>&lt;a&gt;</code>
+    <code>&lt;/a&gt;</code>tags. Users can click anywhere in between the tags. To specify the page you want to link to, use the 
+    <code>href</code>attribute. 
+    <br />
+    <code>&lt;a href="link goes here"&gt;Link text&lt;/a&gt;</code></p>
+    <h4 id="linkothersites">Linking to Other Sites</h4>
+    <p>When you link to a different website, the value of the 
+    <code>href</code>attribute will be the full web address for the site, which is known as an 
+    <dfn>absolute URL</dfn>. 
+    <br />
+    <br />Example: 
+    <br />
+    <code>&lt;a href="https://www.reddit.com/r/learnprogramming"&gt;LearnProgramming Subreddit&lt;/a&gt;</code>
+    <br />
+    <a href="https://www.reddit.com/r/learnprogramming">LearnProgramming Subreddit</a></p>
+    <h4 id="linkotherpages">Linking to Other Pages on the Same Site</h4>
+    <p>When you are linking to other pages within the same site, you do not need to use the domain name as the URL. You can instead use the shorthand known as 
+    <dfn>relative URL</dfn>. 
+    <br />
+    <br />If all the pages of the site are in the same folder, then you can just use the file name for the 
+    <code>href</code>attribute. 
+    <br />
+    <br />If they are in different folders, then you will have to follow the directory structure. 
+    <br />The top-level folder is known as the 
+    <dfn>root folder</dfn>. It contains a file called 
+    <dfn>index.html</dfn>which is the homepage for the entire site and individual folders such as 
+    <i>assets</i>. Web servers are usually set up so that links return to 
+    <i>index.html</i>if no file name is specified. 
+    <br />
+    <br />
+    <code>&lt;a href="linkedPage.html"&gt;Link to page in the same website.&lt;/a&gt;</code>
+    <br />
+    <a href="linkedPage.html">Link to page in same website.</a></p>
+    <h4 id="emaillinks">Email Links</h4>
+    <p>Creating email links is just like creating any other link, except prepend 
+    <code>mailto:</code>to the string containing the link, or in this case, email address. 
+    <br />
+    <br />
+    <code>&lt;a href="mailto:thisisnotarealemail@notarealemailhoster.com"&gt;Contact Us via Email!&lt;/a&gt;</code>
+    <br />
+    <a href="mailto:thisisnotarealemail@notarealemailhoster.com">Contact Us via Email!</a></p>
+    <h4 id="newwindowlinks">Opening Links in a New Window</h4>
+    <p>To have a link open in a new window, you can use the 
+    <code>target</code>attribute in the 
+    <code>&lt;a&gt;</code>element. The value of the attribute should be 
+    <code>_blank</code>. 
+    <br />
+    <br />
+    <code>&lt;a href="linkedPage.html" target="_blank"&gt;Open new window to page in the same website.&lt;/a&gt;</code>
+    <br />
+    <a href="linkedPage.html" target="_blank">Open new window to page in same website.</a></p>
+    <h4 id="linkpartsamepage">Linking to a Specific Part of the Same Page</h4>
+    <p>Before you can link to a specific part of a page, you need to identify the points in the page that the link will go to. You do this by setting the 
+    <code>id</code>attribute, which can be used on every HTML element. The value of the 
+    <code>id</code>attribute should start with a letter or an underscore (not a number or any other character). To target an 
+    <code>id</code>, prepend the 
+    <code>href</code>attribute value with a "#". 
+    <br />
+    <br />
+    <code>&lt;a href="#tableofcontents"&gt;Return to Top&lt;/a&gt;</code>
+    <br />
+    <a href="#tableofcontents">Return to Top</a></p>
+    <h4 id="linkpartotherpage">Linking to a Specific Part of Another Page</h4>
+    <p>If you want to link to part in another page, that can be done as well, for both your own site and other sites. There just needs to be an 
+    <code>id</code>attribute in that page. Just add the same syntax to the end of the link for that page. The 
+    <code>href</code>attribute will contain either the absolute or relative URL, followed by the # symbol, and then the 
+    <code>id</code>. 
+    <br />
+    <br />
+    <code>&lt;a href="https://www.reddit.com#header"&gt;Header of Reddit&lt;/a&gt;</code>
+    <br />
+    <a href="https://ww.reddit.com#header">Header of Reddit</a>
+    <br />
+    <br />
+    <code>&lt;a href="linkedPage.html#part&gt;Specific Part of Other Page on Same Website&lt;/a&gt;</code>
+    <br />
+    <a href="linkedPage.html#part">Specific Part of Other Page on Same Website</a></p>
+    <hr />
+    <h2 id="images">Images</h2>
+    <p>For larger websites, images should be stored separetely, in an 
+    <i>images</i>folder perhaps, which may contain subfolders in itself for even larger websites.</p>
+    <h3 id="addimages">Adding Images</h3>
+    <p>To add an image to the page, using the 
+    <code>&lt;img&gt;</code>element. It's also an empty element, meaning there is no closing tag. The 
+    <code>src</code>attribute tells the browser where it can find the image file. The 
+    <code>alt</code>attribute provides a text description of the image which describes the image if you cannot see it. Both the 
+    <code>src</code>and 
+    <code>alt</code>attribute are necessary. Additionally, the 
+    <code>title</code>attribute can provide additional information about the image. Typically, most browsers will display the contents in a tooltip when the mouse hovers over the image. The text in the 
+    <code>alt</code>attribute is referred to as the 
+    <dfn>alt text</dfn>, and is used by screen reader software. If the image is just there for graphical purchases, it's best to just leave the 
+    <code>alt</code>attribute blank.</p>
+    <code>&lt;img src="assets/images/MemeableShane.png" alt="A gloriously smug picture of Shane O'Neill smirking." title="How u doin'?" /&gt;</code>
+    <br />
+    <img src="assets/images/MemeableShane.png" alt="A gloriously smug picture of Shane O'Neill smirking." title="How u doin'?" />
+    <h3 id="heightwidthimages">Height and Width of Images</h3>
+    <p>There are two other attributes that can be used to specify the size: 
+    <code>height</code>and 
+    <code>width</code>. Images take longer to load than the rest of the code, so it's a good idea to specify the size so that the browser can render the rest of the text while leaving the right amount of space for the image that is still loading. The size of images, however, is increasingly being specified using CSS rather than HTML.</p>
+    <code>&lt;img src="assets/images/MemeableShane.png" alt="Small gloriously smug picture of Shane O'Neill smirking." title="How u doin'?" height="180" width="120" /&gt;</code>
+    <br />
+    <img src="assets/images/MemeableShane.png" alt="Small gloriously smug picture of Shane O'Neill smirking." title="How u doin'?" height="180" width="120" />
+    <h3 id="wheretoplaceimages">Where to Place Images in Your Code</h3>
+    <p>Where an image is placed in the code will affect how it is displayed. 
+    <ul>
+      <li>
+        <b>Before a Paragraph</b>
+        <br />
+        <img src="assets/images/MemeableShane.png" alt="Small gloriously smug picture of Shane O'Neill smirking." title="How u doin'?" height="60" width="40" />
+        <p>The paragraph starts on a new line after the image.</p>
+      </li>
+      <li>
+        <b>Inside the Start of a Paragraph</b>
+        <br />
+        <p>
+        <img src="assets/images/MemeableShane.png" alt="Small gloriously smug picture of Shane O'Neill smirking." title="How u doin'?" height="60" width="40" />The first row of text aligns with the bottom of the image.</p>
+      </li>
+      <li>
+        <b>In the Middle of a Paragraph</b>
+        <br />
+        <p>The image is placed between 
+        <img src="assets/images/MemeableShane.png" alt="Small gloriously smug picture of Shane O'Neill smirking." title="How u doin'?" height="60" width="40" />the words of the paragraph it appears in.</p>
+      </li>
+    </ul></p>
+    <p>Where you place the image in the code is important because we show HTML elements in one of two ways, 
+    <dfn>block</dfn>or 
+    <dfn>inline</dfn>elements. 
+    <br />Block elements always appear on a new line. Examples of block elements include the 
+    <code>&lt;h&gt;</code>and 
+    <code>&lt;p&gt;</code>elements. 
+    <br />Inline elements sit within a block level element and do not start on a new line. Examples of inline elements include the 
+    <code>&lt;em&gt;</code>and 
+    <code>&lt;img&gt;</code>elements.</p>
+    <h3 id="imgrules">Three Rules for Creating Images</h3>
+    <p>There are three rules to remember when you are creating images for your website:</p>
+    <ol>
+      <li>
+        <b>Save images in the right format.</b>
+        <p>Choosing the wrong format for your image may cause it to not look as sharp as it should and can make the web page slower to load.</p>
+      </li>
+      <li>
+        <b>Save images at the right size.</b>
+        <p>Save the image at the same width and height it will appear in the website. If the image is too small, it might get distorted. If it's too large, then it will take longer to display on the page than it should.</p>
+      </li>
+      <li>
+        <b>Measure images in pixels.</b>
+        <p>Measure the image in terms of pixels, and not in centimeters or inches.</p>
+      </li>
+    </ol>
+    <h3 id="figures">HTML5: Figure and Figure Caption</h3>
+    <p>Images often come with captions. In HTML5, you can wrap images and their captions in the 
+    <code>&lt;figure&gt;</code>element. You can have more than one image in the 
+    <code>&lt;figure&gt;</code>element as long as they share the same caption. Browsers sometimes indent the contents of the element. The 
+    <code>&lt;figcaption&gt;</code>element is used to create the caption for the image.</p>
+    <pre>
 <code>
 &lt;figure&gt;
-	&lt;img src="assets/images/MemeableShane.png" alt="Gloriously smug Shane O'Neill" title="HOW U DOIN'?" /&gt;
-	&lt;br /&gt;
-	&lt;figcaption&gt;One does not out-smug the Shane.&lt;/figcaption&gt;
+  &lt;img src="assets/images/MemeableShane.png" alt="Gloriously smug Shane O'Neill" title="HOW U DOIN'?" /&gt;
+  &lt;br /&gt;
+  &lt;figcaption&gt;One does not out-smug the Shane.&lt;/figcaption&gt;
 &lt;/figure&gt;
 </code>
-</pre>
-		<figure>
-			<img src="assets/images/MemeableShane.png" alt="Gloriously smug Shane O'Neill" title="HOW U DOIN'?" />
-			<br />
-			<figcaption>One does not out-smug the Shane.</figcaption>
-		</figure>
-		<hr />
-		<h2 id="tables">Tables</h2>
-		<h3 id="basictables">Basic Table Structure</h3>
-		<p>
-			Use the <code>&lt;table&gt;</code> element to create a table. The contents of the table are written out row by row. You can indicate the start of the row using <code>&lt;tr&gt;</code>. Inside the <code>&lt;tr&gt;</code> 
-			tags are one or more <code>&lt;td&gt;</code> elements, which represent the columns of the table. Some browsers automatically draw lines around the cells, but this can be controlled using CSS.
-		</p>
-<pre>
+
+    </pre>
+    <figure>
+      <img src="assets/images/MemeableShane.png" alt="Gloriously smug Shane O'Neill" title="HOW U DOIN'?" />
+      <br />
+      <figcaption>One does not out-smug the Shane.</figcaption>
+    </figure>
+    <hr />
+    <h2 id="tables">Tables</h2>
+    <h3 id="basictables">Basic Table Structure</h3>
+    <p>Use the 
+    <code>&lt;table&gt;</code>element to create a table. The contents of the table are written out row by row. You can indicate the start of the row using 
+    <code>&lt;tr&gt;</code>. Inside the 
+    <code>&lt;tr&gt;</code>tags are one or more 
+    <code>&lt;td&gt;</code>elements, which represent the columns of the table. Some browsers automatically draw lines around the cells, but this can be controlled using CSS.</p>
+    <pre>
 <code>
 &lt;table&gt;
-	&lt;tr&gt;
-		&lt;td&gt;1&lt;/td&gt;
-		&lt;td&gt;2&lt;/td&gt;
-		&lt;td&gt;3&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;4&lt;/td&gt;
-		&lt;td&gt;5&lt;/td&gt;
-		&lt;td&gt;6&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;7&lt;/td&gt;
-		&lt;td&gt;8&lt;/td&gt;
-		&lt;td&gt;9&lt;/td&gt;
-	&lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;1&lt;/td&gt;
+    &lt;td&gt;2&lt;/td&gt;
+    &lt;td&gt;3&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;4&lt;/td&gt;
+    &lt;td&gt;5&lt;/td&gt;
+    &lt;td&gt;6&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;7&lt;/td&gt;
+    &lt;td&gt;8&lt;/td&gt;
+    &lt;td&gt;9&lt;/td&gt;
+  &lt;/tr&gt;
 &lt;/table&gt;
 </code>
-</pre>
-		<br />
-		<table>
-			<tr>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-			</tr>
-			<tr>
-				<td>4</td>
-				<td>5</td>
-				<td>6</td>
-			</tr>
-			<tr>
-				<td>7</td>
-				<td>8</td>
-				<td>9</td>
-			</tr>
-		</table>
-		<h3 id="tableheadings">Table Headings</h3>
-		<p>
-			The <code>&lt;th&gt;</code> element is used just like the <code>&lt;td&gt;</code> element but it will be used to represent the heading for either a column or a row. Even if a cell has no content, you should still use 
-			the <code>&lt;th&gt;</code> element to represent the presence of an empty cell (otherwise the table will not render properly). You can use the <code>scope</code> attribute to indicate if it is the heading for a column 
-			or a row. It can take the value of <code>"row"</code> or <code>"col"</code>.
-		</p>
-<pre>
+
+    </pre>
+    <br />
+    <table>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+    </table>
+    <h3 id="tableheadings">Table Headings</h3>
+    <p>The 
+    <code>&lt;th&gt;</code>element is used just like the 
+    <code>&lt;td&gt;</code>element but it will be used to represent the heading for either a column or a row. Even if a cell has no content, you should still use the 
+    <code>&lt;th&gt;</code>element to represent the presence of an empty cell (otherwise the table will not render properly). You can use the 
+    <code>scope</code>attribute to indicate if it is the heading for a column or a row. It can take the value of 
+    <code>"row"</code>or 
+    <code>"col"</code>.</p>
+    <pre>
 <code>
 &lt;table&gt;
-	&lt;tr&gt;
-		&lt;th&gt;&lt;/th&gt;
-		&lt;th scope="col"&gt;Midterm&lt;/th&gt;
-		&lt;th scope="col"&gt;Final Exam&lt;/th&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;th scope="row"&gt;Mayla&lt;/th&gt;
-		&lt;td&gt;B+&lt;/td&gt;
-		&lt;td&gt;A&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;th scope="row"&gt;Lisa&lt;/th&gt;
-		&lt;td&gt;C+&lt;/td&gt;
-		&lt;td&gt;A&lt;/td&gt;
-	&lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;&lt;/th&gt;
+    &lt;th scope="col"&gt;Midterm&lt;/th&gt;
+    &lt;th scope="col"&gt;Final Exam&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th scope="row"&gt;Mayla&lt;/th&gt;
+    &lt;td&gt;B+&lt;/td&gt;
+    &lt;td&gt;A&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th scope="row"&gt;Lisa&lt;/th&gt;
+    &lt;td&gt;C+&lt;/td&gt;
+    &lt;td&gt;A&lt;/td&gt;
+  &lt;/tr&gt;
 &lt;/table&gt;
 </code>
-</pre>
-		<table>
-			<tr>
-				<th></th>
-				<th scope="col">Midterm</th>
-				<th scope="col">Final Exam</th>
-			</tr>
-			<tr>
-				<th scope="row">Mayla</th>
-				<td>B+</td>
-				<td>A</td>
-			</tr>
-			<tr>
-				<th scope="row">Lisa</th>
-				<td>C+</td>
-				<td>A</td>
-			</tr>
-		</table>
-		<h3 id="spanningcols">Spanning Columns</h3>
-		<p>
-			To have a <code>&lt;td&gt;</code> or <code>&lt;th&gt;</code> element span multiple columns, you can use the <code>colspan</code> attribute and indicate how many columns the cell should span across.
-		</p>
-<pre>
+
+    </pre>
+    <table>
+      <tr>
+        <th></th>
+        <th scope="col">Midterm</th>
+        <th scope="col">Final Exam</th>
+      </tr>
+      <tr>
+        <th scope="row">Mayla</th>
+        <td>B+</td>
+        <td>A</td>
+      </tr>
+      <tr>
+        <th scope="row">Lisa</th>
+        <td>C+</td>
+        <td>A</td>
+      </tr>
+    </table>
+    <h3 id="spanningcols">Spanning Columns</h3>
+    <p>To have a 
+    <code>&lt;td&gt;</code>or 
+    <code>&lt;th&gt;</code>element span multiple columns, you can use the 
+    <code>colspan</code>attribute and indicate how many columns the cell should span across.</p>
+    <pre>
 <code>
 &lt;table&gt;
-	&lt;tr&gt;
-		&lt;th scope="col"&gt;&lt;/th&gt;
-		&lt;th scope="col"&gt;12 PM&lt;/th&gt;
-		&lt;th scope="col"&gt;1 PM&lt;/th&gt;
-		&lt;th scope="col"&gt;2 PM&lt;/th&gt;
-		&lt;th scope="col"&gt;3 PM&lt;/th&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;th scope="row"&gt;Monday&lt;/th&gt;
-		&lt;td colspan="2"&gt;| Database Concepts |&lt;/td&gt;
-		&lt;td&gt;| Intro to Algorithms |&lt;/td&gt;
-		&lt;td&gt;| Game Technology |&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;th scope="row"&gt;Tuesday&lt;/th&gt;
-		&lt;td colspan="3"&gt;&lt;/td&gt;
-		&lt;td&gt;| SICE Tutors |&lt;/td&gt;
-	&lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th scope="col"&gt;&lt;/th&gt;
+    &lt;th scope="col"&gt;12 PM&lt;/th&gt;
+    &lt;th scope="col"&gt;1 PM&lt;/th&gt;
+    &lt;th scope="col"&gt;2 PM&lt;/th&gt;
+    &lt;th scope="col"&gt;3 PM&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th scope="row"&gt;Monday&lt;/th&gt;
+    &lt;td colspan="2"&gt;| Database Concepts |&lt;/td&gt;
+    &lt;td&gt;| Intro to Algorithms |&lt;/td&gt;
+    &lt;td&gt;| Game Technology |&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th scope="row"&gt;Tuesday&lt;/th&gt;
+    &lt;td colspan="3"&gt;&lt;/td&gt;
+    &lt;td&gt;| SICE Tutors |&lt;/td&gt;
+  &lt;/tr&gt;
 &lt;/table&gt;
 </code>
-</pre>
-		<table>
-			<tr>
-				<th scope="col"></th>
-				<th scope="col">12 PM</th>
-				<th scope="col">1 PM</th>
-				<th scope="col">2 PM</th>
-				<th scope="col">3 PM</th>
-			</tr>
-			<tr>
-				<th scope="row">Monday</th>
-				<td colspan="2">| Database Concepts |</td>
-				<td>| Intro to Algorithms |</td>
-				<td>| Game Technology |</td>
-			</tr>
-			<tr>
-				<th scope="row">Tuesday</th>
-				<td colspan="3"></td>
-				<td>| SICE Tutors |</td>
-			</tr>
-		</table>
-		<h3 id="spanningrows">Spanning Rows</h3>
-		<p>
-			You can also create rows that span over multiple rows using the <code>rowspan</code> attribute.
-		</p>
-<pre>
+
+    </pre>
+    <table>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">12 PM</th>
+        <th scope="col">1 PM</th>
+        <th scope="col">2 PM</th>
+        <th scope="col">3 PM</th>
+      </tr>
+      <tr>
+        <th scope="row">Monday</th>
+        <td colspan="2">| Database Concepts |</td>
+        <td>| Intro to Algorithms |</td>
+        <td>| Game Technology |</td>
+      </tr>
+      <tr>
+        <th scope="row">Tuesday</th>
+        <td colspan="3"></td>
+        <td>| SICE Tutors |</td>
+      </tr>
+    </table>
+    <h3 id="spanningrows">Spanning Rows</h3>
+    <p>You can also create columns that span over multiple rows using the 
+    <code>rowspan</code>attribute.</p>
+    <pre>
 <code> 
 &lt;table&gt;
-	&lt;tr&gt;
-		&lt;th scope="col"&gt;&lt;/th&gt;
-		&lt;th scope="col"&gt;ABC&lt;/th&gt;
-		&lt;th scope="col"&gt;BBC&lt;/th&gt;
-		&lt;th scope="col"&gt;CNN&lt;/th&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;th scope="row"&gt;6pm - 7pm&lt;/th&gt;
-		&lt;td rowspan="2"&gt;Movie&lt;/td&gt;
-		&lt;td&gt;Comedy&lt;/td&gt;
-		&lt;td&gt;News&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;th scope="row"&gt;7pm - 8pm&lt;/th&gt;
-		&lt;td&gt;Sport&lt;/td&gt;
-		&lt;td&gt;Current Affairs&lt;/td&gt;
-	&lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th scope="col"&gt;&lt;/th&gt;
+    &lt;th scope="col"&gt;ABC&lt;/th&gt;
+    &lt;th scope="col"&gt;BBC&lt;/th&gt;
+    &lt;th scope="col"&gt;CNN&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th scope="row"&gt;6pm - 7pm&lt;/th&gt;
+    &lt;td rowspan="2"&gt;Movie&lt;/td&gt;
+    &lt;td&gt;Comedy&lt;/td&gt;
+    &lt;td&gt;News&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th scope="row"&gt;7pm - 8pm&lt;/th&gt;
+    &lt;td&gt;Sport&lt;/td&gt;
+    &lt;td&gt;Current Affairs&lt;/td&gt;
+  &lt;/tr&gt;
 &lt;/table&gt;
 </code>
-</pre>
-		<table>
-			<tr>
-				<th scope="col"></th>
-				<th scope="col">ABC</th>
-				<th scope="col">BBC</th>
-				<th scope="col">CNN</th>
-			</tr>
-			<tr>
-				<th scope="row">6pm - 7pm</th>
-				<td rowspan="2">Movie</td>
-				<td>Comedy</td>
-				<td>News</td>
-			</tr>
-			<tr>
-				<th scope="row">7pm - 8pm</th>
-				<td>Sport</td>
-				<td>Current Affairs</td>
-			</tr>
-		</table>
-		<h3 id="longtables">Long Tables</h3>
-		<p>There are three elements that help distinguish between the main content of the table and the first and last row. These help people who use screen readers and allow you to style 
-			these sections in a different manner than the rest of the table through CSS. The browser of will very rarely treat these elements any differently, so it's primarily used to change the appearance.
-		</p>
-		<p>
-			<code>&lt;thead&gt;</code> stores the headings of the table.
-			<br />
-			<code>&lt;tbody&gt;</code> stores the main body of the table.
-			<br />
-			<code>&lt;tfoot&gt;</code> stores the footer of the table.
-		</p>
-<pre>
+
+    </pre>
+    <table>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">ABC</th>
+        <th scope="col">BBC</th>
+        <th scope="col">CNN</th>
+      </tr>
+      <tr>
+        <th scope="row">6pm - 7pm</th>
+        <td rowspan="2">Movie</td>
+        <td>Comedy</td>
+        <td>News</td>
+      </tr>
+      <tr>
+        <th scope="row">7pm - 8pm</th>
+        <td>Sport</td>
+        <td>Current Affairs</td>
+      </tr>
+    </table>
+    <h3 id="longtables">Long Tables</h3>
+    <p>There are three elements that help distinguish between the main content of the table and the first and last row. These help people who use screen readers and allow you to style these sections in a different manner than the rest of the table through CSS. The browser of will very rarely treat these elements any differently, so it's primarily used to change the appearance.</p>
+    <p>
+    <code>&lt;thead&gt;</code>stores the headings of the table. 
+    <br />
+    <code>&lt;tbody&gt;</code>stores the main body of the table. 
+    <br />
+    <code>&lt;tfoot&gt;</code>stores the footer of the table.</p>
+    <pre>
 <code>
 &lt;table&gt;
-	&lt;thead&gt;
-		&lt;tr&gt;
-			&lt;th scope="col"&gt;Date&lt;/th&gt;
-			&lt;th scope="col"&gt;Hours Worked&lt;/th&gt;
-			&lt;th scope="col"&gt;Money Made&lt;/th&gt;
-		&lt;/tr&gt;
-	&lt;/thead&gt;
-	&lt;tbody&gt;
-		&lt;tr&gt;
-			&lt;th scope="row"&gt;Nov 1st&lt;/th&gt;
-			&lt;td&gt;4&lt;/td&gt;
-			&lt;td&gt;50&lt;/td&gt;
-		&lt;/tr&gt;
-		&lt;tr&gt;
-			&lt;th scope="row"&gt;Nov 2nd&lt;/th&gt;
-			&lt;td&gt;3&lt;/td&gt;
-			&lt;td&gt;36&lt;/td&gt;
-		&lt;/tr&gt;
-		&lt;tr&gt;
-			&lt;th scope="row"&gt;Nov 3rd&lt;/th&gt;
-			&lt;td&gt;4.5&lt;/td&gt;
-			&lt;td&gt;82&lt;/td&gt;
-		&lt;/tr&gt;
-		&lt;tr&gt;
-			&lt;th scope="row"&gt;Nov 4th&lt;/th&gt;
-			&lt;td&gt;2.5&lt;/td&gt;
-			&lt;td&gt;32&lt;/td&gt;
-		&lt;/tr&gt;
-	&lt;/tbody&gt;
-	&lt;tfoot&gt;
-		&lt;tr&gt;
-			&lt;th scope="row"&gt;&lt;/th&gt;
-			&lt;td&gt;14&lt;/td&gt;
-			&lt;td&gt;200&lt;/td&gt;
-		&lt;/tr&gt;
-	&lt;/tfoot&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Date&lt;/th&gt;
+      &lt;th scope="col"&gt;Hours Worked&lt;/th&gt;
+      &lt;th scope="col"&gt;Money Made&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;Nov 1st&lt;/th&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;50&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;Nov 2nd&lt;/th&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;36&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;Nov 3rd&lt;/th&gt;
+      &lt;td&gt;4.5&lt;/td&gt;
+      &lt;td&gt;82&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;Nov 4th&lt;/th&gt;
+      &lt;td&gt;2.5&lt;/td&gt;
+      &lt;td&gt;32&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;&lt;/th&gt;
+      &lt;td&gt;14&lt;/td&gt;
+      &lt;td&gt;200&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
 &lt;/table&gt;
 </code>
-</pre>
-		<table>
-			<thead>
-				<tr>
-					<th scope="col">Date</th>
-					<th scope="col">Hours Worked</th>
-					<th scope="col">Money Made</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th scope="row">Nov 1st</th>
-					<td>4</td>
-					<td>50</td>
-				</tr>
-				<tr>
-					<th scope="row">Nov 2nd</th>
-					<td>3</td>
-					<td>36</td>
-				</tr>
-				<tr>
-					<th scope="row">Nov 3rd</th>
-					<td>4.5</td>
-					<td>82</td>
-				</tr>
-				<tr>
-					<th scope="row">Nov 4th</th>
-					<td>2.5</td>
-					<td>32</td>
-				</tr>
-			</tbody>
-			<tfoot>
-				<tr>
-					<th scope="row"></th>
-					<td>14</td>
-					<td>200</td>
-				</tr>
-			</tfoot>
-		</table>
-		<hr />
-		<h2 id="forms">Forms</h2>
-		<h3 id="formstructure">Form Structure</h3>
-		<p>
-			Form controls live inside a <code>&lt;form&gt;</code> element. This element should carry the <code>action</code> attribute and will usually have a <code>method</code> and <code>id</code> attribute too. 
-			<br />
-			The value of the <code>action</code> attribute is the URL for the page on the server that will receive the infromation in the form when it is submitted.
-			<br />
-			Forms can be sent using one of two methods: <code>get</code> or <code>post</code>. By default, <code>&lt;form&gt;</code> will use the <code>get</code> method.
-		</p>
-		<ul>
-			<li>With the <code>get</code> method, the values from the form are added to the end of the URL specified in <code>action</code>. It is best used for short forms, or when you are just retrieving data from 
-			the web server.</li>
-			<li>With the <code>post</code> method, the values are sent in what are known as HTTP headers. You should use it if your form allows users to upload a file, is very long, contains sensitive data, or adds/deletes 
-			information from a database.</li>
-		</ul>
-		<p>The <code>id</code> attribute is used to identify the form distinctly from other elements on the page, and often is used by scripts that require you to check that information has been entered in certain fields.</p>
 
-		<h3 id="input">Input</h3>
-		<p>The <code>&lt;input&gt;</code> element is used to create several form controls. Use the <code>type</code> attribute to determine the kind of input they will be creating. Set the mandatory <code>name</code> attribute 
-			to let the server know which form control the piece of data was entered into. This identifies the form control. You can set the optional <code>maxlength</code> attribute to limit the number of characters a user may enter into the field.</p>
-		<h4 id="textinput">Text Input</h4>
-		<p><code>type="text"</code></p>
-		<p>Creates a single line text input. Note that this is an empty element. It is also an inline element, so should be placed inside of <code>&lt;p&gt;</code> tags.</p>
-<pre>
+    </pre>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Hours Worked</th>
+          <th scope="col">Money Made</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Nov 1st</th>
+          <td>4</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <th scope="row">Nov 2nd</th>
+          <td>3</td>
+          <td>36</td>
+        </tr>
+        <tr>
+          <th scope="row">Nov 3rd</th>
+          <td>4.5</td>
+          <td>82</td>
+        </tr>
+        <tr>
+          <th scope="row">Nov 4th</th>
+          <td>2.5</td>
+          <td>32</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th scope="row"></th>
+          <td>14</td>
+          <td>200</td>
+        </tr>
+      </tfoot>
+    </table>
+    <hr />
+    <h2 id="forms">Forms</h2>
+    <h3 id="formstructure">Form Structure</h3>
+    <p>Form controls live inside a 
+    <code>&lt;form&gt;</code>element. This element should carry the 
+    <code>action</code>attribute and will usually have a 
+    <code>method</code>and 
+    <code>id</code>attribute too. 
+    <br />The value of the 
+    <code>action</code>attribute is the URL for the page on the server that will receive the infromation in the form when it is submitted. 
+    <br />Forms can be sent using one of two methods: 
+    <code>get</code>or 
+    <code>post</code>. By default, 
+    <code>&lt;form&gt;</code>will use the 
+    <code>get</code>method.</p>
+    <ul>
+      <li>With the 
+        <code>get</code>method, the values from the form are added to the end of the URL specified in 
+        <code>action</code>. It is best used for short forms, or when you are just retrieving data from the web server.</li>
+      <li>With the 
+        <code>post</code>method, the values are sent in what are known as HTTP headers. You should use it if your form allows users to upload a file, is very long, contains sensitive data, or adds/deletes information from a database.</li>
+    </ul>
+    <p>The 
+    <code>id</code>attribute is used to identify the form distinctly from other elements on the page, and often is used by scripts that require you to check that information has been entered in certain fields.</p>
+    <h3 id="input">Input</h3>
+    <p>The 
+    <code>&lt;input&gt;</code>element is used to create several form controls. Use the 
+    <code>type</code>attribute to determine the kind of input they will be creating. Set the mandatory 
+    <code>name</code>attribute to let the server know which form control the piece of data was entered into. This identifies the form control. You can set the optional 
+    <code>maxlength</code>attribute to limit the number of characters a user may enter into the field.</p>
+    <h4 id="textinput">Text Input</h4>
+    <p>
+    <code>type="text"</code>
+    </p>
+    <p>Creates a single line text input. Note that this is an empty element. It is also an inline element, so should be placed inside of 
+    <code>&lt;p&gt;</code>tags.</p>
+    <pre>
 <code>
 &lt;form action="https://www.reddit.com"&gt;
-	&lt;p&gt;Favorite Animal: 
-		&lt;input type="text" name="animal" maxlength="25" /&gt;
-	&lt;/p&gt;
+  &lt;p&gt;Favorite Animal: 
+    &lt;input type="text" name="animal" maxlength="25" /&gt;
+  &lt;/p&gt;
 &lt;/form&gt;
 </code>
-</pre>
-		<form action="https://www.reddit.com">
-			<p>Favorite Animal: 
-				<input type="text" name="animal" maxlength="25" />
-			</p>
-		</form>
 
-		<p>When the above form is submitted, you will see that <i>/?animal=text</i> is appended to the end of the URL.</p>
-		<h4 id="passwordinput">Password Input</h4>
-		<p><code>text="password"</code></p>
-		<p>Creates a text box that acts just like a single-line text input. but the characters are blocked out. Otherwise, it acts just like the <code>text</code> type, and has the same attributes. However, one thing to keep in mind is 
-		that while the password is hidden on screen, it is not sent securely to the server. For full secuity, you should use Secure Sockets Layer (SSL) to communicate to the browser from the server. That is not taught here, however.</p>
-<pre>
+    </pre>
+    <form action="https://www.reddit.com">
+      <p>Favorite Animal: 
+      <input type="text" name="animal" maxlength="25" /></p>
+    </form>
+    <p>When the above form is submitted, you will see that 
+    <i>/?animal=text</i>is appended to the end of the URL.</p>
+    <h4 id="passwordinput">Password Input</h4>
+    <p>
+    <code>text="password"</code>
+    </p>
+    <p>Creates a text box that acts just like a single-line text input. but the characters are blocked out. Otherwise, it acts just like the 
+    <code>text</code>type, and has the same attributes. However, one thing to keep in mind is that while the password is hidden on screen, it is not sent securely to the server. For full secuity, you should use Secure Sockets Layer (SSL) to communicate to the browser from the server. That is not taught here, however.</p>
+    <pre>
 <code>
 &lt;form action="https://www.reddit.com"&gt;
-	&lt;p&gt;Username:
-		&lt;input type="text" name="username" maxlength="25" /&gt;
-	&lt;/p&gt;
-	&lt;p&gt;Password: 
-		&lt;input type="password" name="password" maxlength="30" /&gt;
-	&lt;/p&gt;
+  &lt;p&gt;Username:
+    &lt;input type="text" name="username" maxlength="25" /&gt;
+  &lt;/p&gt;
+  &lt;p&gt;Password: 
+    &lt;input type="password" name="password" maxlength="30" /&gt;
+  &lt;/p&gt;
 &lt;/form&gt;
 </code>
-</pre>
-		<form action="https://www.reddit.com">
-			<p>Username:
-				<input type="text" name="username" maxlength="25" />
-			</p>
-			<p>Password: 
-				<input type="password" name="password" maxlength="30" />
-			</p>
-		</form>
 
-		<h4 id="textarea">Text Area</h4>
-		<p>
-			Creates a multi-line text input. Unlike the previous two, this is NOT an empty element. Any text that appears in between the tag will appear in the text area when the page loads. If nothing is entered and the form is 
-			submitted, then whatever was there by default will be sent to the server. Some sites use Javascript to clear this area when it is clicked on. Use CSS to manipulate the size. This is a block element so should not be put 
-			inside of <code>&lt;p&gt;</code> tags.
-		</p>
-<pre>
+    </pre>
+    <form action="https://www.reddit.com">
+      <p>Username: 
+      <input type="text" name="username" maxlength="25" /></p>
+      <p>Password: 
+      <input type="password" name="password" maxlength="30" /></p>
+    </form>
+    <h4 id="textarea">Text Area</h4>
+    <p>Creates a multi-line text input. Unlike the previous two, this is NOT an empty element. Any text that appears in between the tag will appear in the text area when the page loads. If nothing is entered and the form is submitted, then whatever was there by default will be sent to the server. Some sites use Javascript to clear this area when it is clicked on. Use CSS to manipulate the size. This is a block element so should not be put inside of 
+    <code>&lt;p&gt;</code>tags.</p>
+    <pre>
 <code>
 &lt;form action="https://www.reddit.com"&gt;
-	&lt;p&gt;Please leave your feedback here!&lt;/p&gt;
-	&lt;textarea name="feedback" maxlength="120"&gt;Enter your comments...&lt;/textarea&gt;
+  &lt;p&gt;Please leave your feedback here!&lt;/p&gt;
+  &lt;textarea name="feedback" maxlength="120"&gt;Enter your comments...&lt;/textarea&gt;
 &lt;/form&gt;
 </code>
-</pre>
-		<form action="https://www.reddit.com">
-			<p>Please leave your feedback here!</p>
-			<textarea name="feedback" maxlength="120">Enter your comments...</textarea>
-		</form>
 
-		<h4 id="radiobutton">Radio Button</h4>
-		<p><code>type="radio"</code></p>
-		<p>
-			They allow users to pick just one of a number of options. The <code>name</code> attribute is sent to the server with the value of the option that the user selects. It also groups the radio buttons together. The <code>name</code> attribute should be the same for 
-			all of the radio buttons used to answer the question. The <code>value</code> attribute indicates the value that is sent to the server for the selected option. The value for each button should be different. The <code>checked</code> 
-			attribute is used to indicate which value should be selected when the page loads. The value of this attribute is just <code>"checked"</code>. This is an inline empty element.
-		</p>
-<pre>
+    </pre>
+    <form action="https://www.reddit.com">
+      <p>Please leave your feedback here!</p>
+      <textarea name="feedback" maxlength="120">Enter your comments...</textarea>
+    </form>
+    <h4 id="radiobutton">Radio Button</h4>
+    <p>
+    <code>type="radio"</code>
+    </p>
+    <p>They allow users to pick just one of a number of options. The 
+    <code>name</code>attribute is sent to the server with the value of the option that the user selects. It also groups the radio buttons together. The 
+    <code>name</code>attribute should be the same for all of the radio buttons used to answer the question. The 
+    <code>value</code>attribute indicates the value that is sent to the server for the selected option. The value for each button should be different. The 
+    <code>checked</code>attribute is used to indicate which value should be selected when the page loads. The value of this attribute is just 
+    <code>"checked"</code>. This is an inline empty element.</p>
+    <pre>
 <code>
 &lt;form action="https://www.reddit.com"&gt;
-	&lt;p&gt;
-		Select your lane:
-		&lt;br /&gt;
-		&lt;input type="radio" name="lane" value="top" /&gt;Top
-		&lt;input type="radio" name="lane" value="jungle" /&gt;Jungle
-		&lt;input type="radio" name="lane" value="middle" checked="checked" /&gt;Middle
-		&lt;input type="radio" name="lane" value="adc" /&gt;ADC
-		&lt;input type="radio" name="lane" value="support" /&gt;Support
-	&lt;/p&gt;
+  &lt;p&gt;
+    Select your lane:
+    &lt;br /&gt;
+    &lt;input type="radio" name="lane" value="top" /&gt;Top
+    &lt;input type="radio" name="lane" value="jungle" /&gt;Jungle
+    &lt;input type="radio" name="lane" value="middle" checked="checked" /&gt;Middle
+    &lt;input type="radio" name="lane" value="adc" /&gt;ADC
+    &lt;input type="radio" name="lane" value="support" /&gt;Support
+  &lt;/p&gt;
 &lt;/form&gt;
 </code>
-</pre>
-		<form action="https://www.reddit.com">
-			<p>
-				Select your lane:
-				<br />
-				<input type="radio" name="lane" value="top" />Top
-				<input type="radio" name="lane" value="jungle" />Jungle
-				<input type="radio" name="lane" value="middle" checked="checked" />Middle
-				<input type="radio" name="lane" value="adc" />ADC
-				<input type="radio" name="lane" value="support" />Support
-			</p>
-		</form>
-		<h4 id="checkbox">Checkbox</h4>
-		<p><code>type="checkbox"</code></p>
-		<p>Has the same attributes as <code>type="radio"</code>. This is an inline element.</p>
-<pre>
-<code>
-&lt;form action="https://www.reddit.com"&gt;
-	&lt;p&gt;
-		What would you like on your burrito?
-		&lt;br /&gt;
-		&lt;input type="checkbox" name="burrito" value="meat" /&gt;Meat
-		&lt;input type="checkbox" name="burrito" value="moremeat" /&gt;More Meat
-		&lt;input type="checkbox" name="burrito" value="mostmeat" /&gt;Most Meat
-		&lt;input type="checkbox" name="burrito" value="allmeat" /&gt;All Meat
-	&lt;/p&gt;
-&lt;/form&gt;
-</code>
-</pre>
-		<form action="https://www.reddit.com">
-			<p>
-				What would you like on your burrito?
-				<br />
-				<input type="checkbox" name="burrito" value="meat" />Meat
-				<input type="checkbox" name="burrito" value="moremeat" />More Meat
-				<input type="checkbox" name="burrito" value="mostmeat" />Most Meat
-				<input type="checkbox" name="burrito" value="allmeat" />All Meat
-			</p>
-		</form>
-		<h4 id="file">File Input</h4>
-		<p><code>type="file"</code></p>
-		<p>This creates a box that looks like a text input followed by a Browse button. If you are allowing users to upload files, the <code>&lt;form&gt;</code> element must have a value of <code>"post"</code> for its <code>method</code> attribute. This is an empty element.</p>
-<pre>
-<code>
-&lt;form action="https://www.reddit.com" type="file"&gt;
-	&lt;p&gt;Upload your file!&lt;/p&gt;
-	&lt;input type="file" name="userfile" /&gt;
-&lt;/form&gt;
-</code>
-</pre>
-		<form action="https://www.reddit.com" type="file">
-			<p>Upload your file!</p>
-			<input type="file" name="userfile" />
-		</form>
-		<h4 id="hidden">Hidden Controls</h4>
-		<p><code>type="hidden"</code></p>
-		<p>If you use the <code>"hidden"</code> value, you can prevent forms from showing on a webpage. For example, an author might use a hidden field to indicate which page the user was on when they submitted the form.</p>
-		<h3 id="dropdown">Drop Down List Box</h3>
-		<p>A drop down list box can be created using the <code>&lt;select&gt;</code> element. It contains two or more <code>&lt;option&gt;</code> elements. It also contains a <code>name</code> attribute to be sent to the server.</p>
-		<p>The <code>&lt;option&gt;</code> element is used to specify the options the user can select from. The <code>value</code> attribute indicates the value that is sent to the server if that option is selected. For a default selected 
-		option, use the <code>selected</code> attribute, which has the only value <code>"selected"</code>. If the <code>selected</code> attribute is not specified, it defaults to the first <code>option</code>. This is a block element.</p>
 
-<pre>
+    </pre>
+    <form action="https://www.reddit.com">
+      <p>Select your lane: 
+      <br />
+      <input type="radio" name="lane" value="top" />Top 
+      <input type="radio" name="lane" value="jungle" />Jungle 
+      <input type="radio" name="lane" value="middle" checked="checked" />Middle 
+      <input type="radio" name="lane" value="adc" />ADC 
+      <input type="radio" name="lane" value="support" />Support</p>
+    </form>
+    <h4 id="checkbox">Checkbox</h4>
+    <p>
+    <code>type="checkbox"</code>
+    </p>
+    <p>Has the same attributes as 
+    <code>type="radio"</code>. This is an inline element.</p>
+    <pre>
 <code>
 &lt;form action="https://www.reddit.com"&gt;
-	&lt;p&gt;What was your first programming language?&lt;/p&gt;
-	&lt;select name="language"&gt;
-		&lt;option value="java"&gt;Java&lt;/option&gt;
-		&lt;option value="C"&gt;C&lt;/option&gt;
-		&lt;option value="C++"&gt;C++&lt;/option&gt;
-		&lt;option value="python" selected="selected"&gt;Python&lt;/option&gt;
-		&lt;option value="javascript"&gt;Javascript&lt;/option&gt;
-	&lt;/select&gt;
+  &lt;p&gt;
+    What would you like on your burrito?
+    &lt;br /&gt;
+    &lt;input type="checkbox" name="burrito" value="meat" /&gt;Meat
+    &lt;input type="checkbox" name="burrito" value="moremeat" /&gt;More Meat
+    &lt;input type="checkbox" name="burrito" value="mostmeat" /&gt;Most Meat
+    &lt;input type="checkbox" name="burrito" value="allmeat" /&gt;All Meat
+  &lt;/p&gt;
 &lt;/form&gt;
 </code>
-</pre>
-		<form action="https://www.reddit.com">
-			<p>What was your first programming language?</p>
-			<select name="language">
-				<option value="java">Java</option>
-				<option value="C">C</option>
-				<option value="C++">C++</option>
-				<option value="python" selected="selected">Python</option>
-				<option value="javascript">Javascript</option>
-			</select>
-		</form>
-		
-		<h4 id="multipleselect">Multiple Select Box</h4>
-		<p>
-			You can convert the aforementioned drop down list box into a multiple select box by adding the <code>multiple</code> attribute with a value of <code>"multiple"</code>. You can also turn it from a drop down box into a 
-			box that shows more than one option by using the <code>size</code> attribute to change how many options are shown at once.
-		</p>
-<pre>
+
+    </pre>
+    <form action="https://www.reddit.com">
+      <p>What would you like on your burrito? 
+      <br />
+      <input type="checkbox" name="burrito" value="meat" />Meat 
+      <input type="checkbox" name="burrito" value="moremeat" />More Meat 
+      <input type="checkbox" name="burrito" value="mostmeat" />Most Meat 
+      <input type="checkbox" name="burrito" value="allmeat" />All Meat</p>
+    </form>
+    <h4 id="file">File Input</h4>
+    <p>
+    <code>type="file"</code>
+    </p>
+    <p>This creates a box that looks like a text input followed by a Browse button. If you are allowing users to upload files, the 
+    <code>&lt;form&gt;</code>element must have a value of 
+    <code>"post"</code>for its 
+    <code>method</code>attribute. This is an empty element.</p>
+    <pre>
+<code>
+&lt;form action="https://www.reddit.com" method="post"&gt;
+  &lt;p&gt;Upload your file!&lt;/p&gt;
+  &lt;input type="file" name="userfile" /&gt;
+&lt;/form&gt;
+</code>
+
+    </pre>
+    <form action="https://www.reddit.com" method="post">
+      <p>Upload your file!</p>
+      <input type="file" name="userfile" />
+    </form>
+    <h4 id="hidden">Hidden Controls</h4>
+    <p>
+    <code>type="hidden"</code>
+    </p>
+    <p>If you use the 
+    <code>"hidden"</code>value, you can prevent forms from showing on a webpage. For example, an author might use a hidden field to indicate which page the user was on when they submitted the form.</p>
+    <h3 id="dropdown">Drop Down List Box</h3>
+    <p>A drop down list box can be created using the 
+    <code>&lt;select&gt;</code>element. It contains two or more 
+    <code>&lt;option&gt;</code>elements. It also contains a 
+    <code>name</code>attribute to be sent to the server.</p>
+    <p>The 
+    <code>&lt;option&gt;</code>element is used to specify the options the user can select from. The 
+    <code>value</code>attribute indicates the value that is sent to the server if that option is selected. For a default selected option, use the 
+    <code>selected</code>attribute, which has the only value 
+    <code>"selected"</code>. If the 
+    <code>selected</code>attribute is not specified, it defaults to the first 
+    <code>option</code>. This is a block element.</p>
+    <pre>
 <code>
 &lt;form action="https://www.reddit.com"&gt;
-	&lt;p&gt;What languages do you know? (Press and hold control (PC)/command (Mac) to select multiple options).&lt;/p&gt;
-	&lt;select name="knownlanguage" multiple="multiple" size="5"&gt;
-		&lt;option value="java"&gt;Java&lt;/option&gt;
-		&lt;option value="C"&gt;C&lt;/option&gt;
-		&lt;option value="C++"&gt;C++&lt;/option&gt;
-		&lt;option value="python" selected="selected"&gt;Python&lt;/option&gt;
-		&lt;option value="javascript"&gt;Javascript&lt;/option&gt;
-	&lt;/select&gt;
+  &lt;p&gt;What was your first programming language?&lt;/p&gt;
+  &lt;select name="language"&gt;
+    &lt;option value="java"&gt;Java&lt;/option&gt;
+    &lt;option value="C"&gt;C&lt;/option&gt;
+    &lt;option value="C++"&gt;C++&lt;/option&gt;
+    &lt;option value="python" selected="selected"&gt;Python&lt;/option&gt;
+    &lt;option value="javascript"&gt;Javascript&lt;/option&gt;
+  &lt;/select&gt;
 &lt;/form&gt;
 </code>
-</pre>
-		<form action="https://www.reddit.com">
-			<p>What languages do you know? (Press and hold control (PC)/command (Mac) to select multiple options).</p>
-			<select name="knownlanguage" multiple="multiple" size="5">
-				<option value="java">Java</option>
-				<option value="C">C</option>
-				<option value="C++">C++</option>
-				<option value="python" selected="selected">Python</option>
-				<option value="javascript">Javascript</option>
-			</select>
-		</form>
-		<h3 id="buttons">Buttons</h3>
-		<h4 id="submitbutton">Submit Button</h4>
-		<p>type="submit"</p>
-		<p>We also use the <code>&lt;input&gt;</code> element to create the buttons. An <code>&lt;input&gt;</code> of <code>type="submit"</code> will send the form to the server. To manipulate the text on the button, use the <code>value</code> attribute.</p>
-<pre>
+
+    </pre>
+    <form action="https://www.reddit.com">
+      <p>What was your first programming language?</p>
+      <select name="language">
+        <option value="java">Java</option>
+        <option value="C">C</option>
+        <option value="C++">C++</option>
+        <option value="python" selected="selected">Python</option>
+        <option value="javascript">Javascript</option>
+      </select>
+    </form>
+    <h4 id="multipleselect">Multiple Select Box</h4>
+    <p>You can convert the aforementioned drop down list box into a multiple select box by adding the 
+    <code>multiple</code>attribute with a value of 
+    <code>"multiple"</code>. You can also turn it from a drop down box into a box that shows more than one option by using the 
+    <code>size</code>attribute to change how many options are shown at once.</p>
+    <pre>
 <code>
 &lt;form action="https://www.reddit.com"&gt;
-	&lt;p&gt;Username: &lt;input type="text" name="username" maxlength="25" /&gt;&lt;/p&gt;
-	&lt;p&gt;Password: &lt;input type="password" name="password" maxlength="30" /&gt;&lt;/p&gt;
-	&lt;input type="submit" value="Submit" /&gt;
+  &lt;p&gt;What languages do you know? (Press and hold control (PC)/command (Mac) to select multiple options).&lt;/p&gt;
+  &lt;select name="knownlanguage" multiple="multiple" size="5"&gt;
+    &lt;option value="java"&gt;Java&lt;/option&gt;
+    &lt;option value="C"&gt;C&lt;/option&gt;
+    &lt;option value="C++"&gt;C++&lt;/option&gt;
+    &lt;option value="python" selected="selected"&gt;Python&lt;/option&gt;
+    &lt;option value="javascript"&gt;Javascript&lt;/option&gt;
+  &lt;/select&gt;
 &lt;/form&gt;
 </code>
-</pre>
-		<form action="https://www.reddit.com">
-			<p>Username: <input type="text" name="username" maxlength="25" /></p>
-			<p>Password: <input type="password" name="password" maxlength="30" /></p>
-			<input type="submit" value="Submit" />
-		</form>
-		<p>If you look at the URL after submitting the form, you will see that <i>/?username=text&password=text</i> is appended to the end of the URL.</p>
-		<h4 id="imagebutton">Image Button</h4>
-		<p>type="image"</p>
-		<p>If you want to use an image for the submit button, you set the <code>type</code> attribute to <code>"image"</code> and then you may use the <code>src</code>, <code>width</code>, <code>height</code>, and <code>alt</code> attributes just as you do with the <code>&lt;img&gt;</code> element.</p>
-<pre>
+
+    </pre>
+    <form action="https://www.reddit.com">
+      <p>What languages do you know? (Press and hold control (PC)/command (Mac) to select multiple options).</p>
+      <select name="knownlanguage" multiple="multiple" size="5">
+        <option value="java">Java</option>
+        <option value="C">C</option>
+        <option value="C++">C++</option>
+        <option value="python" selected="selected">Python</option>
+        <option value="javascript">Javascript</option>
+      </select>
+    </form>
+    <h3 id="buttons">Buttons</h3>
+    <h4 id="submitbutton">Submit Button</h4>
+    <p>type="submit"</p>
+    <p>We also use the 
+    <code>&lt;input&gt;</code>element to create the buttons. An 
+    <code>&lt;input&gt;</code>of 
+    <code>type="submit"</code>will send the form to the server. To manipulate the text on the button, use the 
+    <code>value</code>attribute.</p>
+    <pre>
+<code>
+&lt;form action="https://www.reddit.com" target="_blank"&gt;
+  &lt;p&gt;Username: &lt;input type="text" name="username" maxlength="25" /&gt;&lt;/p&gt;
+  &lt;p&gt;Password: &lt;input type="password" name="password" maxlength="30" /&gt;&lt;/p&gt;
+  &lt;input type="submit" value="Submit" /&gt;
+&lt;/form&gt;
+</code>
+
+    </pre>
+    <form action="https://www.reddit.com" target="_blank">
+      <p>Username: 
+      <input type="text" name="username" maxlength="25" /></p>
+      <p>Password: 
+      <input type="password" name="password" maxlength="30" /></p>
+      <input type="submit" value="Submit" />
+    </form>
+    <p>If you look at the URL after submitting the form, you will see that 
+    <i>/?username=text&amp;password=text</i>is appended to the end of the URL.</p>
+    <h4 id="imagebutton">Image Button</h4>
+    <p>type="image"</p>
+    <p>If you want to use an image for the submit button, you set the 
+    <code>type</code>attribute to 
+    <code>"image"</code>and then you may use the 
+    <code>src</code>, 
+    <code>width</code>, 
+    <code>height</code>, and 
+    <code>alt</code>attributes just as you do with the 
+    <code>&lt;img&gt;</code>element.</p>
+    <pre>
 <code>
 &lt;form action="https://www.reddit.com"&gt;
-	&lt;p&gt;Please leave your feedback here!&lt;/p&gt;
-	&lt;textarea name="feedback" maxlength="120"&gt;Enter your comments...&lt;/textarea&gt;
-	&lt;input type="image" src="assets/images/submit.png" width="100" height="34" alt="submit" /&gt;
+  &lt;p&gt;Please leave your feedback here!&lt;/p&gt;
+  &lt;textarea name="feedback" maxlength="120"&gt;Enter your comments...&lt;/textarea&gt;
+  &lt;input type="image" src="assets/images/submit.png" width="100" height="34" alt="submit" /&gt;
 &lt;/form&gt;
 </code>
-</pre>
-		<form action="https://www.reddit.com">
-			<p>Please leave your feedback here!</p>
-			<textarea name="feedback" maxlength="120">Enter your comments...</textarea>
-			<input type="image" src="assets/images/submit.png" width="100" height="34" alt="submit" />
-		</form>
-		<h4 id="button">Button</h4>
-		<p>The <code>&lt;button&gt;</code> element was introduced to allow more control over how their buttons appear and allow other elements to appear inside the button. So you can combine text and images in between the tags.</p>
-<pre>
+
+    </pre>
+    <form action="https://www.reddit.com">
+      <p>Please leave your feedback here!</p>
+      <textarea name="feedback" maxlength="120">Enter your comments...</textarea>
+      <input type="image" src="assets/images/submit.png" width="100" height="34" alt="submit" />
+    </form>
+    <h4 id="button">Button</h4>
+    <p>The 
+    <code>&lt;button&gt;</code>element was introduced to allow more control over how their buttons appear and allow other elements to appear inside the button. So you can combine text and images in between the tags.</p>
+    <pre>
 <code>
 &lt;form action="https://www.reddit.com"&gt;
-	&lt;button&gt;&lt;p&gt;&lt;img src="assets/images/MemeableShane.png" alt="press shane" title="press me I dare you" width="40" height="60" /&gt;Press Shane!&lt;/p&gt;&lt;/button&gt;
+  &lt;button&gt;&lt;p&gt;&lt;img src="assets/images/MemeableShane.png" alt="press shane" title="press me I dare you" width="40" height="60" /&gt;Press Shane!&lt;/p&gt;&lt;/button&gt;
 &lt;/form&gt;
 </code>
-</pre>
-		<form action="https://www.reddit.com">
-			<button><p><img src="assets/images/MemeableShane.png" alt="press shane" title="press me I dare you" width="40" height="60" />Press Shane!</p></button>
-		</form>
-		<h3 id="labellingforms">Labelling Form Controls</h3>
-		<p>When introducing form controls, the code was kept simple indicating the purpose of each one in text next to it. However, each form control should have its own <code>&lt;label&gt;</code> element as this makes this form accessible 
-		to vision-impaired users. You can use this in two ways:</p>
-		<ul>
-			<li>Wrap around both the text description and the form input.</li>
-			<li>Be kept separate from the form control and use the <code>for</code> attribute to indicate which form control it is a label for by referencing the <code>id</code> attribute.</li>
-		</ul>
-<pre>
+
+    </pre>
+    <form action="https://www.reddit.com">
+      <button>
+        <p>
+        <img src="assets/images/MemeableShane.png" alt="press shane" title="press me I dare you" width="40" height="60" />Press Shane!</p>
+      </button>
+    </form>
+    <h3 id="labellingforms">Labelling Form Controls</h3>
+    <p>When introducing form controls, the code was kept simple indicating the purpose of each one in text next to it. However, each form control should have its own 
+    <code>&lt;label&gt;</code>element as this makes this form accessible to vision-impaired users. You can use this in two ways:</p>
+    <ul>
+      <li>Wrap around both the text description and the form input.</li>
+      <li>Be kept separate from the form control and use the 
+        <code>for</code>attribute to indicate which form control it is a label for by referencing the 
+        <code>id</code>attribute.</li>
+    </ul>
+    <pre>
 <code>
 &lt;label&gt;Account Number: &lt;input type="text" name="account" maxlength="25" /&gt;&lt;/label&gt;
 &lt;br /&gt;
@@ -990,260 +1266,520 @@ int main(void) {
 &lt;input id="savings" type="radio" name="accounttype" value="savings" /&gt;
 &lt;label for="savings"&gt;Savings&lt;/label&gt;
 </code>
-</pre>
-		<label>Account Number: <input type="text" name="account" maxlength="25" /></label>
-		<br />
-		<input id="checking" type="radio" name="accounttype" value="checking" />
-		<label for="checking">Checking</label>
-		<input id="savings" type="radio" name="accounttype" value="savings" />
-		<label for="savings">Savings</label>
-		<p>You may notice that when you use a <code>&lt;label&gt;</code> element with a checkbox/radio button, users can click on either the form control or the label to select. The expanded clickable area makes the form easier to use.</p>
-		<h3 id="groupingforms">Grouping Form Elements</h3>
-		<p>You can group related form controls together inside the <code>&lt;fieldset&gt;</code> element. Most browsers will show the fieldset with a line around the edge to show how they are related. The <code>&lt;legend&gt;</code> element can come directly 
-		after the opening <code>&lt;fieldset&gt;</code> tag and contains a caption which helps identify the purpose of that group of form controls.</p>
-<pre>
+
+    </pre>
+    <label>Account Number: 
+      <input type="text" name="account" maxlength="25" /></label>
+    <br />
+    <input id="checking" type="radio" name="accounttype" value="checking" />
+    <label for="checking">Checking</label>
+    <input id="savings" type="radio" name="accounttype" value="savings" />
+    <label for="savings">Savings</label>
+    <p>You may notice that when you use a 
+    <code>&lt;label&gt;</code>element with a checkbox/radio button, users can click on either the form control or the label to select. The expanded clickable area makes the form easier to use.</p>
+    <h3 id="groupingforms">Grouping Form Elements</h3>
+    <p>You can group related form controls together inside the 
+    <code>&lt;fieldset&gt;</code>element. Most browsers will show the fieldset with a line around the edge to show how they are related. The 
+    <code>&lt;legend&gt;</code>element can come directly after the opening 
+    <code>&lt;fieldset&gt;</code>tag and contains a caption which helps identify the purpose of that group of form controls.</p>
+    <pre>
 <code>
 &lt;fieldset&gt;
-	&lt;legend&gt;Login&lt;/legend&gt;
-	&lt;label&gt;Username:&lt;br /&gt;
-	&lt;input type="text" name="username" maxlength="25" /&gt;&lt;/label&gt;&lt;br /&gt;
-	&lt;label&gt;Password:&lt;br /&gt;
-	&lt;input type="password" name="password" maxlength="30" /&gt;&lt;/label&gt;
+  &lt;legend&gt;Login&lt;/legend&gt;
+  &lt;label&gt;Username:&lt;br /&gt;
+  &lt;input type="text" name="username" maxlength="25" /&gt;&lt;/label&gt;&lt;br /&gt;
+  &lt;label&gt;Password:&lt;br /&gt;
+  &lt;input type="password" name="password" maxlength="30" /&gt;&lt;/label&gt;
 &lt;/fieldset&gt;
 </code>
-</pre>
-		<fieldset>
-			<legend>Login</legend>
-			<label>Username:<br />
-			<input type="text" name="username" maxlength="25" /></label><br />
-			<label>Password:<br />
-			<input type="password" name="password" maxlength="30" /></label>
-		</fieldset>
-		<h3 id="formvalid">HTML5: Form Validation</h3>
-		<p>Some websites give users a message when a form control has not been filled in correctly, which is known as <dfn>form validation</dfn>. Traditionally, form validation is done via Javascript. But HTML5 introduces form validation. 
-		An example of form validation is including the <code>required</code> attribute, which is set to the value of <code>"required"</code>.</p>
-<pre>
+
+    </pre>
+    <fieldset>
+      <legend>Login</legend>
+      <label>Username:
+        <br />
+        <input type="text" name="username" maxlength="25" /></label>
+      <br />
+      <label>Password:
+        <br />
+        <input type="password" name="password" maxlength="30" /></label>
+    </fieldset>
+    <h3 id="formvalid">HTML5: Form Validation</h3>
+    <p>Some websites give users a message when a form control has not been filled in correctly, which is known as 
+    <dfn>form validation</dfn>. Traditionally, form validation is done via Javascript. But HTML5 introduces form validation. An example of form validation is including the 
+    <code>required</code>attribute, which is set to the value of 
+    <code>"required"</code>.</p>
+    <pre>
 <code>
 &lt;fieldset&gt;
-	&lt;legend&gt;Login&lt;/legend&gt;
-	&lt;form action="https://www.reddit.com"&gt;
-		&lt;label&gt;Username:&lt;br /&gt;
-		&lt;input type="text" name="username" maxlength="25" required="required"/&gt;&lt;/label&gt;&lt;br /&gt;
-		&lt;label&gt;Password:&lt;br /&gt;
-		&lt;input type="password" name="password" maxlength="30" required="required"/&gt;&lt;/label&gt;&lt;br /&gt;&lt;br /&gt;
-		&lt;input type="submit" name="login" value="login" /&gt;
-	&lt;/form&gt;
+  &lt;legend&gt;Login&lt;/legend&gt;
+  &lt;form action="https://www.reddit.com"&gt;
+    &lt;label&gt;Username:&lt;br /&gt;
+    &lt;input type="text" name="username" maxlength="25" required="required"/&gt;&lt;/label&gt;&lt;br /&gt;
+    &lt;label&gt;Password:&lt;br /&gt;
+    &lt;input type="password" name="password" maxlength="30" required="required"/&gt;&lt;/label&gt;&lt;br /&gt;&lt;br /&gt;
+    &lt;input type="submit" value="login" /&gt;
+  &lt;/form&gt;
 &lt;/fieldset&gt;
 </code>
-</pre>
-		<fieldset>
-			<legend>Login</legend>
-			<form action="https://www.reddit.com">
-				<label>Username:<br />
-				<input type="text" name="username" maxlength="25" required="required"/></label><br />
-				<label>Password:<br />
-				<input type="password" name="password" maxlength="30" required="required"/></label><br /><br />
-				<input type="submit" name="login" value="Login" />
-			</form>
-		</fieldset>
-		<h3 id="dateinput">HTML5: Date Input</h3>
-		<p>Use an <code>&lt;input&gt;</code> element and set the <code>type</code> to <code>"date"</code>. On older browsers that do not support HTML5, it will just treat the input as a single line text box.</p>
-<pre>
+
+    </pre>
+    <fieldset>
+      <legend>Login</legend>
+      <form action="https://www.reddit.com">
+        <label>Username:
+          <br />
+          <input type="text" name="username" maxlength="25" required="required" /></label>
+        <br />
+        <label>Password:
+          <br />
+          <input type="password" name="password" maxlength="30" required="required" /></label>
+        <br />
+        <br />
+        <input type="submit" value="Login" />
+      </form>
+    </fieldset>
+    <h3 id="dateinput">HTML5: Date Input</h3>
+    <p>Use an 
+    <code>&lt;input&gt;</code>element and set the 
+    <code>type</code>to 
+    <code>"date"</code>. On older browsers that do not support HTML5, it will just treat the input as a single line text box.</p>
+    <pre>
 <code>
 &lt;form action="https://www.reddit.com"&gt;
-	&lt;label&gt;Birth Date: &lt;input type="date" name="birth" /&gt;&lt;/label&gt;
-	&lt;input type="submit" name="datesubmit" value="Submit" /&gt;
+  &lt;label&gt;Birth Date: &lt;input type="date" name="birth" /&gt;&lt;/label&gt;
+  &lt;input type="submit" value="Submit" /&gt;
 &lt;/form&gt;
 </code>
-</pre>
-		<form action="https://www.reddit.com">
-			<label>Birth Date: <input type="date" name="birth" /></label>
-			<input type="submit" name="datesubmit" value="Submit" />
-		</form>
-		<p>Looking at the link this brings you to, you'll see a <i>/?birth=YYYY-MM-DD</i> appended to the end of the link.</p>
-		<h3 id="emailurlinput">HTML5: Email & URL Input</h3>
-		<p>For email input, use the <code>&lt;input&gt;</code> element and set the <code>type</code> attribute to <code>"email"</code>. For URL input, set the attribute to <code>"url"</code>. Browsers that support HTML5 validation 
-		will check that the provided input is valid.</p>
-<pre>
+
+    </pre>
+    <form action="https://www.reddit.com">
+      <label>Birth Date: 
+        <input type="date" name="birth" /></label>
+      <input type="submit" value="Submit" />
+    </form>
+    <p>Looking at the link this brings you to, you'll see a 
+    <i>/?birth=YYYY-MM-DD</i>appended to the end of the link.</p>
+    <h3 id="emailurlinput">HTML5: Email &amp; URL Input</h3>
+    <p>For email input, use the 
+    <code>&lt;input&gt;</code>element and set the 
+    <code>type</code>attribute to 
+    <code>"email"</code>. For URL input, set the attribute to 
+    <code>"url"</code>. Browsers that support HTML5 validation will check that the provided input is valid.</p>
+    <pre>
 <code>
 &lt;form action="https://www.reddit.com"&gt;
-	&lt;label&gt;Email Address: &lt;br /&gt;
-		&lt;input type="email" name="email" maxlength="40" required="required" /&gt;&lt;/label&gt;&lt;br /&gt;
-	&lt;label&gt;Website: &lt;br /&gt;
-		&lt;input type="url" name="website" maxlength="40" required="required" /&gt;&lt;/label&gt;&lt;br /&gt;&lt;br /&gt;
-	&lt;input type="submit" name="submit" value="Submit" /&gt;
+  &lt;label&gt;Email Address: &lt;br /&gt;
+    &lt;input type="email" name="email" maxlength="40" required="required" /&gt;&lt;/label&gt;&lt;br /&gt;
+  &lt;label&gt;Website: &lt;br /&gt;
+    &lt;input type="url" name="website" maxlength="40" required="required" /&gt;&lt;/label&gt;&lt;br /&gt;&lt;br /&gt;
+  &lt;input type="submit" value="Submit" /&gt;
 &lt;/form&gt;
 </code>
-</pre>
-		<form action="https://www.reddit.com">
-			<label>Email Address: <br />
-				<input type="email" name="email" maxlength="40" required="required" /></label><br />
-			<label>Website: <br />
-				<input type="url" name="website" maxlength="40" required="required" /></label><br /><br />
-			<input type="submit" name="submit" value="Submit" />
-		</form>
-		<h3 id="searchinput">HTML5: Search Input</h3>
-		<p>To create a single line text box for search queries, use the <code>&lt;input&gt;</code> element and set the <code>type</code> attribute to <code>"search"</code>. On any text box, you can also use an attribute called 
-		<code>placeholder</code> whose value is text that will be shown in the textbox until the user clicks in that area.</p>
-<pre>
+
+    </pre>
+    <form action="https://www.reddit.com">
+      <label>Email Address: 
+        <br />
+        <input type="email" name="email" maxlength="40" required="required" /></label>
+      <br />
+      <label>Website: 
+        <br />
+        <input type="url" name="website" maxlength="40" required="required" /></label>
+      <br />
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+    <h3 id="searchinput">HTML5: Search Input</h3>
+    <p>To create a single line text box for search queries, use the 
+    <code>&lt;input&gt;</code>element and set the 
+    <code>type</code>attribute to 
+    <code>"search"</code>. On any text box, you can also use an attribute called 
+    <code>placeholder</code>whose value is text that will be shown in the textbox until the user clicks in that area.</p>
+    <pre>
 <code>
 &lt;form action="https://www.reddit.com"&gt;
-	&lt;label&gt;Search: &lt;br /&gt;
-		&lt;input type="search" name="searchbox" placeholder="Enter keyword" /&gt;
-	&lt;/label&gt;
-	&lt;input type="submit" name="searchsubmit" value="Submit" /&gt;
+  &lt;label&gt;Search: &lt;br /&gt;
+    &lt;input type="search" name="searchbox" placeholder="Enter keyword" /&gt;
+  &lt;/label&gt;
+  &lt;input type="submit" value="Submit" /&gt;
 &lt;/form&gt;
 </code>
-</pre>
-		<form action="https://www.reddit.com">
-			<label>Search: <br />
-				<input type="search" name="searchbox" placeholder="Enter keyword" />
-			</label>
-			<input type="submit" name="searchsubmit" value="Submit" />
-		</form>
-		<hr />
-		<h2 id="extramarkup">Extra Markup</h2>
-		<h3 id="doctypes">Doctypes</h3>
-		<p>
-			There have been several version of HTML, so webpages should begin with a DOCTYPE declaration to tell the browser which version of HTML is being used. Here are the following common version used:
-		</p>
-		<ul>
-			<li>
-				<b>HTML5</b>
-				<br />
-				<code>&lt;!DOCTYPE html&gt;</code>
-			</li>
-			<li>
-				<b>HTML4</b>
-				<br />
-				<code>&lt;!DOCTYPE html PUBLIC
-					<br />
-					"-//W3C//DTD HTML 4.01 Transitional //EN"
-					<br />
-					"http://www.w3.org/TR/html4/loose.dtd"&gt;
-				</code>
-			</li>
-			<li>
-				<b>Transitional XHTML 1.0</b>
-				<br />
-				<code>&lt;!DOCTYPE html PUBLIC
-					<br />
-					"`//W3C//DTD XHTML 1.0 Transitional//EN"
-					<br />
-					"http://www.w3.org/TR/xhtml1/DTD/
-					<br />
-					xhtml1-transitional.dtd"&gt;
-				</code>
-			</li>
-			<li>
-				<b>Strict XHTML 1.0</b>
-				<br />
-				<code>&lt;!DOCTYPE html PUBLIC
-					<br />
-					"`//W3C//DTD XHTML 1.0 Strict//EN"
-					<br />
-					"http://www.w3.org/TR/xhtml1/DTD/
-					<br />
-					xhtml1-strict.dtd"&gt;
-				</code>
-			</li>
-			<li>
-				<b>XML Declaration</b>
-				<br />
-				<code>&lt;?xml version="1.0" ?&gt;</code>
-			</li>
-		</ul>
-		<h3 id="comments">Comments in HTML</h3>
-		<!-- For example, you can't see this so ha! -->
-		<p>To add a comment in html, insert the comment between <code>&lt;!-- --&gt;</code> like so: <code>&lt;!-- This is my comment! --&gt;</code>.</p>
-		<h3 id="id">ID Attribute</h3>
-		<p>
-			Every HTML element can carry the <code>id</code> attribute. It uniquely identifies the element from other elements on the page. The value should start with a letter of an underscore, and it's crucial that no two elements on the same page share the same 
-			<code>id</code> attribute. Giving an element it's own unique <code>id</code> allows CSS style it differently from any other instance of the same element on the page. In Javascript, <code>id</code> attributes allow the script to work with that specific element. 
-			An <code>id</code> attribute is known as a <dfn>global attribute</dfn> because it can be used with any element.
-		</p>
-		<h3 id="class">Class Attribute</h3>
-		<p>
-			Another global attribute is the <code>class</code> attribute. It allows you to identify several elements of a page as different from the other elements of the page, instead of only allowing you to identify one at a time. The <code>class</code> attribute on any element 
-			can share the same value as another element, and they will belong to the same class. Using these attributes do not affect the presentation of the element unless there is CSS code that indicates it should be displayed differently.
-		</p>
-		<h3 id="block">Block Elements</h3>
-		<p>
-			<dfn>Block elements</dfn> will always appear to start on a new line in the browser. Examples of block elements include <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;ul&gt;</code>, and <code>&lt;li&gt;</code>.
-		</p>
-		<h3 id="inline">Inline Elements</h3>
-		<p>
-			Unlike block elements, <dfn>inline elements</dfn> will appear to to continue on the same line as their neighboring elements. These include <code>&lt;a&gt;</code>, <code>&lt;b&gt;</code>, <code>&lt;em&gt;</code>, and <code>&lt;img&gt;</code>.
-		</p>
-		<h3 id="div">Grouping Text & Elements in a Block</h3>
-		<p>The <code>&lt;div&gt;</code> element allows you to group a set of elements together in a one-level block. In a browser, the contents of a <code>&lt;div&gt; elements will start on a new line. Typically, these are paired with the <code>id</code> and <code>class</code> attributes so that CSS can style the block.</coe></code></p>
-		<h3 id="span">Grouping Text & Elements Inline</h3>
-		<p>The <code>&lt;span&gt;</code> element acts like the <code>&lt;div&gt;</code> element, except it groups them together inline. It is typically used when a section of text needs to be differentiated, but there is no other suitable element to differentiate it. Alternatively, it is used to store a certain number of inline elements.</p>
-		<h3 id="iframes">IFrames</h3>
-		<p>
-			An <dfn>iframe</dfn> is like a little window that has been cut into your page, and in that window you can see another page. It's an abbreviation of "inline frame". A common use of iframes is to embed a Google Map onto the page. It is created using the <code>&lt;iframe&gt;</code> element. There are three attributes that need to be 
-			defined, <code>src</code>, <code>height</code>, and <code>width</code>. <code>src</code> indicates the URL of the page that should be shown. The <code>height</code> and <code>width</code> attributes indicate the size of the "window" in pixels.
-		</p>
-<pre>
+
+    </pre>
+    <form action="https://www.reddit.com">
+      <label>Search: 
+        <br />
+        <input type="search" name="searchbox" placeholder="Enter keyword" /></label>
+      <input type="submit" value="Submit" />
+    </form>
+    <hr />
+    <h2 id="extramarkup">Extra Markup</h2>
+    <h3 id="doctypes">Doctypes</h3>
+    <p>There have been several versions of HTML, so webpages should begin with a DOCTYPE declaration to tell the browser which version of HTML is being used. Here are the following common version used:</p>
+    <ul>
+      <li>
+        <b>HTML5</b>
+        <br />
+        <code>&lt;!DOCTYPE html&gt;</code>
+      </li>
+      <li>
+        <b>HTML4</b>
+        <br />
+        <code>&lt;!DOCTYPE html PUBLIC 
+          <br />"-//W3C//DTD HTML 4.01 Transitional //EN" 
+          <br />"http://www.w3.org/TR/html4/loose.dtd"&gt;</code>
+      </li>
+      <li>
+        <b>Transitional XHTML 1.0</b>
+        <br />
+        <code>&lt;!DOCTYPE html PUBLIC 
+          <br />"`//W3C//DTD XHTML 1.0 Transitional//EN" 
+          <br />"http://www.w3.org/TR/xhtml1/DTD/ 
+          <br />xhtml1-transitional.dtd"&gt;</code>
+      </li>
+      <li>
+        <b>Strict XHTML 1.0</b>
+        <br />
+        <code>&lt;!DOCTYPE html PUBLIC 
+          <br />"`//W3C//DTD XHTML 1.0 Strict//EN" 
+          <br />"http://www.w3.org/TR/xhtml1/DTD/ 
+          <br />xhtml1-strict.dtd"&gt;</code>
+      </li>
+      <li>
+        <b>XML Declaration</b>
+        <br />
+        <code>&lt;?xml version="1.0" ?&gt;</code>
+      </li>
+    </ul>
+    <h3 id="comments">Comments in HTML</h3>
+    <!-- For example, you can't see this so ha! -->
+    <p>To add a comment in html, insert the comment between 
+    <code>&lt;!-- --&gt;</code>like so: 
+    <code>&lt;!-- This is my comment! --&gt;</code>.</p>
+    <h3 id="id">ID Attribute</h3>
+    <p>Every HTML element can carry the 
+    <code>id</code>attribute. It uniquely identifies the element from other elements on the page. The value should start with a letter or an underscore, and it's crucial that no two elements on the same page share the same 
+    <code>id</code>attribute. Giving an element it's own unique 
+    <code>id</code>allows CSS style it differently from any other instance of the same element on the page. In Javascript, 
+    <code>id</code>attributes allow the script to work with that specific element. An 
+    <code>id</code>attribute is known as a 
+    <dfn>global attribute</dfn>because it can be used with any element.</p>
+    <h3 id="class">Class Attribute</h3>
+    <p>Another global attribute is the 
+    <code>class</code>attribute. It allows you to identify several elements of a page as different from the other elements of the page, instead of only allowing you to identify one at a time. The 
+    <code>class</code>attribute on any element can share the same value as another element, and they will belong to the same class. Using these attributes do not affect the presentation of the element unless there is CSS code that indicates it should be displayed differently.</p>
+    <h3 id="block">Block Elements</h3>
+    <p>
+    <dfn>Block elements</dfn>will always appear to start on a new line in the browser. Examples of block elements include 
+    <code>&lt;h1&gt;</code>, 
+    <code>&lt;p&gt;</code>, 
+    <code>&lt;ul&gt;</code>, and 
+    <code>&lt;li&gt;</code>.</p>
+    <h3 id="inline">Inline Elements</h3>
+    <p>Unlike block elements, 
+    <dfn>inline elements</dfn>will appear to to continue on the same line as their neighboring elements. These include 
+    <code>&lt;a&gt;</code>, 
+    <code>&lt;b&gt;</code>, 
+    <code>&lt;em&gt;</code>, and 
+    <code>&lt;img&gt;</code>.</p>
+    <h3 id="div">Grouping Text &amp; Elements in a Block</h3>
+    <p>The 
+    <code>&lt;div&gt;</code>element allows you to group a set of elements together in a one-level block. In a browser, the contents of a 
+    <code>&lt;div&gt;</code>elements will start on a new line. Typically, these are paired with the 
+    <code>id</code>and 
+    <code>class</code>attributes so that CSS can style the block.</p>
+    <h3 id="span">Grouping Text &amp; Elements Inline</h3>
+    <p>The 
+    <code>&lt;span&gt;</code>element acts like the 
+    <code>&lt;div&gt;</code>element, except it groups them together inline. It is typically used when a section of text needs to be differentiated, but there is no other suitable element to differentiate it. Alternatively, it is used to store a certain number of inline elements.</p>
+    <h3 id="iframes">IFrames</h3>
+    <p>An 
+    <dfn>iframe</dfn>is like a little window that has been cut into your page, and in that window you can see another page. It's an abbreviation of "inline frame". A common use of iframes is to embed a Google Map onto the page. It is created using the 
+    <code>&lt;iframe&gt;</code>element. There are three attributes that need to be defined, 
+    <code>src</code>, 
+    <code>height</code>, and 
+    <code>width</code>. 
+    <code>src</code>indicates the URL of the page that should be shown. The 
+    <code>height</code>and 
+    <code>width</code>attributes indicate the size of the "window" in pixels.</p>
+    <pre>
 <code>
 &lt;iframe width="640" height="480" src="A REALLY LONG GOOGLE EMBED LINK THAT IS TOO LONG TO SHOW HERE"&gt;&lt;/iframe&gt;
 </code>
-</pre>
-		<iframe width="640" height="480" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12089.918986334653!2d-73.98549824468824!3d40.751471909070666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1573782237602!5m2!1sen!2sus"></iframe>
-		<p>
-			There's also the <code>scrolling</code> attribute, but that is not supported in HTML5, only in prior versions. You can set the value to <code>"yes"</code> or <code>"no"</code> and it will show/hide scrollbars. Another deprecated attribute is <code>frameborder</code>, 
-			which takes a value <code>"1"</code> or <code>"0"</code> and indicates if a border should be shown/should not be shown. However, there is a new attribute only in HTML5, <code>seamless</code>, which can be added to an iframe if scrollbars should not be shown. It, like the other attributes, 
-			does not require a value, but good practice states that you should give it a value of <code>"seamless"</code>.
-		</p>
-		<h3 id="meta">Information About Your Pages</h3>
-		<p>
-			The <code>&lt;meta&gt;</code> element lives inside the <code>&lt;head&gt;</code> element described earlier. It contains information about the webpage itself. It's not visible to the user, but it's incredibly important as it tells search engines about your page. The <code>&lt;meta&gt;</code> element is an empty element, so does not have a closing tag. 
-			The information it stores is found in the attributes. The most common attributes are the <code>name</code> and <code>content</code> attributes, which tend to be used together. The <code>name</code> attribute indicates the property you are editing, and the <code>content</code> attribute indicates the value you are setting the property to. Here are the following 
-			possible name values: 
-		</p>
-		<ul>
-			<li>
-				<code>description</code>
-				<br />
-				<p>It contains a description of the page. The description is typically used by search engines to understand what the page is about, and often times, the description is displayed in the search engine results.</p>
-			</li>
-			<li>
-				<code>keywords</code>
-				<br />
-				<p>This contains a list of comma-separated words that a user might search on to find the page. However, this is no longer really used due to changes in how search engines index sites.</p>
-			</li>
-			<li>
-				<code>robots</code>
-				<br />
-				<p>This indicates whether the search engines should add this page to the search results or not. A value of <code>noindex</code> can be used if it should not be added. A value of <code>nofollow</code> should be used if they should add the page in their results, but not any pages that it links to.</p>
-			</li>
-			<li>
-				<code>author</code>
-				<br />
-				<p>Defines the author of the page.</p>
-			</li>
-			<li>
-				<code>pragma</code>
-				<br />
-				<p>This prevents the browser from caching the page (storing it locally to save time downloading it on subsequent visits).</p>
-			</li>
-			<li>
-				<code>expires</code>
-				<br />
-				<p>Since browsers often cache the content of the page, the <code>expires</code> option can be used to indicate when the page should expire and no longer be cached. It is specified in a specific format.</p>
-			</li>
-		</ul>
-<pre>
+
+    </pre>
+    <iframe width="640" height="480" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12089.918986334653!2d-73.98549824468824!3d40.751471909070666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1573782237602!5m2!1sen!2sus"></iframe>
+    <p>There's also the 
+    <code>scrolling</code>attribute, but that is not supported in HTML5, only in prior versions. You can set the value to 
+    <code>"yes"</code>or 
+    <code>"no"</code>and it will show/hide scrollbars. Another deprecated attribute is 
+    <code>frameborder</code>, which takes a value 
+    <code>"1"</code>or 
+    <code>"0"</code>and indicates if a border should be shown/should not be shown. However, there is a new attribute only in HTML5, 
+    <code>seamless</code>, which can be added to an iframe if scrollbars should not be shown. It, like the other attributes, does not require a value, but good practice states that you should give it a value of 
+    <code>"seamless"</code>.</p>
+    <h3 id="meta">Information About Your Pages</h3>
+    <p>The 
+    <code>&lt;meta&gt;</code>element lives inside the 
+    <code>&lt;head&gt;</code>element described earlier. It contains information about the webpage itself. It's not visible to the user, but it's incredibly important as it tells search engines about your page. The 
+    <code>&lt;meta&gt;</code>element is an empty element, so does not have a closing tag. The information it stores is found in the attributes. The most common attributes are the 
+    <code>name</code>and 
+    <code>content</code>attributes, which tend to be used together. The 
+    <code>name</code>attribute indicates the property you are editing, and the 
+    <code>content</code>attribute indicates the value you are setting the property to. Here are the following possible name values:</p>
+    <ul>
+      <li>
+        <code>description</code>
+        <br />
+        <p>It contains a description of the page. The description is typically used by search engines to understand what the page is about, and often times, the description is displayed in the search engine results.</p>
+      </li>
+      <li>
+        <code>keywords</code>
+        <br />
+        <p>This contains a list of comma-separated words that a user might search on to find the page. However, this is no longer really used due to changes in how search engines index sites.</p>
+      </li>
+      <li>
+        <code>robots</code>
+        <br />
+        <p>This indicates whether the search engines should add this page to the search results or not. A value of 
+        <code>noindex</code>can be used if it should not be added. A value of 
+        <code>nofollow</code>should be used if they should add the page in their results, but not any pages that it links to.</p>
+      </li>
+      <li>
+        <code>author</code>
+        <br />
+        <p>Defines the author of the page.</p>
+      </li>
+      <li>
+        <code>pragma</code>
+        <br />
+        <p>This prevents the browser from caching the page (storing it locally to save time downloading it on subsequent visits).</p>
+      </li>
+      <li>
+        <code>expires</code>
+        <br />
+        <p>Since browsers often cache the content of the page, the 
+        <code>expires</code>option can be used to indicate when the page should expire and no longer be cached. It is specified in a specific format.</p>
+      </li>
+    </ul>
+    <pre>
 <code>
 &lt;head&gt;
-	&lt;!--Contains meta-data about the page.--&gt;
-	&lt;title&gt;Learning HTML&lt;/title&gt;
-	&lt;meta name="description" content="A webpage I created to store my notes on HTML and to practice using HTML elements." /&gt;
-	&lt;meta name="keywords" content="HTML, notes, CSS, websites, Jon Duckett" /&gt;
-	&lt;meta name="robots" content="nofollow" /&gt;
-	&lt;meta name="author" content="DefineCoding" /&gt;
+  &lt;!--Contains meta-data about the page.--&gt;
+  &lt;title&gt;Learning HTML&lt;/title&gt;
+  &lt;meta name="description" content="A webpage I created to store my notes on HTML and to practice using HTML elements." /&gt;
+  &lt;meta name="keywords" content="HTML, notes, CSS, websites, Jon Duckett" /&gt;
+  &lt;meta name="robots" content="nofollow" /&gt;
+  &lt;meta name="author" content="DefineCoding" /&gt;
 &lt;/head&gt;
 </code>
-</pre>
-	</body>
+    </pre>
+    <hr />
+    <h2 id="flashvideo">Flash, Video, &amp; Audio</h2>
+    <p>Flash is a very popular technology used to add animations, video, and audio to websites.</p>
+    <h3 id="howflashworks">How Flash Works</h3>
+    <p>Whether you are creating an animation or a media player in Flash, the files you put on your website are referred to as Flash movies. To create your own Flash movie, you need to purchase the Flash authoring environment from Adobe.
+    <br />
+    <br />
+    When you create a Flash file in the Flash authoring environment, it is saved with the <code>.fla</code> extension. In order to use this file on a web page, it has to be saved in a different format known as SWF (<code>.swf</code>).
+    <br />
+    <br />
+    When you export the movie into SWF format, Flash creates code that you can use to embed the Flash movie in your page. Traditionally, this code used the HTML <code>&lt;object&gt;</code> and <code>&lt;embed&gt;</code> tags. However, now it is more common to use JavaScript.
+    <br />
+    <br />
+    There's now also the HTML5 <code>&lt;video&gt;</code> and <code>&lt;audio&gt;</code> tags.
+    </p>
+    <h3 id="addingflash">Adding a Flash Movie to your Web Page</h3>
+    <p>
+    The most popular way of adding Flash into a web page is using JavaScript. The script we will be using is called SWFObject. You can obtain a copy of it for free from Google.
+    <br />
+    <br />
+    One advantage to using this technique is that it allows browsers to show alternative content for users whose browsers are not capable of showing Flash.
+    <br />
+    <br />
+    This technique uses a <code>&lt;div&gt;</code> element to create a space where the Flash movie should sit. The element has an <code>id</code> attribute whose value is used by the SWFObject script. In this example, the value of the <code>id</code> attribute is <code>bird</code>.
+    <br />
+    <br />
+    Inside the <code>&lt;div&gt;</code> element, you can place the alternative content for users who are not able to play Flash. The SWFObject script will check to see if the user's browser can play the Flash movie. If it can, they it will replace the content of the <code>&lt;div&gt;</code> element with the <code>.swf</code> file.
+    <br />
+    <pre>
+<code>
+&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+swfobject.embedSWF("flash/bird.swf", "bird", "400", "300", "8.0.0");
+&lt;/script&gt;
+&lt;div id="bird"&gt;&lt;p&gt;An animation of a bird taking a shower.&lt;/p&gt;&lt;/div&gt;
+</code>
+    </pre>
+    I can't get Flash working on Brave, so this is just what was shown. The scripts were stored in the <code>&lt;head&gt;</code> tags.
+    </p>
+    <h3 id="videoformats">Understanding Video Formats and Players</h3>
+    <p>
+    Browsers differ in what video formats they do and don't support. In order for users to view your videos online, you may need to convert them to other formats. THe process of converting a video into another format is sometimes referred to as "encoding" the video.
+    <br />
+    <br />
+    The easiest way to add a video to your site is to use a hosted service such as YouTube or Vimeo.
+    <br />
+    <br />
+    At the moment, the best way to ensure most people can play your video content is to use the HTML5 <code>&lt;video&gt;</code> element for browsers that support it, and Flash video for those that do not.
+    </p>
+    <h3 id="hostedvideo">Using Hosted Video Services</h3>
+    <h4>Advantages</h4>
+    <p>
+    Hosted video sites provide players that work with the majority of web browsers.
+    <br />
+    <br />
+    You do not need to worry about encoding the videos because the sites allow you to upload your content in a range of formats. They will automatically convert your video into the various formats required by different browsers.
+    <br />
+    <br />
+    You also have the benefit of not having to host the video on your own site, which can cost extra bandwidth.
+    </p>
+    <h4>Disadvantages</h4>
+    <p>
+    Your video will be available on the hosted site, which means if you want it to be available exclusively on your site, you will need to host the video on your own server.
+    <br />
+    <br />
+    You may also get advertisements on the video player or unwanted overlays on the video.
+    </p>
+    <h3 id="addingflashvideo">Adding a Flash Video to your Page</h3>
+    <p>
+    There are three steps to follow:
+    </p>
+    <ol>
+      <li>
+        Convert your video into FLV format.
+      </li>
+      <li>
+        Find an FLV player to play the video. Its purpose is to hold the FLV movie and add controls such as play/pause. Here are two sites that offer FLV players.
+        <br />
+        <a href="http://www.osflv.com">www.osflv.com</a>
+        <br />
+        <a href="http://www.longtailvideo.com">www.longtailvideo.com</a>
+      </li>
+      <li>
+        Include the player and video in your page.
+        <br />
+        You can include the player in your page using a JavaScript technique such as SWFObject. YOu will also need to tell the player where it can find the video file that you want it to play.
+      </li>
+    </ol>
+    <br />
+    <p>Once again, just going to show the code since I can't get Flash working on Brave.
+    </p>
+    <pre>
+<code>
+&lt;script type="text/javascript"
+        src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+  var flashvars = {};
+  var params = {movie: "../video/puppy.flv"};
+  swfobject.embedSWFT("flash/osplayer.swf", "snow", "400", "320", "8.0.0", flashvars, params);
+&lt;/script&gt;
+&lt;div id="snow"&gt;&lt;p&gt;A video of a puppy playing in the snow&lt;/p&gt;&lt;/div&gt;
+</code>
+    </pre>
+    <p>
+    And again, the <code>&lt;script&gt;</code> elements are found in <code>&lt;head&gt;</code>.
+    </p>
+    <h3 id="addinghtml5video">Adding a HTML5 Video to your Page</h3>
+    <p>
+    The new HTML5 <code>&lt;video&gt;</code> element is only supported by recent browsers, so you cannot just use this one technique if you want everyone to be able to see your video. (This book was written in 2011, so all modern browsers can support HTML5 now).
+    <br />
+    <br />
+    Not all browsers support the same video formats. Therefore, you need to supply your video in more than one format. To reach as many browsers as possible, you should provide videos in proper formats. To find this list of supported formats, check online at <a href="http://www.encoding.com/html5-video-codec/">www.encoding.com/html5-video-codec</a>.
+    <br />
+    <br />
+    The browser will also supply its own controls for the player, and the appearance of these controls can be manipulated with Javascript. 
+    </p>
+    <video src="assets/videos/test_video.mp4"
+           poster="assets/images/video_thumbnail.png"
+           width="400"
+           height="300"
+           preload
+           controls
+           loop>
+      <p>A video of my workflow.</p>
+    </video>
+    <pre>
+<code>
+&lt;video src="assets/videos/test_video.mp4"
+       poster="assets/images/video_thumbnail.png"
+       width="400"
+       height="300"
+       preload
+       controls
+       loop&gt;
+  &lt;p&gt;A video of my workflow.&lt;/p&gt;
+&lt;/video&gt;
+</code>
+    </pre>
+    <p>
+    As we can see, we also have some additional attributes at our disposal. In HTML5, you do not need to supply values for these attributes, and simply including the attributes toggles them on. Here is a list of available attributes:
+    </p>
+    <ul>
+      <li>
+        <b>preload</b>
+        <br />
+        This attribute tells the browser what to do when the page loads. It can have one of three values:
+        <ul>
+          <li>
+            <b>none</b>
+            <br />
+            The browser should not load the video until the user presses play.
+          </li>
+          <li>
+            <b>auto</b>
+            <br />
+            The browser should download the video when the page loads.
+          </li>
+          <li>
+            <b>metadata</b>
+            <br />
+            The browser should just collect information such as size, first frame, track list, and duration.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>poster</b>
+        <br />
+        This attribute allows you to specify an image to show while the video is downloading or until the user tells the video to play.
+      </li>
+      <li>
+        <b>width/height</b>
+        <br />
+        Specifies the width and height of the player in pixels.
+      </li>
+      <li>
+        <b>controls</b>
+        <br />
+        Indicates that the browser should supply its own controls for playback.
+      </li>
+      <li>
+        <b>autoplay</b>
+        <br />
+        Indicates the file should play automatically.
+      </li>
+      <li>
+        <b>loop</b>
+        <br />
+        Indicates that the video should start playing again once it has ended.
+      </li>
+    </ul>
+    <br />
+    <p>
+    You can also have multiple video sources as well, in case a browser can not play one format of your video. To do so, you should use the <code>&lt;source&gt;</code> element inside of the <code>&lt;video&gt;</code> element. With each <code>&lt;source&gt;</code> element, be sure to use the <code>type</code> attribute, which tells the browser what the format of the video is. Otherwise, the browser will have to attempt to download a portion of the video and check if it can play it, which wastes bandwidth. You can also specify the codec used. Note the use of single quotes and double quotes in the <code>type</code> attribute.
+    </p>
+    <pre>
+<code>
+&lt;video poster="assets/images/video_thumbnail.png" width="400" height="320" preload controls loop&gt;
+  &lt;source src="assets/videos/test_video.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' /&gt;
+  &lt;source src="assets/videos/test_video.webm" type='video/webm;codecs="vp8, vorbis"' /&gt;
+  &lt;p&gt;A video of my workflow.&lt;/p&gt;
+&lt;/video&gt;
+</code>
+    </pre>
+    <p>
+    I don't have another format of the video, so this is what you got.
+    </p>
+  </body>
 </html>
