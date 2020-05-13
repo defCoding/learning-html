@@ -248,6 +248,12 @@
           <li>
             <a href="#addinghtml5video">Adding a HTML5 Video to your Page</a>
           </li>
+          <li>
+            <a href="#addingflashaudio">Adding a Flash MP3 Player</a>
+          </li>
+          <li>
+            <a href="#addinghtml5audio">Adding HTML5 Audio to your Page</a>
+          </li>
         </ol>
       </li>
     </ol>
@@ -1781,5 +1787,102 @@ swfobject.embedSWF("flash/bird.swf", "bird", "400", "300", "8.0.0");
     <p>
     I don't have another format of the video, so this is what you got.
     </p>
+    <h3 id="addingflashaudio">Adding a Flash MP3 Player</h3>
+    <p>
+    There are many MP3 players that have already been written in Flash, such as:
+    </p>
+    <ul>
+      <li>
+        <a href="http://www.flash-mp3-player.net">http://www.flash-mp3-player.net</a>
+      </li>
+      <li>
+        <a href="http://www.musicplayer.sourceforge.net">http://www.musicplayer.sourceforge.net</a>
+      </li>
+      <li>
+        <a href="http://www.wimpyplayer.com">http://www.wimpyplayer.com</a>
+      </li>
+    </ul>
+    <p>
+    Each Flash player has its own functionality, so check up on it before using them.
+    </p>
+    <pre>
+<code>
+&lt;script type="text/javascript"
+        src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+  var flashvars = {};
+  var params = {mp3: "audio/text-audio.mp3"};
+  swfobject.embedSWF(
+    "flash/player_mp3_1.0.0.swf",
+    "music-player", "200", "20", "8.0.0",
+    flashvars, params);
+&lt;/script&gt;
+&lt;div id="music-player"&gt;
+  &lt;p&gt;
+  You cannot hear this track because this browser does not support our Flash music player.
+  &lt;/p&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <h3 id="addinghtml5audio">Adding HTML5 Audio to your Page</h3>
+    <p>
+    HTML5 introduced the <code>&lt;audio&gt;</code> element to include audio files in your pages. As with HTML5 video, browsers expect different formats for the audio. The element has a number of attributes which allow you to control audio playback:
+    </p>
+    <ul>
+      <li>
+        <b>src</b>
+        <br />
+        Specifies the path to the audio file.
+      </li>
+      <li>
+        <b>controls</b>
+        <br />
+        Indicates whether or not the player should display controls.
+      </li>
+      <li>
+        <b>autoplay</b>
+        <br />
+        Indicates that the audio should start playing automatically.
+      </li>
+      <li>
+        <b>preload</b>
+        <br />
+        Indicates what the browser should do if the player is NOT set to <code>autoplay</code>. It can have the same values as the <code>&lt;video&gt;</code> element.
+      </li>
+      <li>
+        <b>loop</b>
+        <br />
+        Specifies if the audio should loop after ending.
+      </li>
+    </ul>
+    <audio src="assets/audio/test_audio.mp3"
+           controls>
+      <p>
+      The browser does not support this audio format.
+      </p>
+    </audio>
+    <pre>
+<code>
+&lt;audio src="assets/audio/test_audio.mp3"
+       controls&gt;
+  &lt;p&gt;
+  The browser does not support this audio format.
+  &lt;/p&gt;
+&lt;/audio&gt;
+</code>
+    </pre>
+    <p>
+    As with HTML5 <code>&lt;video&gt;</code>, you can also have multiple audio sources. Simply use the <code>&lt;source&gt;</code> element between the opening and closing <code>&lt;audio&gt;</code> tags. And you can also use the <code>type</code> attribute as well just as with the <code>&lt;video&gt;</code> tags.
+    <pre>
+<code>
+&lt;audio controls&gt;
+  &lt;source src="assets/audio/test_audio.mp3" type="audio/mp3" /&gt;
+  &lt;source src="assets/audio/test_audio.ogg" type="audio/ogg" /&gt;
+  &lt;p&gt;
+  This browser does not support our audio format.
+  &lt;/p&gt;
+&lt;/audio&gt;
+</code>
+    </pre>
   </body>
 </html>
